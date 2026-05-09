@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everest Drilling (Pty) Ltd – Borehole & Water Solutions | South Africa</title>
+  <meta name="description" content="South Africa's trusted borehole drilling specialists. Geophysical surveys, water borehole drilling up to 250m, pump installation, overhead tanks. Branches in Eastern Cape, East London, Durban and Johannesburg." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --navy:    #08192e;
+      --navy2:   #f0f4f8;
+      --navy3:   #e4ecf4;
+      --gold:    #c8960c;
+      --gold2:   #c8960c;
+      --gold3:   #e2a800;
+      --white:   #ffffff;
+      --offwhite:#1a2535;
+      --slate:   #556070;
+      --light:   #333d4d;
+      --card:    #ffffff;
+      --cardalt: #f7f9fc;
+    }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Source Sans 3',sans-serif; background:#ffffff; color:#1a2535; overflow-x:hidden; }
+
+    /* ── UTILITY ─────────────────────────────── */
+    .container { max-width:1100px; margin:0 auto; padding:0 48px; }
+    .eyebrow { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+    .eyebrow-line { width:30px; height:2px; background:var(--gold); flex-shrink:0; }
+    .eyebrow span { font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:4px; color:var(--gold2); text-transform:uppercase; }
+    .sec-title { font-family:'Montserrat',sans-serif; font-size:36px; font-weight:900; color:var(--navy); text-transform:uppercase; letter-spacing:2px; line-height:1.1; margin-bottom:14px; }
+    .sec-desc { font-size:16px; color:var(--slate); line-height:1.8; max-width:560px; }
+    .fade-up { opacity:0; transform:translateY(30px); transition:opacity 0.65s ease, transform 0.65s ease; }
+    .fade-up.visible { opacity:1; transform:translateY(0); }
+    .d1 { transition-delay:0.1s; } .d2 { transition-delay:0.2s; } .d3 { transition-delay:0.3s; } .d4 { transition-delay:0.4s; }
+
+    /* ── NAVBAR ──────────────────────────────── */
+    #navbar {
+      position:fixed; top:0; left:0; right:0; z-index:1000;
+      background:rgba(8,25,46,0.97);
+      border-bottom:2px solid var(--gold);
+      backdrop-filter:blur(10px);
+    }
+    .nav-inner { max-width:1100px; margin:0 auto; padding:0 48px; height:68px; display:flex; align-items:center; justify-content:space-between; }
+    .nav-logo { display:flex; align-items:center; gap:14px; text-decoration:none; }
+    .nav-logo-mark { width:40px; height:40px; background:var(--gold); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-logo-mark svg { width:22px; height:22px; fill:var(--navy); }
+    .nav-logo-text { display:flex; flex-direction:column; line-height:1; }
+    .nav-logo-top { font-family:'Montserrat',sans-serif; font-size:15px; font-weight:900; color:var(--white); letter-spacing:3px; text-transform:uppercase; }
+    .nav-logo-bot { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; color:var(--gold2); letter-spacing:4px; text-transform:uppercase; margin-top:3px; }
+    .nav-links { display:flex; gap:34px; }
+    .nav-links a { font-family:'Montserrat',sans-serif; color:var(--slate); font-size:11px; font-weight:700; text-decoration:none; letter-spacing:2px; text-transform:uppercase; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--gold2); }
+    .nav-cta { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:11px; padding:11px 24px; letter-spacing:2px; text-transform:uppercase; text-decoration:none; transition:background 0.2s; white-space:nowrap; }
+    .nav-cta:hover { background:var(--gold3); }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .hamburger span { width:24px; height:2px; background:var(--gold); display:block; transition:0.3s; }
+    .mobile-menu { display:none; flex-direction:column; background:var(--navy); border-top:1px solid rgba(200,150,12,0.2); padding:20px 48px 28px; gap:18px; }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { font-family:'Montserrat',sans-serif; color:var(--slate); font-size:13px; font-weight:700; text-decoration:none; letter-spacing:2px; text-transform:uppercase; padding:6px 0; border-bottom:1px solid rgba(200,150,12,0.1); }
+
+    /* ── HERO ────────────────────────────────── */
+    #hero { position:relative; min-height:100vh; display:flex; align-items:center; margin-top:68px; overflow:hidden; }
+    .hero-bg { position:absolute; inset:0; }
+    .hero-bg img { width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block; }
+    .hero-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(105deg, rgba(8,25,46,0.95) 40%, rgba(8,25,46,0.6) 100%); }
+    .hero-content { position:relative; z-index:2; max-width:1100px; margin:0 auto; padding:80px 48px; }
+    .hero-tag { display:inline-flex; align-items:center; gap:12px; border:1px solid rgba(200,150,12,0.5); padding:8px 20px; margin-bottom:28px; }
+    .hero-tag-line { width:22px; height:1px; background:var(--gold); }
+    .hero-tag span { font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:4px; color:var(--gold2); text-transform:uppercase; }
+    #hero h1 { font-family:'Montserrat',sans-serif; font-size:76px; font-weight:900; color:var(--white); text-transform:uppercase; letter-spacing:4px; line-height:1.0; margin-bottom:8px; }
+    #hero h1 em { color:var(--gold2); font-style:normal; display:block; }
+    .hero-sub { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:5px; color:var(--slate); text-transform:uppercase; margin-bottom:28px; }
+    .hero-desc { font-size:17px; color:var(--light); line-height:1.8; max-width:500px; margin-bottom:40px; }
+    .hero-btns { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:64px; }
+    .btn-primary { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:11px; padding:15px 34px; letter-spacing:2px; text-transform:uppercase; text-decoration:none; border:none; cursor:pointer; transition:background 0.2s; display:inline-block; }
+    .btn-primary:hover { background:var(--gold3); }
+    .btn-outline { font-family:'Montserrat',sans-serif; background:transparent; border:1.5px solid rgba(200,150,12,0.6); color:var(--gold2); font-weight:700; font-size:11px; padding:15px 34px; letter-spacing:2px; text-transform:uppercase; text-decoration:none; cursor:pointer; transition:all 0.2s; display:inline-block; }
+    .btn-outline:hover { border-color:var(--gold2); color:var(--gold3); }
+    .hero-stats { display:flex; gap:44px; flex-wrap:wrap; }
+    .hstat { border-left:2px solid var(--gold); padding-left:16px; }
+    .hstat-n { font-family:'Montserrat',sans-serif; font-size:28px; font-weight:900; color:var(--gold2); letter-spacing:1px; line-height:1; }
+    .hstat-l { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:3px; color:var(--slate); text-transform:uppercase; margin-top:5px; }
+
+    /* ── GOLD STATS BAR ──────────────────────── */
+    #goldbar { background:var(--gold); }
+    .gb-inner { max-width:1100px; margin:0 auto; padding:0 48px; display:flex; }
+    .gb-item { flex:1; padding:18px 12px; text-align:center; border-right:1px solid rgba(8,25,46,0.18); }
+    .gb-item:last-child { border-right:none; }
+    .gb-n { font-family:'Montserrat',sans-serif; font-size:16px; font-weight:800; color:var(--navy); letter-spacing:1px; }
+    .gb-l { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:2px; color:rgba(8,25,46,0.6); text-transform:uppercase; margin-top:3px; }
+
+    /* ── SERVICES ────────────────────────────── */
+    #services { padding:90px 0; background:#fff; }
+    .svc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:48px; }
+    .svc-card { background:#fff; padding:36px 28px; border:1px solid #e2e8f0; border-top:3px solid transparent; border-radius:2px; box-shadow:0 2px 12px rgba(0,0,0,0.05); transition:border-color 0.25s, box-shadow 0.25s; }
+    .svc-card:hover { border-color:var(--gold); box-shadow:0 6px 24px rgba(200,150,12,0.12); }
+    .svc-icon { font-size:28px; margin-bottom:18px; }
+    .svc-card h3 { font-family:'Montserrat',sans-serif; font-size:13px; font-weight:800; color:var(--navy); letter-spacing:2px; text-transform:uppercase; margin-bottom:12px; }
+    .svc-card p { font-size:14px; color:var(--slate); line-height:1.75; }
+
+    /* ── ABOUT SPLIT ─────────────────────────── */
+    #about { padding:90px 0; background:#f7f9fc; }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
+    .about-img-wrap { position:relative; }
+    .about-img-wrap img { width:100%; height:500px; object-fit:cover; display:block; border-radius:2px; }
+    .about-badge { position:absolute; bottom:-20px; right:-20px; background:var(--gold); padding:24px 28px; text-align:center; }
+    .about-badge .big { font-family:'Montserrat',sans-serif; font-size:36px; font-weight:900; color:#fff; line-height:1; }
+    .about-badge .sm { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; color:rgba(255,255,255,0.8); letter-spacing:3px; text-transform:uppercase; margin-top:4px; }
+    .about-points { display:flex; flex-direction:column; gap:22px; margin-top:32px; }
+    .apoint { display:flex; align-items:flex-start; gap:16px; }
+    .apoint-icon { width:44px; height:44px; background:rgba(200,150,12,0.1); border:1px solid rgba(200,150,12,0.4); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:18px; }
+    .apoint h4 { font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:var(--navy); letter-spacing:2px; text-transform:uppercase; margin-bottom:4px; }
+    .apoint p { font-size:14px; color:var(--slate); line-height:1.7; }
+
+    /* ── PROCESS ─────────────────────────────── */
+    #process { padding:90px 0; background:#fff; }
+    .proc-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:48px; }
+    .proc-step { background:#fff; border:1px solid #e2e8f0; border-top:3px solid var(--gold); padding:40px 24px; text-align:center; position:relative; border-radius:2px; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
+    .proc-num { font-family:'Montserrat',sans-serif; font-size:54px; font-weight:900; color:rgba(200,150,12,0.15); line-height:1; margin-bottom:8px; }
+    .proc-icon { font-size:28px; margin-bottom:16px; display:block; }
+    .proc-step h3 { font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:3px; color:var(--navy); text-transform:uppercase; margin-bottom:10px; }
+    .proc-step p { font-size:13px; color:var(--slate); line-height:1.7; }
+    .proc-arrow { position:absolute; top:50%; right:-23px; transform:translateY(-50%); width:26px; height:26px; background:var(--gold); display:flex; align-items:center; justify-content:center; z-index:2; font-family:'Montserrat',sans-serif; font-size:13px; font-weight:900; color:#fff; }
+    .proc-step:last-child .proc-arrow { display:none; }
+
+    /* ── GALLERY ─────────────────────────────── */
+    #gallery { padding:90px 0; background:#f7f9fc; }
+    .gallery-grid { display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:280px 280px; gap:4px; margin-top:48px; }
+    .gal-item { overflow:hidden; position:relative; }
+    .gal-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; display:block; }
+    .gal-item:hover img { transform:scale(1.05); }
+    .gal-item.big { grid-column:1; grid-row:1/3; }
+    .gal-overlay { position:absolute; inset:0; background:rgba(8,25,46,0); transition:background 0.3s; display:flex; align-items:flex-end; }
+    .gal-item:hover .gal-overlay { background:rgba(8,25,46,0.45); }
+    .gal-label { font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:3px; color:var(--gold2); text-transform:uppercase; padding:18px; opacity:0; transition:opacity 0.3s; }
+    .gal-item:hover .gal-label { opacity:1; }
+
+    /* ── SPECS ───────────────────────────────── */
+    #specs { padding:90px 0; background:#fff; }
+    .specs-layout { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; margin-top:48px; }
+    .specs-img img { width:100%; height:440px; object-fit:cover; display:block; border-radius:2px; }
+    .specs-cap { background:#f7f9fc; padding:20px 24px; border-left:3px solid var(--gold); margin-top:2px; }
+    .specs-cap p { font-size:13px; color:var(--slate); line-height:1.7; }
+    .specs-cap strong { color:var(--gold); }
+    .specs-table { display:flex; flex-direction:column; gap:2px; }
+    .spec-row { background:#f7f9fc; display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-left:3px solid transparent; transition:border-color 0.2s, background 0.2s; }
+    .spec-row:hover { border-color:var(--gold); background:#fff8e6; }
+    .sk { font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:2px; color:var(--slate); text-transform:uppercase; }
+    .sv { font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:var(--gold); text-align:right; }
+
+    /* ── BRANCHES ────────────────────────────── */
+    #branches { padding:90px 0; background:#f7f9fc; }
+    .branch-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:48px; }
+    .branch-card { background:#fff; padding:36px 24px; text-align:center; border:1px solid #e2e8f0; border-top:3px solid var(--gold); border-radius:2px; box-shadow:0 2px 12px rgba(0,0,0,0.05); transition:box-shadow 0.25s; }
+    .branch-card:hover { box-shadow:0 6px 24px rgba(200,150,12,0.12); }
+    .branch-icon { font-size:26px; margin-bottom:14px; }
+    .branch-city { font-family:'Montserrat',sans-serif; font-size:15px; font-weight:800; color:var(--navy); letter-spacing:2px; text-transform:uppercase; margin-bottom:6px; }
+    .branch-prov { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:3px; color:var(--gold); text-transform:uppercase; }
+    .branch-tag { display:inline-block; margin-top:12px; background:rgba(200,150,12,0.08); font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:2px; color:var(--slate); padding:5px 12px; text-transform:uppercase; }
+
+    /* ── QUOTE ───────────────────────────────── */
+    #quote { padding:90px 0; background:#fff; }
+    .quote-layout { display:grid; grid-template-columns:1fr 1.4fr; gap:64px; align-items:start; }
+    .quote-info .sec-title { font-size:30px; }
+    .quote-info p { font-size:15px; color:var(--slate); line-height:1.8; margin-bottom:36px; }
+    .q-contacts { display:flex; flex-direction:column; gap:18px; }
+    .qc { display:flex; align-items:center; gap:16px; }
+    .qc-icon { width:44px; height:44px; background:rgba(200,150,12,0.1); border:1px solid rgba(200,150,12,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:18px; }
+    .qc-label { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:3px; color:var(--slate); text-transform:uppercase; }
+    .qc-value { font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:var(--navy); margin-top:2px; }
+    .qform { background:#fff; border:1px solid #e2e8f0; border-top:3px solid var(--gold); padding:40px; border-radius:2px; box-shadow:0 4px 24px rgba(0,0,0,0.07); }
+    .qform-head { font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:4px; color:var(--gold); text-transform:uppercase; margin-bottom:28px; padding-bottom:18px; border-bottom:1px solid #e2e8f0; }
+    .frow { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+    .frow.full { grid-template-columns:1fr; }
+    .fg { display:flex; flex-direction:column; }
+    .fg label { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:3px; color:var(--slate); text-transform:uppercase; margin-bottom:8px; }
+    .fg input, .fg select, .fg textarea { background:#f7f9fc; border:1px solid #e2e8f0; color:#1a2535; font-size:14px; padding:12px 16px; font-family:'Source Sans 3',sans-serif; transition:border-color 0.2s; outline:none; width:100%; resize:none; border-radius:2px; }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color:var(--gold); background:#fff; }
+    .fg input::placeholder, .fg textarea::placeholder { color:#aab4c0; }
+    .fg select option { background:#fff; }
+    .fsub { width:100%; background:var(--gold); color:#fff; font-family:'Montserrat',sans-serif; font-weight:800; font-size:12px; padding:16px; border:none; cursor:pointer; letter-spacing:3px; text-transform:uppercase; transition:background 0.2s; margin-top:8px; border-radius:2px; }
+    .fsub:hover { background:var(--gold3); }
+
+    /* ── CONTACT ─────────────────────────────── */
+    #contact { background:var(--navy); border-top:4px solid var(--gold); padding:80px 0 64px; text-align:center; }
+    .contact-title { font-family:'Montserrat',sans-serif; font-size:40px; font-weight:900; color:#fff; text-transform:uppercase; letter-spacing:3px; margin-bottom:8px; }
+    .contact-sub { font-size:16px; color:#7a8fa8; margin-bottom:48px; }
+    .phones { display:flex; justify-content:center; align-items:center; gap:60px; flex-wrap:wrap; margin-bottom:40px; }
+    .phone-block { text-align:center; }
+    .phone-num { font-family:'Montserrat',sans-serif; font-size:30px; font-weight:900; color:var(--gold2); letter-spacing:1px; }
+    .phone-label { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:3px; color:var(--slate); text-transform:uppercase; margin-top:8px; }
+    .phone-divider { width:1px; height:60px; background:rgba(200,150,12,0.2); }
+    .contact-pills { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:48px; }
+    .cpill { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:1px; color:var(--slate); border:1px solid rgba(200,150,12,0.2); padding:10px 20px; display:inline-flex; align-items:center; gap:10px; text-decoration:none; transition:all 0.2s; }
+    .cpill:hover { border-color:var(--gold); color:var(--gold2); }
+    .wa-cta { display:inline-flex; align-items:center; gap:12px; background:#1a8f44; color:var(--white); font-family:'Montserrat',sans-serif; font-weight:700; font-size:12px; letter-spacing:3px; text-transform:uppercase; padding:16px 40px; text-decoration:none; transition:background 0.2s; }
+    .wa-cta:hover { background:#157a3a; }
+    .wa-cta svg { width:22px; height:22px; fill:var(--white); flex-shrink:0; }
+
+    /* ── FOOTER ──────────────────────────────── */
+    footer { background:#040d1a; border-top:1px solid rgba(200,150,12,0.15); padding:28px 48px; }
+    .foot-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+    .foot-logo { display:flex; align-items:center; gap:12px; }
+    .foot-logo-mark { width:28px; height:28px; background:var(--gold); display:flex; align-items:center; justify-content:center; }
+    .foot-logo-mark svg { width:14px; height:14px; fill:var(--navy); }
+    .foot-name { font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; color:var(--white); letter-spacing:3px; text-transform:uppercase; }
+    .foot-copy { font-family:'Montserrat',sans-serif; font-size:10px; color:var(--slate); letter-spacing:1px; }
+    .foot-socials { display:flex; gap:10px; }
+    .fsoc { width:34px; height:34px; border:1px solid rgba(200,150,12,0.25); display:flex; align-items:center; justify-content:center; text-decoration:none; transition:border-color 0.2s; }
+    .fsoc:hover { border-color:var(--gold); }
+    .fsoc svg { width:16px; height:16px; fill:var(--gold); }
+
+    /* ── WHATSAPP FLOAT ──────────────────────── */
+    #wa-float { position:fixed; bottom:28px; right:28px; z-index:999; background:#1a8f44; display:flex; align-items:center; gap:10px; padding:14px 22px; cursor:pointer; box-shadow:0 4px 24px rgba(26,143,68,0.4); text-decoration:none; transition:background 0.2s, transform 0.2s; }
+    #wa-float:hover { background:#157a3a; transform:translateY(-2px); }
+    #wa-float svg { width:22px; height:22px; fill:#fff; flex-shrink:0; }
+    #wa-float span { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; color:#fff; letter-spacing:2px; text-transform:uppercase; }
+
+    /* ── RESPONSIVE ──────────────────────────── */
+    @media (max-width:960px) {
+      #hero h1 { font-size:52px; }
+      .svc-grid { grid-template-columns:1fr 1fr; }
+      .about-grid { grid-template-columns:1fr; }
+      .about-badge { right:0; bottom:0; }
+      .proc-grid { grid-template-columns:1fr 1fr; }
+      .gallery-grid { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+      .gal-item.big { grid-column:1/3; grid-row:auto; height:300px; }
+      .gal-item { height:200px; }
+      .specs-layout { grid-template-columns:1fr; }
+      .branch-grid { grid-template-columns:1fr 1fr; }
+      .quote-layout { grid-template-columns:1fr; }
+      .nav-links { display:none; }
+      .nav-cta { display:none; }
+      .hamburger { display:flex; }
+      .gb-inner { flex-wrap:wrap; }
+      .gb-item { flex:1 1 45%; }
+    }
+    @media (max-width:600px) {
+      .container { padding:0 20px; }
+      #hero h1 { font-size:38px; }
+      .sec-title { font-size:26px; }
+      .hero-content { padding:60px 20px; }
+      .svc-grid { grid-template-columns:1fr; }
+      .frow { grid-template-columns:1fr; }
+      .proc-grid { grid-template-columns:1fr; }
+      .proc-arrow { display:none; }
+      .phones { flex-direction:column; gap:32px; }
+      .phone-divider { display:none; }
+      .branch-grid { grid-template-columns:1fr 1fr; }
+      #wa-float span { display:none; }
+      #wa-float { border-radius:50%; padding:14px; }
+      .nav-inner { padding:0 20px; }
+      .mobile-menu { padding:20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-mark">
+        <svg viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-top">Everest Drilling</span>
+        <span class="nav-logo-bot">Pty Ltd &nbsp;·&nbsp; South Africa</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#specs">Technology</a>
+      <a href="#branches">Branches</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#quote" class="nav-cta">Request Quote</a>
+    <button class="hamburger" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+    <a href="#about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
+    <a href="#specs" onclick="document.getElementById('mobile-menu').classList.remove('open')">Technology</a>
+    <a href="#branches" onclick="document.getElementById('mobile-menu').classList.remove('open')">Branches</a>
+    <a href="#quote" onclick="document.getElementById('mobile-menu').classList.remove('open')">Request Quote</a>
+    <a href="#contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline poster="images/site-sunset-wide.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;">
+      <source src="images/rig_active3.mp4" type="video/mp4">
+      <img src="images/site-sunset-wide.jpg" alt="Everest Drilling TATA Prima rig truck on site" style="object-position:center 55%;" />
+    </video>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <div class="hero-tag-line"></div>
+      <span>South Africa's Trusted Borehole Specialists</span>
+      <div class="hero-tag-line"></div>
+    </div>
+    <h1>EVEREST<em>DRILLING</em></h1>
+    <div class="hero-sub">Water Solutions &nbsp;·&nbsp; Geophysical Survey &nbsp;·&nbsp; Pump Installation</div>
+    <p class="hero-desc">From the first geophysical scan to a fully commissioned water supply — one team, one call, complete solution. Serving agricultural, residential and industrial clients across South Africa.</p>
+    <div class="hero-btns">
+      <a href="#quote" class="btn-primary">Get a Free Quote</a>
+      <a href="#services" class="btn-outline">Our Services ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-n">250M</div><div class="hstat-l">Max Drill Depth</div></div>
+      <div class="hstat"><div class="hstat-n">280 kg.m</div><div class="hstat-l">Max Torque</div></div>
+      <div class="hstat"><div class="hstat-n">4</div><div class="hstat-l">SA Branches</div></div>
+      <div class="hstat"><div class="hstat-n">6.5"</div><div class="hstat-l">Drill Diameter</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GOLD BAR ════════════════════════════════════════ -->
+<div id="goldbar">
+  <div class="gb-inner">
+    <div class="gb-item"><div class="gb-n">170 RPM</div><div class="gb-l">Max Rotary Speed</div></div>
+    <div class="gb-item"><div class="gb-n">15,500 kg</div><div class="gb-l">Max Pull Force</div></div>
+    <div class="gb-item"><div class="gb-n">320 kg/cm²</div><div class="gb-l">Hydraulic Pressure</div></div>
+    <div class="gb-item"><div class="gb-n">TATA Prima 2528A</div><div class="gb-l">Drill Platform</div></div>
+    <div class="gb-item"><div class="gb-n">Soft &amp; Hard</div><div class="gb-l">Formation Types</div></div>
+  </div>
+</div>
+
+<!-- ══ SERVICES ════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="eyebrow fade-up"><div class="eyebrow-line"></div><span>What We Offer</span></div>
+    <div class="sec-title fade-up d1">Complete Water<br>Solutions</div>
+    <p class="sec-desc fade-up d2">From the first geophysical scan to final water delivery — we manage the entire process end-to-end. One team, one call, complete solution for agricultural, residential and industrial clients.</p>
+    <div class="svc-grid">
+      <div class="svc-card fade-up d1">
+        <div class="svc-icon">📡</div>
+        <h3>Geophysical Survey</h3>
+        <p>Advanced ground scanning pinpoints optimal borehole locations and subsurface water-bearing formations, minimising drilling risk and cost before we break ground.</p>
+      </div>
+      <div class="svc-card fade-up d2">
+        <div class="svc-icon">⛏</div>
+        <h3>Water Borehole Drilling</h3>
+        <p>Professional water borehole drilling up to 250 metres in both soft and hard formations. 6.5" continuous diameter with overburden options of 9", 10" and 12".</p>
+      </div>
+      <div class="svc-card fade-up d3">
+        <div class="svc-icon">🧱</div>
+        <h3>Sedimentary Drilling</h3>
+        <p>Specialist sedimentary formation drilling up to 250 metres using precision-calibrated equipment suited to the varied geological conditions across Southern Africa.</p>
+      </div>
+      <div class="svc-card fade-up d1">
+        <div class="svc-icon">⚙️</div>
+        <h3>Pump Installation</h3>
+        <p>Supply and full installation of hand pumps and submersible pump sets. Every installation is pressure-tested, commissioned and warranted before handover to the client.</p>
+      </div>
+      <div class="svc-card fade-up d2">
+        <div class="svc-icon">🏗️</div>
+        <h3>Overhead Tank Construction</h3>
+        <p>Construction of elevated water storage tanks built to SANS standards, engineered for long-term structural integrity in residential, commercial and agricultural settings.</p>
+      </div>
+      <div class="svc-card fade-up d3">
+        <div class="svc-icon">💧</div>
+        <h3>Full Water Supply</h3>
+        <p>Complete end-to-end delivery from borehole to tap. Tank construction, pipework, and commissioning — we don't leave until the water flows reliably at your site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ════════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap fade-up">
+        <video autoplay muted loop playsinline poster="images/rig-active2.jpg" style="width:100%;height:500px;object-fit:cover;object-position:center top;display:block;">
+          <source src="images/rig-active2.mp4" type="video/mp4">
+          <img src="images/rig-active2.jpg" alt="Everest Drilling rig actively drilling a borehole" style="object-position:center top;" />
+        </video>
+        <div class="about-badge">
+          <div class="big">250M</div>
+          <div class="sm">Max Depth</div>
+        </div>
+      </div>
+      <div class="fade-up d2">
+        <div class="eyebrow"><div class="eyebrow-line"></div><span>Why Choose Us</span></div>
+        <div class="sec-title">Precision.<br>Reliability.<br>Results.</div>
+        <p class="sec-desc">Everest Drilling (Pty) Ltd operates a fully-equipped Tata Prima 2528A water well drilling rig capable of penetrating both soft and hard formations to 250 metres. We provide a complete turnkey water solution — from the initial geophysical survey to a fully commissioned supply.</p>
+        <div class="about-points">
+          <div class="apoint">
+            <div class="apoint-icon">✔</div>
+            <div>
+              <h4>Full Turnkey Solution</h4>
+              <p>We drill the hole, install the pump, construct the tank and supply the water. One contractor, zero coordination headaches.</p>
+            </div>
+          </div>
+          <div class="apoint">
+            <div class="apoint-icon">📍</div>
+            <div>
+              <h4>4 Branches Nationwide</h4>
+              <p>Branches in Eastern Cape, East London, Durban and Johannesburg ensure rapid mobilisation anywhere in South Africa.</p>
+            </div>
+          </div>
+          <div class="apoint">
+            <div class="apoint-icon">🔧</div>
+            <div>
+              <h4>Industrial-Grade Equipment</h4>
+              <p>Our TATA Prima 2528A delivers 280 kg.m of torque and 15,500 kg pull force — reliable performance in any formation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESS ══════════════════════════════════════════ -->
+<section id="process">
+  <div class="container">
+    <div class="eyebrow fade-up"><div class="eyebrow-line"></div><span>Our Process</span></div>
+    <div class="sec-title fade-up d1">How We Work</div>
+    <div class="proc-grid">
+      <div class="proc-step fade-up d1">
+        <div class="proc-num">01</div>
+        <span class="proc-icon">📡</span>
+        <h3>Survey</h3>
+        <p>Geophysical scan pinpoints the optimal water-bearing location on your property before any drilling begins.</p>
+        <div class="proc-arrow">›</div>
+      </div>
+      <div class="proc-step fade-up d2">
+        <div class="proc-num">02</div>
+        <span class="proc-icon">⛏</span>
+        <h3>Drill</h3>
+        <p>Our Tata Prima 2528A rig drills to confirmed depth with precision and minimal surface disturbance.</p>
+        <div class="proc-arrow">›</div>
+      </div>
+      <div class="proc-step fade-up d3">
+        <div class="proc-num">03</div>
+        <span class="proc-icon">⚙️</span>
+        <h3>Install</h3>
+        <p>Pump and casing installed — submersible or hand-pump configured exactly to your site requirements.</p>
+        <div class="proc-arrow">›</div>
+      </div>
+      <div class="proc-step fade-up d4">
+        <div class="proc-num">04</div>
+        <span class="proc-icon">💧</span>
+        <h3>Commission</h3>
+        <p>Tank constructed, pipework completed, water supply fully tested and officially handed over to you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALLERY ══════════════════════════════════════════ -->
+<section id="gallery">
+  <div class="container">
+    <div class="eyebrow fade-up"><div class="eyebrow-line"></div><span>Equipment &amp; Operations</span></div>
+    <div class="sec-title fade-up d1">Seen In Action</div>
+    <div class="gallery-grid">
+      <div class="gal-item big fade-up">
+        <img src="images/site-blowout.jpg" alt="Borehole strike — drilling debris erupting from the ground" loading="lazy" style="object-position:center center;" />
+        <div class="gal-overlay"><div class="gal-label">Borehole Strike — Water Reached</div></div>
+      </div>
+      <div class="gal-item fade-up d1">
+        <img src="images/site-active-spray.jpg" alt="Active borehole drilling with spray" loading="lazy" style="object-position:center top;" />
+        <div class="gal-overlay"><div class="gal-label">Active Drilling Operation</div></div>
+      </div>
+      <div class="gal-item fade-up d2">
+        <img src="images/site-drilling-branding.jpg" alt="Everest Drilling rig on site" loading="lazy" style="object-position:center 55%;" />
+        <div class="gal-overlay"><div class="gal-label">On-Site — Eastern Cape</div></div>
+      </div>
+      <div class="gal-item fade-up d1">
+        <img src="images/site-sunset-wide.jpg" alt="Everest Drilling truck at sunset" loading="lazy" style="object-position:center 60%;" />
+        <div class="gal-overlay"><div class="gal-label">Sunset Site — TATA Prima</div></div>
+      </div>
+      <div class="gal-item fade-up d2">
+        <img src="images/night-city.jpg" alt="Everest Drilling TATA Prima truck at night" loading="lazy" style="object-position:center center;" />
+        <div class="gal-overlay"><div class="gal-label">24-Hour Mobilisation</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SPECS ════════════════════════════════════════════ -->
+<section id="specs">
+  <div class="container">
+    <div class="eyebrow fade-up"><div class="eyebrow-line"></div><span>Technical Specifications</span></div>
+    <div class="sec-title fade-up d1">Built For Performance</div>
+    <div class="specs-layout">
+      <div class="fade-up d1">
+        <img src="images/site-truck-sunset.jpg" alt="Everest Drilling TATA Prima 2528A on site at sunset" loading="lazy" style="width:100%; height:440px; object-fit:cover; object-position:center 60%; display:block;" />
+        <div class="specs-cap">
+          <p><strong>TATA Prima 2528A</strong> truck-mounted water well drilling rig. Hydraulic cylinder mast with pulley and wire rope. Water injection via Pumplex reciprocating pump powered by hydraulic motor. Four box-type hydraulic levelling jacks. Operates in both soft and hard geological formations.</p>
+        </div>
+      </div>
+      <div class="specs-table fade-up d2">
+        <div class="spec-row"><span class="sk">Hole Diameter</span><span class="sv">6.5" / 9" / 10" / 12"</span></div>
+        <div class="spec-row"><span class="sk">Maximum Depth</span><span class="sv">250 Metres</span></div>
+        <div class="spec-row"><span class="sk">Rotary Head Speed</span><span class="sv">0 – 170 RPM</span></div>
+        <div class="spec-row"><span class="sk">Maximum Torque</span><span class="sv">280 kg.m</span></div>
+        <div class="spec-row"><span class="sk">Max Pull-Up Force</span><span class="sv">15,500 kgs</span></div>
+        <div class="spec-row"><span class="sk">Max Pull-Down Force</span><span class="sv">7,500 kgs</span></div>
+        <div class="spec-row"><span class="sk">Reeving Ratio</span><span class="sv">1 : 3</span></div>
+        <div class="spec-row"><span class="sk">Pull-Up Speed</span><span class="sv">45 metres / min</span></div>
+        <div class="spec-row"><span class="sk">Pull-Down Speed</span><span class="sv">60 metres / min</span></div>
+        <div class="spec-row"><span class="sk">Hydraulic Pressure</span><span class="sv">320 kg / cm²</span></div>
+        <div class="spec-row"><span class="sk">Hydraulic Pumps</span><span class="sv">Load Sensing</span></div>
+        <div class="spec-row"><span class="sk">Oil Cooler Capacity</span><span class="sv">70 gpm / 120 gpm</span></div>
+        <div class="spec-row"><span class="sk">Breakout Winch Torque</span><span class="sv">500 kg.m</span></div>
+        <div class="spec-row"><span class="sk">Cylinder Bore</span><span class="sv">80 mm / 100 mm</span></div>
+        <div class="spec-row"><span class="sk">Stroke</span><span class="sv">300 mm / 350 mm</span></div>
+        <div class="spec-row"><span class="sk">Levelling Jacks</span><span class="sv">4× Box-type hydraulic</span></div>
+        <div class="spec-row"><span class="sk">Formation Type</span><span class="sv">Soft &amp; Hard</span></div>
+        <div class="spec-row"><span class="sk">Prime Mover</span><span class="sv">Truck Engine / Customer Request</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BRANCHES ═════════════════════════════════════════ -->
+<section id="branches">
+  <div class="container">
+    <div class="eyebrow fade-up"><div class="eyebrow-line"></div><span>National Coverage</span></div>
+    <div class="sec-title fade-up d1">Our Branches</div>
+    <p class="sec-desc fade-up d2">Strategically positioned across South Africa for rapid mobilisation to agricultural, residential and industrial sites nationwide.</p>
+    <div class="branch-grid">
+      <div class="branch-card fade-up d1">
+        <div class="branch-icon">📍</div>
+        <div class="branch-city">Eastern Cape</div>
+        <div class="branch-prov">South Africa</div>
+        <div class="branch-tag">Regional HQ</div>
+      </div>
+      <div class="branch-card fade-up d2">
+        <div class="branch-icon">📍</div>
+        <div class="branch-city">East London</div>
+        <div class="branch-prov">Eastern Cape</div>
+        <div class="branch-tag">Full Service</div>
+      </div>
+      <div class="branch-card fade-up d3">
+        <div class="branch-icon">📍</div>
+        <div class="branch-city">Durban</div>
+        <div class="branch-prov">KwaZulu-Natal</div>
+        <div class="branch-tag">Full Service</div>
+      </div>
+      <div class="branch-card fade-up d4">
+        <div class="branch-icon">📍</div>
+        <div class="branch-city">Johannesburg</div>
+        <div class="branch-prov">Gauteng</div>
+        <div class="branch-tag">Full Service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUOTE FORM ════════════════════════════════════════ -->
+<section id="quote">
+  <div class="container">
+    <div class="quote-layout">
+      <div class="fade-up">
+        <div class="eyebrow"><div class="eyebrow-line"></div><span>Free Estimate</span></div>
+        <div class="sec-title">Request<br>a Quote</div>
+        <p class="quote-info">Complete the form and our team will respond within 24 hours with a tailored estimate for your site and requirements.</p>
+        <div class="q-contacts">
+          <div class="qc">
+            <div class="qc-icon">📞</div>
+            <div><div class="qc-label">Call / WhatsApp</div><div class="qc-value">+27 (0) 75 112 3456</div></div>
+          </div>
+          <div class="qc">
+            <div class="qc-icon">📞</div>
+            <div><div class="qc-label">Call / WhatsApp</div><div class="qc-value">+27 (0) 61 240 0980</div></div>
+          </div>
+          <div class="qc">
+            <div class="qc-icon">✉️</div>
+            <div><div class="qc-label">Email</div><div class="qc-value">everestdrilling.sa@gmail.com</div></div>
+          </div>
+          <div class="qc">
+            <div class="qc-icon">📸</div>
+            <div><div class="qc-label">Instagram</div><div class="qc-value">@EverestDrillingsa</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="qform fade-up d2">
+        <div class="qform-head">Complete the form — we respond within 24 hours</div>
+        <div class="frow">
+          <div class="fg"><label>Full Name</label><input type="text" placeholder="Your full name" /></div>
+          <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+27 ..." /></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com" /></div>
+          <div class="fg"><label>Location / Town</label><input type="text" placeholder="City or town" /></div>
+        </div>
+        <div class="frow full">
+          <div class="fg">
+            <label>Service Required</label>
+            <select>
+              <option value="">Select a service...</option>
+              <option>Water Borehole Drilling</option>
+              <option>Geophysical Survey</option>
+              <option>Pump Installation</option>
+              <option>Overhead Tank Construction</option>
+              <option>Sedimentary Drilling</option>
+              <option>Full End-to-End Package</option>
+            </select>
+          </div>
+        </div>
+        <div class="frow full">
+          <div class="fg"><label>Additional Notes</label><textarea rows="3" placeholder="Depth estimate, formation type, site access, urgency..."></textarea></div>
+        </div>
+        <button class="fsub" onclick="alert('Thank you! Our team will contact you within 24 hours.')">Submit Quote Request</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center;"><div class="eyebrow-line"></div><span>Get In Touch</span><div class="eyebrow-line"></div></div>
+    <div class="contact-title">Need Boreholes?</div>
+    <p class="contact-sub">Call or WhatsApp us directly — we are ready to mobilise.</p>
+    <div class="phones">
+      <div class="phone-block">
+        <div class="phone-num">+27 (0) 75 112 3456</div>
+        <div class="phone-label">WhatsApp &amp; Voice</div>
+      </div>
+      <div class="phone-divider"></div>
+      <div class="phone-block">
+        <div class="phone-num">+27 (0) 61 240 0980</div>
+        <div class="phone-label">WhatsApp &amp; Voice</div>
+      </div>
+    </div>
+    <div class="contact-pills">
+      <a href="mailto:everestdrilling.sa@gmail.com" class="cpill">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--gold);flex-shrink:0;"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        everestdrilling.sa@gmail.com
+      </a>
+      <a href="https://www.instagram.com/everestdrillingsa" target="_blank" class="cpill">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--gold);flex-shrink:0;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        @EverestDrillingsa
+      </a>
+      <a href="https://www.facebook.com/EverestDrillingPtyLtd" target="_blank" class="cpill">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--gold);flex-shrink:0;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Everest Drilling Pty Ltd
+      </a>
+    </div>
+    <a href="https://wa.me/27751123456" target="_blank" class="wa-cta">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Chat on WhatsApp Now
+    </a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════ -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">
+      <div class="foot-logo-mark">
+        <svg viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg>
+      </div>
+      <span class="foot-name">Everest Drilling (Pty) Ltd</span>
+    </div>
+    <div class="foot-copy">© 2025 Everest Drilling Pty Ltd &nbsp;·&nbsp; All Rights Reserved &nbsp;·&nbsp; Registered in South Africa</div>
+    <div class="foot-socials">
+      <a href="https://www.facebook.com/EverestDrillingPtyLtd" target="_blank" class="fsoc" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/everestdrillingsa" target="_blank" class="fsoc" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <a href="https://wa.me/27751123456" target="_blank" class="fsoc" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ WHATSAPP FLOAT ════════════════════════════════════ -->
+<a href="https://wa.me/27751123456" target="_blank" id="wa-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Chat on WhatsApp</span>
+</a>
+
+<script>
+  // Scroll fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Navbar shadow on scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').style.boxShadow =
+      window.scrollY > 40 ? '0 4px 32px rgba(0,0,0,0.4)' : 'none';
+  });
+</script>
+</body>
+</html>
