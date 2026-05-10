@@ -98,10 +98,14 @@
     /* ── SERVICES ────────────────────────────── */
     #services { padding:90px 0; background:#fff; }
     .svc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:48px; }
-    .svc-card { background:#fff; padding:36px 28px; border:1px solid #e2e8f0; border-top:3px solid transparent; border-radius:2px; box-shadow:0 2px 12px rgba(0,0,0,0.05); transition:border-color 0.25s, box-shadow 0.25s; }
+    .svc-card { background:#fff; padding:0; border:1px solid #e2e8f0; border-top:3px solid transparent; border-radius:2px; box-shadow:0 2px 12px rgba(0,0,0,0.05); transition:border-color 0.25s, box-shadow 0.25s; overflow:hidden; }
     .svc-card:hover { border-color:var(--gold); box-shadow:0 6px 24px rgba(200,150,12,0.12); }
-    .svc-icon { width:56px; height:56px; background:rgba(200,150,12,0.1); border:1px solid rgba(200,150,12,0.3); border-radius:2px; display:flex; align-items:center; justify-content:center; margin-bottom:20px; }
-    .svc-icon i { font-size:22px; color:var(--gold); }
+    .svc-card:hover .svc-img { transform:scale(1.04); }
+    .svc-img-wrap { overflow:hidden; }
+    .svc-card-body { padding:24px 24px 28px; }
+    .svc-img { width:100%; height:180px; object-fit:cover; display:block; margin-bottom:0; }
+    .svc-card-body { padding:24px 28px 28px; }
+    .svc-icon { display:none; }
     .svc-card h3 { font-family:'Montserrat',sans-serif; font-size:13px; font-weight:800; color:var(--navy); letter-spacing:2px; text-transform:uppercase; margin-bottom:12px; }
     .svc-card p { font-size:14px; color:var(--slate); line-height:1.75; }
 
@@ -346,34 +350,46 @@
     <p class="sec-desc fade-up d2">From the first geophysical scan to final water delivery — we manage the entire process end-to-end. One team, one call, complete solution for agricultural, residential and industrial clients.</p>
     <div class="svc-grid">
       <div class="svc-card fade-up d1">
-        <div class="svc-icon"><i class="fa-solid fa-satellite-dish"></i></div>
-        <h3>Geophysical Survey</h3>
-        <p>Advanced ground scanning pinpoints optimal borehole locations and subsurface water-bearing formations, minimising drilling risk and cost before we break ground.</p>
+        <div class="svc-img-wrap"><img class="svc-img" src="images/svc-geophysical.jpg" alt="Geophysical Survey Equipment" loading="lazy" style="transition:transform 0.4s ease;" /></div>
+        <div class="svc-card-body">
+          <h3>Geophysical Survey</h3>
+          <p>Advanced ground scanning pinpoints optimal borehole locations and subsurface water-bearing formations, minimising drilling risk and cost before we break ground.</p>
+        </div>
       </div>
       <div class="svc-card fade-up d2">
-        <div class="svc-icon"><i class="fa-solid fa-arrows-down-to-line"></i></div>
-        <h3>Water Borehole Drilling</h3>
-        <p>Professional water borehole drilling up to 250 metres in both soft and hard formations. 6.5" continuous diameter with overburden options of 9", 10" and 12".</p>
+        <div class="svc-img-wrap"><img class="svc-img" src="images/svc-drilling.jpg" alt="Water Borehole Drilling" loading="lazy" style="transition:transform 0.4s ease;" /></div>
+        <div class="svc-card-body">
+          <h3>Water Borehole Drilling</h3>
+          <p>Professional water borehole drilling up to 250 metres in both soft and hard formations. 6.5" continuous diameter with overburden options of 9", 10" and 12".</p>
+        </div>
       </div>
       <div class="svc-card fade-up d3">
-        <div class="svc-icon"><i class="fa-solid fa-layer-group"></i></div>
-        <h3>Sedimentary Drilling</h3>
-        <p>Specialist sedimentary formation drilling up to 250 metres using precision-calibrated equipment suited to the varied geological conditions across Southern Africa.</p>
+        <div class="svc-img-wrap"><img class="svc-img" src="images/svc-sedimentary.jpg" alt="Sedimentary Rock Formation" loading="lazy" style="transition:transform 0.4s ease;" /></div>
+        <div class="svc-card-body">
+          <h3>Sedimentary Drilling</h3>
+          <p>Specialist sedimentary formation drilling up to 250 metres using precision-calibrated equipment suited to the varied geological conditions across Southern Africa.</p>
+        </div>
       </div>
       <div class="svc-card fade-up d1">
-        <div class="svc-icon"><i class="fa-solid fa-gear"></i></div>
-        <h3>Pump Installation</h3>
-        <p>Supply and full installation of hand pumps and submersible pump sets. Every installation is pressure-tested, commissioned and warranted before handover to the client.</p>
+        <div class="svc-img-wrap"><img class="svc-img" src="images/svc-pump.jpg" alt="Pump Installation" loading="lazy" style="transition:transform 0.4s ease;" /></div>
+        <div class="svc-card-body">
+          <h3>Pump Installation</h3>
+          <p>Supply and full installation of hand pumps and submersible pump sets. Every installation is pressure-tested, commissioned and warranted before handover to the client.</p>
+        </div>
       </div>
       <div class="svc-card fade-up d2">
-        <div class="svc-icon"><i class="fa-solid fa-building"></i></div>
-        <h3>Overhead Tank Construction</h3>
-        <p>Construction of elevated water storage tanks built to SANS standards, engineered for long-term structural integrity in residential, commercial and agricultural settings.</p>
+        <div class="svc-img-wrap"><img class="svc-img" src="images/svc-tank.jpg" alt="Overhead Water Tank" loading="lazy" style="transition:transform 0.4s ease;" /></div>
+        <div class="svc-card-body">
+          <h3>Overhead Tank Construction</h3>
+          <p>Construction of elevated water storage tanks built to SANS standards, engineered for long-term structural integrity in residential, commercial and agricultural settings.</p>
+        </div>
       </div>
       <div class="svc-card fade-up d3">
-        <div class="svc-icon"><i class="fa-solid fa-faucet-drip"></i></div>
-        <h3>Full Water Supply</h3>
-        <p>Complete end-to-end delivery from borehole to tap. Tank construction, pipework, and commissioning — we don't leave until the water flows reliably at your site.</p>
+        <div class="svc-img-wrap"><img class="svc-img" src="images/svc-water.jpg" alt="Full Water Supply" loading="lazy" style="transition:transform 0.4s ease;" /></div>
+        <div class="svc-card-body">
+          <h3>Full Water Supply</h3>
+          <p>Complete end-to-end delivery from borehole to tap. Tank construction, pipework, and commissioning — we don't leave until the water flows reliably at your site.</p>
+        </div>
       </div>
     </div>
   </div>
