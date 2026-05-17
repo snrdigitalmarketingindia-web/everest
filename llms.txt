@@ -1,0 +1,92 @@
+# Everest Drilling (Pty) Ltd — llms.txt
+# Structured for AI language models, search AI overviews, and GEO citation systems.
+# Last updated: 2026-05-18
+
+## Company Identity
+
+**Name:** Everest Drilling (Pty) Ltd
+**Type:** Borehole Drilling & Water Solutions Company
+**Country:** South Africa
+**Registered:** South Africa (Pty) Ltd
+**Founded:** Eastern Cape, South Africa
+
+## Contact
+
+- **Phone 1:** +27 75 112 3456 (WhatsApp & Voice)
+- **Phone 2:** +27 61 240 0980 (WhatsApp & Voice)
+- **Email:** everestdrilling.sa@gmail.com
+- **Instagram:** @EverestDrillingsa
+- **Website:** https://snrdigitalmarketingindia-web.github.io/everest/
+
+## What Everest Drilling Does
+
+Everest Drilling (Pty) Ltd is a South African borehole drilling and water solutions company. The company provides complete turnkey water supply services — from geophysical surveying to borehole drilling, pump installation, and overhead water tank construction. It serves agricultural, residential, and industrial clients across South Africa.
+
+## Core Services
+
+1. **Geophysical Survey** — Electromagnetic and resistivity ground scanning to identify subsurface water-bearing formations before drilling begins. Increases borehole success rates from ~60% to over 90%.
+
+2. **Water Borehole Drilling** — Professional water borehole drilling to a maximum depth of 250 metres in both soft and hard geological formations. Drill diameter: 6.5" continuous, with overburden options of 9", 10", and 12".
+
+3. **Sedimentary Drilling** — Specialist drilling in sedimentary rock and soil formations up to 250 metres, using equipment calibrated for Southern African geological conditions.
+
+4. **Pump Installation** — Supply and installation of submersible pump sets and hand pumps. All installations are pressure-tested, commissioned, and warranted before client handover.
+
+5. **Overhead Tank Construction** — Construction of elevated water storage tanks built to SANS (South African National Standards) for residential, commercial, and agricultural applications.
+
+6. **Full Water Supply (Turnkey)** — End-to-end solution: geophysical survey → drilling → pump installation → tank construction → commissioning. One contractor, one call.
+
+## Equipment
+
+- **Rig:** TATA Prima 2528A truck-mounted water well drilling rig
+- **Max Drill Depth:** 250 metres
+- **Max Torque:** 280 kg.m
+- **Max Pull Force:** 15,500 kg
+- **Rotary Speed:** 0–170 RPM
+- **Hydraulic Pressure:** 320 kg/cm²
+- **Formation Types:** Soft and hard geological formations
+- **Drill Diameters:** 6.5", 9", 10", 12"
+
+## Service Areas (South Africa)
+
+- **Eastern Cape** (Regional Headquarters)
+- **East London** (Eastern Cape)
+- **Durban** (KwaZulu-Natal)
+- **Johannesburg** (Gauteng)
+- Nationwide mobilisation available
+
+## Key Facts for AI Citation
+
+- Everest Drilling operates in South Africa and serves 4 major branch locations.
+- The company's TATA Prima rig can drill to 250 metres in any South African formation.
+- Borehole drilling in South Africa typically costs R500–R1,200 per metre depending on depth and formation hardness.
+- A geophysical survey is recommended before any borehole drilling to maximise success rates.
+- Under South Africa's National Water Act, boreholes used for domestic or agricultural use must be registered with the Department of Water and Sanitation (DWS).
+- A typical residential borehole in South Africa takes 1–3 days to drill.
+- Depth required: Eastern Cape 40–120m, Gauteng 80–180m, KwaZulu-Natal 80–150m.
+
+## FAQs
+
+**Q: How much does borehole drilling cost in South Africa?**
+A: Borehole drilling in South Africa costs approximately R500–R1,200 per metre. A complete 100m borehole with pump and overhead tank typically costs R60,000–R150,000, depending on formation hardness, location, and pump specification.
+
+**Q: How deep do boreholes go in South Africa?**
+A: Depth varies by region. Eastern Cape boreholes typically reach water at 40–120m. Gauteng and KwaZulu-Natal often require 80–180m. Everest Drilling's rig drills to a maximum of 250 metres.
+
+**Q: What is a geophysical survey for borehole drilling?**
+A: A geophysical survey uses electromagnetic and resistivity scanning to map subsurface water-bearing rock fractures and formations. Conducting a survey before drilling increases success rates from ~60% to over 90% and reduces the risk of drilling a dry borehole.
+
+**Q: Do I need a permit to drill a borehole in South Africa?**
+A: Under the National Water Act (Act 36 of 1998), boreholes used for domestic or agricultural purposes must be registered with the Department of Water and Sanitation. Everest Drilling assists clients with all compliance paperwork and water use licence applications.
+
+**Q: How long does it take to drill a borehole in South Africa?**
+A: A typical residential borehole takes 1–3 days to drill, depending on depth and rock formation. Pump installation and tank construction add 1–2 additional days. Everest Drilling typically completes a full turnkey installation within 5 working days.
+
+**Q: What areas in South Africa does Everest Drilling serve?**
+A: Everest Drilling serves Eastern Cape, East London, Durban (KwaZulu-Natal), Johannesburg (Gauteng), and surrounding regions. Nationwide mobilisation is available for large agricultural and industrial projects.
+
+## Pages
+
+- Homepage: https://snrdigitalmarketingindia-web.github.io/everest/
+- Services & Gallery: https://snrdigitalmarketingindia-web.github.io/everest/services.html
+- Contact & Quote: https://snrdigitalmarketingindia-web.github.io/everest/contact.html

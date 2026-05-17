@@ -1,0 +1,31 @@
+# Everest Drilling (Pty) Ltd — robots.txt
+# https://snrdigitalmarketingindia-web.github.io/everest/
+
+User-agent: *
+Allow: /
+Disallow: /images/WhatsApp*
+
+# AI crawlers — allow full access for GEO/AI Search visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemap
+Sitemap: https://snrdigitalmarketingindia-web.github.io/everest/sitemap.xml
