@@ -1024,31 +1024,57 @@
   </a>
 </div>
 
-<script>
-/* Active nav link detection */
-(function(){
-  var path = window.location.pathname;
-  var hash = window.location.hash;
-  var links = document.querySelectorAll(".nav-links a");
-  links.forEach(function(a){
-    var href = a.getAttribute("href");
-    if(!href) return;
-    var isHome    = path.endsWith("/") || path.endsWith("index.html") || path.endsWith("/everest/");
-    var onSvc     = path.endsWith("services.html");
-    var onContact = path.endsWith("contact.html");
-    var onFaq     = path.endsWith("faq.html");
-    var onCity    = path.includes("borehole-drilling-");
 
-    if(href === "index.html"               && isHome)                                         a.classList.add("active");
-    else if(href === "services.html"       && onSvc && !hash)                                 a.classList.add("active");
-    else if(href === "contact.html#specs"  && onContact && hash === "#specs")                 a.classList.add("active");
-    else if(href === "contact.html#branches" && onContact && hash === "#branches")            a.classList.add("active");
-    else if(href === "services.html#testimonials" && onSvc && hash === "#testimonials")       a.classList.add("active");
-    else if(href === "services.html#blog"  && onSvc && hash === "#blog")                      a.classList.add("active");
-    else if(href === "faq.html"            && onFaq)                                          a.classList.add("active");
-    else if(href === "#contact"            && hash === "#contact")                            a.classList.add("active");
-    else if(href === "services.html"       && onCity)                                         a.classList.add("active");
-  });
+<script>
+/* Active nav — v2 */
+(function(){
+  function setActive(){
+    var path  = window.location.pathname;
+    var hash  = window.location.hash; // e.g. "#specs" or ""
+
+    // Derive filename: "/everest/contact.html" → "contact.html"
+    // "/everest/" or "/" → "index.html"
+    var page = path.split('/').pop();
+    if(!page) page = 'index.html';
+
+    // City pages highlight Services
+    if(page.indexOf('borehole-drilling-') === 0) page = 'services.html';
+
+    var links = document.querySelectorAll('.nav-links a');
+    links.forEach(function(a){ a.classList.remove('active'); });
+
+    var matched = false;
+
+    // Pass 1 — try to match hash-aware links first (only when hash exists)
+    if(hash){
+      links.forEach(function(a){
+        if(matched) return;
+        var href = a.getAttribute('href') || '';
+        // Pure hash link: href="#about", hash="#about"
+        if(href === hash){ a.classList.add('active'); matched = true; return; }
+        // Page+hash link: href="contact.html#specs"
+        var parts   = href.split('#');
+        var hPage   = parts[0];          // "contact.html"
+        var hHash   = parts[1] ? '#'+parts[1] : ''; // "#specs"
+        if(hPage === page && hHash === hash){ a.classList.add('active'); matched = true; }
+      });
+    }
+
+    // Pass 2 — match by page alone (no hash required on the link)
+    if(!matched){
+      links.forEach(function(a){
+        if(matched) return;
+        var href = a.getAttribute('href') || '';
+        if(href.charAt(0) === '#') return; // skip pure-hash anchors
+        var hPage = href.split('#')[0];
+        var hHash = href.includes('#') ? '#'+href.split('#')[1] : '';
+        if(hPage === page && hHash === ''){ a.classList.add('active'); matched = true; }
+      });
+    }
+  }
+
+  setActive();
+  window.addEventListener('hashchange', setActive);
 })();
 </script>
 </body>
