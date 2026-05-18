@@ -45,17 +45,17 @@
     .fade-up.visible { opacity:1; transform:translateY(0); }
     .d1{transition-delay:0.1s;}.d2{transition-delay:0.2s;}.d3{transition-delay:0.3s;}
     #navbar { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(8,25,46,0.97); border-bottom:2px solid var(--gold); backdrop-filter:blur(10px); }
-    .nav-inner { max-width:1100px; margin:0 auto; padding:0 48px; height:68px; display:flex; align-items:center; justify-content:space-between; }
-    .nav-logo { display:flex; align-items:center; gap:14px; text-decoration:none; }
+    .nav-inner { max-width:1200px; margin:0 auto; padding:0 40px; height:68px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; flex-shrink:0; }
     .nav-logo-mark { width:40px; height:40px; background:var(--gold); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
     .nav-logo-mark svg { width:22px; height:22px; fill:var(--navy); }
-    .nav-logo-text { display:flex; flex-direction:column; line-height:1; }
+    .nav-logo-text { display:flex; flex-direction:column; line-height:1; white-space:nowrap; }
     .nav-logo-top { font-family:'Montserrat',sans-serif; font-size:15px; font-weight:900; color:#fff; letter-spacing:3px; text-transform:uppercase; }
-    .nav-logo-bot { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; color:var(--gold2); letter-spacing:4px; text-transform:uppercase; margin-top:3px; }
-    .nav-links { display:flex; gap:34px; }
-    .nav-links a { font-family:'Montserrat',sans-serif; color:var(--slate); font-size:11px; font-weight:700; text-decoration:none; letter-spacing:2px; text-transform:uppercase; transition:color 0.2s; }
+    .nav-logo-bot { font-family:'Montserrat',sans-serif; font-size:8px; font-weight:600; color:var(--gold2); letter-spacing:3px; text-transform:uppercase; margin-top:4px; white-space:nowrap; }
+    .nav-links { display:flex; gap:22px; align-items:center; }
+    .nav-links a { font-family:'Montserrat',sans-serif; color:var(--slate); font-size:10px; font-weight:700; text-decoration:none; letter-spacing:1.5px; text-transform:uppercase; transition:color 0.2s; white-space:nowrap; }
     .nav-links a:hover { color:var(--gold2); }
-    .nav-cta { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:11px; padding:11px 24px; letter-spacing:2px; text-transform:uppercase; text-decoration:none; transition:background 0.2s; white-space:nowrap; }
+    .nav-cta { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:10px; padding:11px 22px; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; transition:background 0.2s; white-space:nowrap; flex-shrink:0; margin-left:20px; }
     .nav-cta:hover { background:var(--gold3); }
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
     .hamburger span { width:24px; height:2px; background:var(--gold); display:block; }
