@@ -361,6 +361,57 @@
       .nav-inner { padding:0 20px; }
       .mobile-menu { padding:20px; }
     }
+  
+/* ══ MOBILE STICKY CTA BAR (Phase 6 CRO) ══════════════════════════════ */
+#mob-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9998;
+  background:#08192e;border-top:2px solid #c8960c;
+  grid-template-columns:1fr 1fr;height:60px;}
+#mob-cta a{display:flex;align-items:center;justify-content:center;gap:8px;
+  font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;
+  letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;
+  color:#fff;height:100%;transition:background .2s;}
+#mob-cta .mcta-call{background:#c8960c;color:#08192e;}
+#mob-cta .mcta-call:active{background:#a37a09;}
+#mob-cta .mcta-wa{background:#1a8f44;}
+#mob-cta .mcta-wa:active{background:#146d34;}
+#mob-cta svg{width:18px;height:18px;fill:currentColor;flex-shrink:0;}
+@media(max-width:900px){
+  #mob-cta{display:grid;}
+  body{padding-bottom:60px;}
+  #wa-float{bottom:76px;}
+}
+
+/* ══ ENHANCED WA FLOAT (Phase 6 CRO) ══════════════════════════════════ */
+#wa-float{position:fixed;bottom:28px;right:28px;z-index:9999;
+  background:#1a8f44;color:#fff;display:flex;align-items:center;
+  gap:10px;padding:13px 22px;border-radius:50px;text-decoration:none;
+  font-weight:700;font-size:.88rem;font-family:'Montserrat',sans-serif;
+  letter-spacing:.5px;box-shadow:0 4px 24px rgba(26,143,68,.45);
+  transition:transform .2s,box-shadow .2s;}
+#wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(26,143,68,.55);}
+#wa-float svg{width:22px;height:22px;fill:#fff;flex-shrink:0;}
+#wa-float .wa-pulse{display:inline-block;width:8px;height:8px;
+  border-radius:50%;background:#fff;flex-shrink:0;
+  animation:wapulse 1.8s ease-in-out infinite;}
+@keyframes wapulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+@media(max-width:900px){
+  #wa-float{bottom:76px;right:16px;padding:13px;border-radius:50%;}
+  #wa-float span{display:none;}
+  #wa-float .wa-pulse{display:none;}
+}
+
+/* ══ SCROLL NUDGE (Phase 6 CRO) ═══════════════════════════════════════ */
+#cro-nudge{display:none;position:fixed;bottom:76px;left:50%;
+  transform:translateX(-50%);z-index:9997;background:#08192e;
+  color:#fff;font-family:'Montserrat',sans-serif;font-size:11px;
+  font-weight:700;letter-spacing:1px;padding:10px 20px 10px 14px;
+  border-radius:50px;border:1.5px solid #c8960c;white-space:nowrap;
+  animation:nudgein .4s ease;box-shadow:0 4px 20px rgba(0,0,0,.4);}
+#cro-nudge a{color:#c8960c;text-decoration:none;}
+#cro-nudge .ndx{cursor:pointer;margin-left:10px;opacity:.6;font-size:14px;}
+@keyframes nudgein{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+@media(max-width:900px){#cro-nudge{display:block;}}
+
   </style>
   <script type="application/ld+json">
   {
@@ -582,34 +633,104 @@
           </div>
         </div>
       </div>
-      <div class="qform fade-up d2">
-        <div class="qform-head">Complete the form — we respond within 24 hours</div>
-        <div class="frow">
-          <div class="fg"><label>Full Name</label><input type="text" placeholder="Your full name" /></div>
-          <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+27 ..." /></div>
+      <div class="qform fade-up d2" id="quote-form-wrap">
+
+        <!-- Online indicator -->
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ade80;flex-shrink:0;animation:wapulse 1.8s ease-in-out infinite;"></span>
+          <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:#4ade80;text-transform:uppercase;">Team Online — Responding Now</span>
         </div>
-        <div class="frow">
-          <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com" /></div>
-          <div class="fg"><label>Location / Town</label><input type="text" placeholder="City or town" /></div>
-        </div>
-        <div class="frow full">
-          <div class="fg">
-            <label>Service Required</label>
-            <select>
-              <option value="">Select a service...</option>
-              <option>Water Borehole Drilling</option>
-              <option>Geophysical Survey</option>
-              <option>Pump Installation</option>
-              <option>Overhead Tank Construction</option>
-              <option>Sedimentary Drilling</option>
-              <option>Full End-to-End Package</option>
-            </select>
+
+        <div class="qform-head" style="margin-bottom:6px;">Get Your Free Borehole Quote</div>
+        <p style="font-size:.83rem;color:#6b7a8d;margin:0 0 24px;">Takes 60 seconds. Free, no commitment. We respond within 24 hours — often the same day.</p>
+
+        <form id="cro-quote-form" novalidate>
+          <!-- Phone FIRST — highest conversion priority -->
+          <div class="frow">
+            <div class="fg">
+              <label for="qf-phone" style="display:flex;justify-content:space-between;">
+                Your Phone Number <span style="font-size:.72rem;color:#c8960c;font-weight:700;">★ Required</span>
+              </label>
+              <input id="qf-phone" type="tel" name="phone" placeholder="+27 75 000 0000" autocomplete="tel" required style="border-color:#c8960c;border-width:2px;" />
+              <span style="font-size:.7rem;color:#6b7a8d;margin-top:3px;display:block;">We'll WhatsApp or call you with your quote.</span>
+            </div>
+            <div class="fg">
+              <label for="qf-name">Your Name</label>
+              <input id="qf-name" type="text" name="name" placeholder="First name" autocomplete="given-name" />
+            </div>
           </div>
+
+          <!-- Service + Location -->
+          <div class="frow">
+            <div class="fg">
+              <label for="qf-service">What Do You Need?</label>
+              <select id="qf-service" name="service">
+                <option value="">— Select your project —</option>
+                <option value="Full Package: Survey + Drill + Pump + Tank">🌟 Full Package (Most Popular)</option>
+                <option value="Water Borehole Drilling">💧 Borehole Drilling</option>
+                <option value="Geophysical Survey">🔬 Geophysical Survey</option>
+                <option value="Pump Installation or Replacement">⚙️ Pump Installation</option>
+                <option value="Overhead Tank Construction">🏗️ Overhead Tank</option>
+                <option value="Not Sure — I Need Advice">❓ Not Sure — I Need Advice</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="qf-location">Your Location / Town</label>
+              <input id="qf-location" type="text" name="location" placeholder="e.g. East London, Joburg..." autocomplete="address-level2" />
+            </div>
+          </div>
+
+          <!-- Project type pills -->
+          <div class="frow full">
+            <div class="fg">
+              <label style="margin-bottom:10px;display:block;">Project Type</label>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                <label style="display:flex;align-items:center;gap:7px;padding:8px 14px;border:1.5px solid #e2e8f0;border-radius:6px;cursor:pointer;font-size:.83rem;font-weight:600;color:#2d3748;">
+                  <input type="radio" name="project_type" value="Residential" style="accent-color:#c8960c;"> 🏠 Residential
+                </label>
+                <label style="display:flex;align-items:center;gap:7px;padding:8px 14px;border:1.5px solid #e2e8f0;border-radius:6px;cursor:pointer;font-size:.83rem;font-weight:600;color:#2d3748;">
+                  <input type="radio" name="project_type" value="Farm / Agricultural" style="accent-color:#c8960c;"> 🌾 Farm / Agricultural
+                </label>
+                <label style="display:flex;align-items:center;gap:7px;padding:8px 14px;border:1.5px solid #e2e8f0;border-radius:6px;cursor:pointer;font-size:.83rem;font-weight:600;color:#2d3748;">
+                  <input type="radio" name="project_type" value="Commercial / Industrial" style="accent-color:#c8960c;"> 🏭 Commercial
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Optional notes -->
+          <div class="frow full">
+            <div class="fg">
+              <label for="qf-notes">Anything Else? <span style="font-size:.7rem;color:#9aa3af;font-weight:400;">(optional)</span></label>
+              <textarea id="qf-notes" name="notes" rows="2" placeholder="Depth, existing problems, site access, urgency..."></textarea>
+            </div>
+          </div>
+
+          <!-- Primary CTA -->
+          <button type="submit" class="fsub" style="width:100%;display:flex;align-items:center;justify-content:center;gap:12px;font-size:13px;padding:18px 20px;">
+            <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Send Quote Request via WhatsApp
+          </button>
+
+          <!-- Trust microcopy -->
+          <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:12px;">
+            <span style="font-size:.7rem;color:#6b7a8d;display:flex;align-items:center;gap:4px;"><span style="color:#4ade80;">✓</span> Free — No Cost</span>
+            <span style="font-size:.7rem;color:#6b7a8d;display:flex;align-items:center;gap:4px;"><span style="color:#4ade80;">✓</span> No Commitment</span>
+            <span style="font-size:.7rem;color:#6b7a8d;display:flex;align-items:center;gap:4px;"><span style="color:#4ade80;">✓</span> Reply in 24 Hours</span>
+            <span style="font-size:.7rem;color:#6b7a8d;display:flex;align-items:center;gap:4px;"><span style="color:#4ade80;">✓</span> DWS Assistance Included</span>
+          </div>
+        </form>
+
+        <!-- Success State -->
+        <div id="qf-success" style="display:none;text-align:center;padding:36px 20px;">
+          <div style="font-size:3rem;margin-bottom:14px;">✅</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:1.15rem;font-weight:800;color:#08192e;margin-bottom:8px;">Quote Request Sent!</div>
+          <p style="color:#4a5568;font-size:.88rem;margin:0 0 22px;">Our team will respond within 24 hours. For an even faster response, also send us a WhatsApp — we're standing by.</p>
+          <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#1a8f44;color:#fff;text-decoration:none;padding:13px 24px;border-radius:8px;font-weight:700;font-size:.88rem;">
+            💬 Also WhatsApp for Fastest Response
+          </a>
         </div>
-        <div class="frow full">
-          <div class="fg"><label>Additional Notes</label><textarea rows="3" placeholder="Depth estimate, formation type, site access, urgency..."></textarea></div>
-        </div>
-        <button class="fsub" onclick="alert('Thank you! Our team will contact you within 24 hours.')">Submit Quote Request</button>
+
       </div>
     </div>
   </div>
@@ -646,7 +767,7 @@
         Everest Drilling Pty Ltd
       </a>
     </div>
-    <a href="https://wa.me/27751123456" target="_blank" class="wa-cta">
+    <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" class="wa-cta">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Chat on WhatsApp Now
     </a>
@@ -670,7 +791,7 @@
       <a href="https://www.instagram.com/everestdrillingsa" target="_blank" class="fsoc" aria-label="Instagram">
         <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
       </a>
-      <a href="https://wa.me/27751123456" target="_blank" class="fsoc" aria-label="WhatsApp">
+      <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" class="fsoc" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       </a>
     </div>
@@ -678,7 +799,7 @@
 </footer>
 
 <!-- ══ WHATSAPP FLOAT ════════════════════════════════════ -->
-<a href="https://wa.me/27751123456" target="_blank" id="wa-float" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" id="wa-float" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span>Chat on WhatsApp</span>
 </a>
@@ -695,6 +816,72 @@
     document.getElementById('navbar').style.boxShadow =
       window.scrollY > 40 ? '0 4px 32px rgba(0,0,0,0.4)' : 'none';
   });
+
+  // ── CRO Nudge: show after 15s if on mobile and no interaction ──
+  (function(){
+    if(window.innerWidth > 900) return;
+    var interacted = false;
+    ['click','touchstart'].forEach(function(e){
+      document.addEventListener(e, function(){ interacted = true; }, {once:true});
+    });
+    setTimeout(function(){
+      if(!interacted){
+        var n = document.getElementById('cro-nudge');
+        if(n) n.style.display = 'block';
+      }
+    }, 15000);
+  })();
+
 </script>
+<!-- ══ QUOTE FORM — WhatsApp Submission Script ══ -->
+<script>
+  var qForm = document.getElementById('cro-quote-form');
+  if (qForm) {
+    qForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var phone    = (document.getElementById('qf-phone').value || '').trim();
+      var name     = (document.getElementById('qf-name').value || '').trim();
+      var service  = (document.getElementById('qf-service').value || '');
+      var location = (document.getElementById('qf-location').value || '').trim();
+      var notes    = (document.getElementById('qf-notes').value || '').trim();
+      var ptype    = document.querySelector('input[name="project_type"]:checked');
+      if (!phone) {
+        var ph = document.getElementById('qf-phone');
+        ph.style.borderColor = '#e53e3e'; ph.focus(); return;
+      }
+      var msg = 'Hi Everest Drilling 👋\n\n';
+      msg += 'FREE BOREHOLE QUOTE REQUEST:\n';
+      if (name)     msg += '👤 Name: ' + name + '\n';
+      msg         += '📞 Phone: ' + phone + '\n';
+      if (location) msg += '📍 Location: ' + location + '\n';
+      if (service)  msg += '🔧 Service: ' + service + '\n';
+      if (ptype)    msg += '🏷 Type: ' + ptype.value + '\n';
+      if (notes)    msg += '📝 Notes: ' + notes + '\n';
+      msg += '\nPlease contact me. Thank you!';
+      window.open('https://wa.me/27751123456?text=' + encodeURIComponent(msg), '_blank');
+      document.getElementById('cro-quote-form').style.display = 'none';
+      document.getElementById('qf-success').style.display = 'block';
+    });
+  }
+</script>
+
+<!-- ══ MOBILE SCROLL NUDGE ══ -->
+<div id="cro-nudge" style="display:none;">
+  👋 Ready to quote — <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank">WhatsApp us</a>
+  <span class="ndx" onclick="document.getElementById('cro-nudge').remove()">✕</span>
+</div>
+
+<!-- ══ MOBILE STICKY CTA BAR (Phase 6 CRO) ═══════════════════════════════ -->
+<div id="mob-cta" role="navigation" aria-label="Quick Contact">
+  <a href="tel:+27751123456" class="mcta-call" aria-label="Call Everest Drilling">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+    📞 Call Now
+  </a>
+  <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" rel="noopener" class="mcta-wa" aria-label="WhatsApp Everest Drilling">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    💬 WhatsApp Quote
+  </a>
+</div>
+
 </body>
 </html>

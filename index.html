@@ -337,6 +337,57 @@
       .nav-inner { padding:0 20px; }
       .mobile-menu { padding:20px; }
     }
+  
+/* ══ MOBILE STICKY CTA BAR (Phase 6 CRO) ══════════════════════════════ */
+#mob-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9998;
+  background:#08192e;border-top:2px solid #c8960c;
+  grid-template-columns:1fr 1fr;height:60px;}
+#mob-cta a{display:flex;align-items:center;justify-content:center;gap:8px;
+  font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;
+  letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;
+  color:#fff;height:100%;transition:background .2s;}
+#mob-cta .mcta-call{background:#c8960c;color:#08192e;}
+#mob-cta .mcta-call:active{background:#a37a09;}
+#mob-cta .mcta-wa{background:#1a8f44;}
+#mob-cta .mcta-wa:active{background:#146d34;}
+#mob-cta svg{width:18px;height:18px;fill:currentColor;flex-shrink:0;}
+@media(max-width:900px){
+  #mob-cta{display:grid;}
+  body{padding-bottom:60px;}
+  #wa-float{bottom:76px;}
+}
+
+/* ══ ENHANCED WA FLOAT (Phase 6 CRO) ══════════════════════════════════ */
+#wa-float{position:fixed;bottom:28px;right:28px;z-index:9999;
+  background:#1a8f44;color:#fff;display:flex;align-items:center;
+  gap:10px;padding:13px 22px;border-radius:50px;text-decoration:none;
+  font-weight:700;font-size:.88rem;font-family:'Montserrat',sans-serif;
+  letter-spacing:.5px;box-shadow:0 4px 24px rgba(26,143,68,.45);
+  transition:transform .2s,box-shadow .2s;}
+#wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(26,143,68,.55);}
+#wa-float svg{width:22px;height:22px;fill:#fff;flex-shrink:0;}
+#wa-float .wa-pulse{display:inline-block;width:8px;height:8px;
+  border-radius:50%;background:#fff;flex-shrink:0;
+  animation:wapulse 1.8s ease-in-out infinite;}
+@keyframes wapulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+@media(max-width:900px){
+  #wa-float{bottom:76px;right:16px;padding:13px;border-radius:50%;}
+  #wa-float span{display:none;}
+  #wa-float .wa-pulse{display:none;}
+}
+
+/* ══ SCROLL NUDGE (Phase 6 CRO) ═══════════════════════════════════════ */
+#cro-nudge{display:none;position:fixed;bottom:76px;left:50%;
+  transform:translateX(-50%);z-index:9997;background:#08192e;
+  color:#fff;font-family:'Montserrat',sans-serif;font-size:11px;
+  font-weight:700;letter-spacing:1px;padding:10px 20px 10px 14px;
+  border-radius:50px;border:1.5px solid #c8960c;white-space:nowrap;
+  animation:nudgein .4s ease;box-shadow:0 4px 20px rgba(0,0,0,.4);}
+#cro-nudge a{color:#c8960c;text-decoration:none;}
+#cro-nudge .ndx{cursor:pointer;margin-left:10px;opacity:.6;font-size:14px;}
+@keyframes nudgein{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+@media(max-width:900px){#cro-nudge{display:block;}}
+
   </style>
   <!-- ═══ SCHEMA: WebSite ════════════════════════════════════════ -->
   <script type="application/ld+json">
@@ -584,10 +635,21 @@
       </div>
       <h1>EVEREST<em>DRILLING</em></h1>
       <div class="hero-sub">Water Solutions &nbsp;·&nbsp; Geophysical Survey &nbsp;·&nbsp; Pump Installation</div>
-      <p class="hero-desc">From the first geophysical scan to a fully commissioned water supply — one team, one call, complete solution. Serving agricultural, residential and industrial clients across South Africa.</p>
+      <p class="hero-desc">Stop losing water to municipal outages and drought. Everest Drilling installs a fully commissioned borehole water supply in 5 working days — from the first geophysical scan to water at your tap.</p>
       <div class="hero-btns">
-        <a href="contact.html#quote" class="btn-primary">Get a Free Quote</a>
-        <a href="services.html" class="btn-outline">Our Services ↓</a>
+        <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;">
+          <svg viewBox="0 0 24 24" style="width:17px;height:17px;fill:currentColor;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp a Quote Request
+        </a>
+        <a href="tel:+27751123456" class="btn-outline" style="display:inline-flex;align-items:center;gap:8px;">
+          <svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:currentColor;flex-shrink:0;"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          Call Now
+        </a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:18px;margin-top:20px;">
+        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.6);text-transform:uppercase;display:flex;align-items:center;gap:6px;"><span style="color:#4ade80;">✓</span> Free Written Quote</span>
+        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.6);text-transform:uppercase;display:flex;align-items:center;gap:6px;"><span style="color:#4ade80;">✓</span> Reply Within 24 Hours</span>
+        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.6);text-transform:uppercase;display:flex;align-items:center;gap:6px;"><span style="color:#4ade80;">✓</span> No Obligation</span>
       </div>
       <div class="hero-stats">
         <div class="hstat"><div class="hstat-n">250M</div><div class="hstat-l">Max Drill Depth</div></div>
@@ -619,6 +681,21 @@
     </div>
   </div>
 </section>
+
+<!-- ══ GUARANTEE STRIP (CRO Phase 6) ═════════════════════
+     High-trust, high-visibility: appears immediately after hero.
+     Reduces hesitation before scrolling. Reinforces key objections.
+════════════════════════════════════════════════════════ -->
+<div style="background:#0d2540;border-top:none;border-bottom:1px solid rgba(200,150,12,.2);padding:16px 0;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 32px;">
+    <span style="font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.75);text-transform:uppercase;display:flex;align-items:center;gap:7px;"><span style="color:#4ade80;font-size:13px;">✓</span> Free Written Quotation</span>
+    <span style="font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.75);text-transform:uppercase;display:flex;align-items:center;gap:7px;"><span style="color:#4ade80;font-size:13px;">✓</span> We Reply Within 24 Hours</span>
+    <span style="font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.75);text-transform:uppercase;display:flex;align-items:center;gap:7px;"><span style="color:#4ade80;font-size:13px;">✓</span> No Obligation Assessment</span>
+    <span style="font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.75);text-transform:uppercase;display:flex;align-items:center;gap:7px;"><span style="color:#4ade80;font-size:13px;">✓</span> DWS Registration Included</span>
+    <span style="font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.75);text-transform:uppercase;display:flex;align-items:center;gap:7px;"><span style="color:#4ade80;font-size:13px;">✓</span> SANS Compliant Construction</span>
+    <span style="font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.75);text-transform:uppercase;display:flex;align-items:center;gap:7px;"><span style="color:#4ade80;font-size:13px;">✓</span> Nationwide Mobilisation</span>
+  </div>
+</div>
 
 <!-- ══ GOLD BAR ════════════════════════════════════════ -->
 <div id="goldbar">
@@ -832,6 +909,31 @@
   </div>
 </section>
 
+<!-- ══ MID-PAGE CTA INTERCEPT (CRO Phase 6) ═══════════════
+     Captures users who are convinced but haven't hit the contact
+     section yet. High-contrast contrast strip = high visibility.
+════════════════════════════════════════════════════════ -->
+<section style="background:linear-gradient(135deg,#c8960c 0%,#e2a800 100%);padding:40px 0;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;">
+    <div>
+      <div style="font-family:'Montserrat',sans-serif;font-size:1.4rem;font-weight:900;color:#08192e;margin-bottom:6px;line-height:1.2;">Ready to get water-independent?</div>
+      <p style="font-size:.9rem;color:rgba(8,25,46,.75);margin:0;">Free assessment · 24hr response · 5-day turnkey installation · Across South Africa</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;">
+      <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" rel="noopener"
+        style="display:inline-flex;align-items:center;gap:9px;background:#08192e;color:#fff;text-decoration:none;padding:13px 24px;border-radius:6px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap;">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#4ade80;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp a Quote
+      </a>
+      <a href="tel:+27751123456"
+        style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#08192e;text-decoration:none;padding:13px 24px;border-radius:6px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;border:2px solid rgba(8,25,46,.3);white-space:nowrap;">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;flex-shrink:0;"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        +27 75 112 3456
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ══ CITIES WE SERVE ══════════════════════════════════ -->
 <section id="cities" style="background:#f4f6f8;padding:72px 0 64px;text-align:center;">
   <div class="container">
@@ -893,8 +995,13 @@
       <span style="color:#c8960c;">Get In Touch</span>
       <div class="eyebrow-line"></div>
     </div>
-    <div style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:900;color:#ffffff;text-transform:uppercase;letter-spacing:3px;margin-bottom:8px;">Need a Borehole?</div>
-    <p style="font-size:16px;color:rgba(255,255,255,0.65);margin-bottom:48px;">Call or WhatsApp us directly — we are ready to mobilise across South Africa.</p>
+    <div style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:900;color:#ffffff;text-transform:uppercase;letter-spacing:3px;margin-bottom:8px;">Get Your Free Quote Today</div>
+    <p style="font-size:16px;color:rgba(255,255,255,0.65);margin-bottom:12px;">Call or WhatsApp now — we respond fast and quote within 24 hours. No cost, no commitment.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px 28px;margin-bottom:36px;">
+      <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.5);text-transform:uppercase;display:flex;align-items:center;gap:6px;"><span style="color:#4ade80;">✓</span> Free Written Quote</span>
+      <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.5);text-transform:uppercase;display:flex;align-items:center;gap:6px;"><span style="color:#4ade80;">✓</span> Reply in Under 24 Hours</span>
+      <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.5);text-transform:uppercase;display:flex;align-items:center;gap:6px;"><span style="color:#4ade80;">✓</span> Mon–Sat 07:00–18:00</span>
+    </div>
 
     <!-- Phone Numbers -->
     <div style="display:flex;justify-content:center;align-items:center;gap:60px;flex-wrap:wrap;margin-bottom:40px;">
@@ -926,10 +1033,17 @@
     </div>
 
     <!-- WhatsApp CTA -->
-    <a href="https://wa.me/27751123456" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#1a8f44;color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:3px;text-transform:uppercase;padding:16px 40px;text-decoration:none;margin-bottom:48px;">
-      <i class="fa-brands fa-whatsapp" style="font-size:22px;"></i>
-      Chat on WhatsApp Now
-    </a>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:48px;">
+      <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" rel="noopener"
+        style="display:inline-flex;align-items:center;gap:12px;background:#1a8f44;color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:16px 36px;text-decoration:none;border-radius:4px;box-shadow:0 4px 20px rgba(26,143,68,.4);">
+        <i class="fa-brands fa-whatsapp" style="font-size:22px;"></i>
+        💬 WhatsApp a Quote Request
+      </a>
+      <a href="contact.html#quote"
+        style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#c8960c;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:16px 36px;text-decoration:none;border:2px solid rgba(200,150,12,.4);border-radius:4px;">
+        📋 Request a Formal Quote
+      </a>
+    </div>
 
     <!-- Branch Summary -->
     <div style="border-top:1px solid rgba(200,150,12,0.2);padding-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;">
@@ -970,7 +1084,7 @@
       <a href="https://www.instagram.com/everestdrillingsa" target="_blank" class="fsoc" aria-label="Instagram">
         <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
       </a>
-      <a href="https://wa.me/27751123456" target="_blank" class="fsoc" aria-label="WhatsApp">
+      <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" class="fsoc" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       </a>
     </div>
@@ -978,7 +1092,7 @@
 </footer>
 
 <!-- ══ WHATSAPP FLOAT ════════════════════════════════════ -->
-<a href="https://wa.me/27751123456" target="_blank" id="wa-float" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" id="wa-float" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span>Chat on WhatsApp</span>
 </a>
@@ -995,6 +1109,40 @@
     document.getElementById('navbar').style.boxShadow =
       window.scrollY > 40 ? '0 4px 32px rgba(0,0,0,0.4)' : 'none';
   });
+
+  // ── CRO Nudge: show after 15s if on mobile and no interaction ──
+  (function(){
+    if(window.innerWidth > 900) return;
+    var interacted = false;
+    ['click','touchstart'].forEach(function(e){
+      document.addEventListener(e, function(){ interacted = true; }, {once:true});
+    });
+    setTimeout(function(){
+      if(!interacted){
+        var n = document.getElementById('cro-nudge');
+        if(n) n.style.display = 'block';
+      }
+    }, 15000);
+  })();
+
 </script>
+<!-- ══ MOBILE SCROLL NUDGE ══ -->
+<div id="cro-nudge" style="display:none;">
+  👋 Ready to quote — <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank">WhatsApp us</a>
+  <span class="ndx" onclick="document.getElementById('cro-nudge').remove()">✕</span>
+</div>
+
+<!-- ══ MOBILE STICKY CTA BAR (Phase 6 CRO) ═══════════════════════════════ -->
+<div id="mob-cta" role="navigation" aria-label="Quick Contact">
+  <a href="tel:+27751123456" class="mcta-call" aria-label="Call Everest Drilling">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+    📞 Call Now
+  </a>
+  <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" rel="noopener" class="mcta-wa" aria-label="WhatsApp Everest Drilling">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    💬 WhatsApp Quote
+  </a>
+</div>
+
 </body>
 </html>
