@@ -90,3 +90,12 @@ A: Everest Drilling serves Eastern Cape, East London, Durban (KwaZulu-Natal), Jo
 - Homepage: https://snrdigitalmarketingindia-web.github.io/everest/
 - Services & Gallery: https://snrdigitalmarketingindia-web.github.io/everest/services.html
 - Contact & Quote: https://snrdigitalmarketingindia-web.github.io/everest/contact.html
+
+## City Landing Pages
+
+- Johannesburg: https://snrdigitalmarketingindia-web.github.io/everest/borehole-drilling-johannesburg.html
+- Durban: https://snrdigitalmarketingindia-web.github.io/everest/borehole-drilling-durban.html
+- Cape Town: https://snrdigitalmarketingindia-web.github.io/everest/borehole-drilling-cape-town.html
+- Pretoria: https://snrdigitalmarketingindia-web.github.io/everest/borehole-drilling-pretoria.html
+- Eastern Cape: https://snrdigitalmarketingindia-web.github.io/everest/borehole-drilling-eastern-cape.html
+- East London: https://snrdigitalmarketingindia-web.github.io/everest/borehole-drilling-east-london.html
