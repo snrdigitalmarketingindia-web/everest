@@ -1291,53 +1291,56 @@
 </div>
 
 
+
 <script>
-/* Active nav — v2 */
+/* Active nav — v3 */
 (function(){
+  var links = document.querySelectorAll('.nav-links a');
+
+  function clearActive(){ links.forEach(function(a){ a.classList.remove('active'); }); }
+
   function setActive(){
     var path  = window.location.pathname;
-    var hash  = window.location.hash; // e.g. "#specs" or ""
-
-    // Derive filename: "/everest/contact.html" → "contact.html"
-    // "/everest/" or "/" → "index.html"
-    var page = path.split('/').pop();
-    if(!page) page = 'index.html';
-
-    // City pages highlight Services
+    var hash  = window.location.hash;
+    var page  = path.split('/').pop() || 'index.html';
     if(page.indexOf('borehole-drilling-') === 0) page = 'services.html';
 
-    var links = document.querySelectorAll('.nav-links a');
-    links.forEach(function(a){ a.classList.remove('active'); });
-
+    clearActive();
     var matched = false;
 
-    // Pass 1 — try to match hash-aware links first (only when hash exists)
+    // Pass 1: hash-aware matching
     if(hash){
       links.forEach(function(a){
         if(matched) return;
         var href = a.getAttribute('href') || '';
-        // Pure hash link: href="#about", hash="#about"
         if(href === hash){ a.classList.add('active'); matched = true; return; }
-        // Page+hash link: href="contact.html#specs"
-        var parts   = href.split('#');
-        var hPage   = parts[0];          // "contact.html"
-        var hHash   = parts[1] ? '#'+parts[1] : ''; // "#specs"
+        var parts = href.split('#');
+        var hPage = parts[0];
+        var hHash = parts[1] ? '#'+parts[1] : '';
         if(hPage === page && hHash === hash){ a.classList.add('active'); matched = true; }
       });
     }
 
-    // Pass 2 — match by page alone (no hash required on the link)
+    // Pass 2: page-only matching
     if(!matched){
       links.forEach(function(a){
         if(matched) return;
         var href = a.getAttribute('href') || '';
-        if(href.charAt(0) === '#') return; // skip pure-hash anchors
+        if(href.charAt(0) === '#') return;
         var hPage = href.split('#')[0];
         var hHash = href.includes('#') ? '#'+href.split('#')[1] : '';
         if(hPage === page && hHash === ''){ a.classList.add('active'); matched = true; }
       });
     }
   }
+
+  // Click listener: immediately highlight the clicked link
+  links.forEach(function(a){
+    a.addEventListener('click', function(){
+      clearActive();
+      a.classList.add('active');
+    });
+  });
 
   setActive();
   window.addEventListener('hashchange', setActive);

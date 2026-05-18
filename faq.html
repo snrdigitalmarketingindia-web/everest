@@ -430,22 +430,31 @@
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'Open Sans',sans-serif;color:var(--text);background:#fff}
     .container{max-width:1120px;margin:0 auto;padding:0 24px}
-    nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(8,25,46,.96);backdrop-filter:blur(8px);border-bottom:2px solid var(--gold)}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;padding:0 28px}
-    .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .nav-logo-mark{width:36px;height:36px;background:var(--gold);border-radius:6px;display:flex;align-items:center;justify-content:center}
-    .nav-logo-mark svg{width:20px;height:20px;fill:#fff}
-    .nav-logo-text{font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;font-size:1.05rem;letter-spacing:1px;line-height:1.1}
-    .nav-links{display:flex;gap:28px;list-style:none}
-    .nav-links a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.88rem;font-weight:600;letter-spacing:.5px;transition:color .2s}
-    .nav-links a:hover{color:var(--gold)}
-    .nav-cta{background:var(--gold);color:#fff;text-decoration:none;padding:9px 22px;border-radius:6px;font-size:.85rem;font-weight:700;letter-spacing:.5px}
-    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-    .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
-    .mobile-menu{display:none;flex-direction:column;background:#0a2540;border-top:1px solid #1a3a5c;padding:16px 28px 24px}
-    .mobile-menu a{color:rgba(255,255,255,.8);text-decoration:none;padding:12px 0;font-size:.95rem;border-bottom:1px solid #1a3a5c}
-    .mobile-menu.open{display:flex}
-    @media(max-width:900px){.nav-links,.nav-cta{display:none}.hamburger{display:flex}}
+    #navbar {
+      position:fixed; top:0; left:0; right:0; z-index:1000;
+      background:rgba(8,25,46,0.97);
+      border-bottom:2px solid var(--gold);
+      backdrop-filter:blur(10px);
+    }
+    .nav-inner { max-width:1200px; margin:0 auto; padding:0 40px; height:68px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; flex-shrink:0; }
+    .nav-logo-mark { width:40px; height:40px; background:var(--gold); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-logo-mark svg { width:22px; height:22px; fill:var(--navy); }
+    .nav-logo-text { display:flex; flex-direction:column; line-height:1; white-space:nowrap; }
+    .nav-logo-top { font-family:'Montserrat',sans-serif; font-size:14px; font-weight:900; color:#ffffff; letter-spacing:2.5px; text-transform:uppercase; white-space:nowrap; }
+    .nav-logo-bot { font-family:'Montserrat',sans-serif; font-size:8px; font-weight:600; color:#c8960c; letter-spacing:3px; text-transform:uppercase; margin-top:4px; white-space:nowrap; }
+    .nav-links { display:flex; gap:22px; align-items:center; }
+    .nav-links a { font-family:'Montserrat',sans-serif; color:#556070; font-size:10px; font-weight:700; text-decoration:none; letter-spacing:1.5px; text-transform:uppercase; transition:color 0.2s; white-space:nowrap; }
+    .nav-links a:hover { color:#c8960c; }
+    .nav-links a.active { color:#c8960c !important; }
+    .nav-cta { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:10px; padding:11px 22px; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; transition:background 0.2s; white-space:nowrap; flex-shrink:0; margin-left:20px; }
+    .nav-cta:hover { background:#e2a800; }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .hamburger span { width:24px; height:2px; background:var(--gold); display:block; transition:0.3s; }
+    .mobile-menu { display:none; flex-direction:column; background:#08192e; border-top:1px solid rgba(200,150,12,0.2); padding:20px 48px 28px; gap:18px; }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { font-family:'Montserrat',sans-serif; color:#556070; font-size:13px; font-weight:700; text-decoration:none; letter-spacing:2px; text-transform:uppercase; padding:6px 0; border-bottom:1px solid rgba(200,150,12,0.1); }
+    @media(max-width:960px){ .nav-links { display:none; } .nav-cta { display:none; } .hamburger { display:flex; } }
     footer{background:#08192e;border-top:2px solid var(--gold);padding:32px 0;margin-top:0}
     .foot-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
     .foot-logo{display:flex;align-items:center;gap:10px}
@@ -541,19 +550,25 @@
 <nav id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-mark"><svg viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div>
-      <div class="nav-logo-text">EVEREST<br>DRILLING</div>
+      <div class="nav-logo-mark">
+        <svg viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-top">Everest Drilling</span>
+        <span class="nav-logo-bot">Pty Ltd &nbsp;&middot;&nbsp; South Africa</span>
+      </div>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a>
-      <a href="services.html">Services</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="contact.html#specs">Technology</a></li>
-      <li><a href="contact.html#branches">Branches</a></li>
-      <li><a href="services.html#testimonials">Reviews</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="contact.html#specs">Technology</a>
+      <a href="contact.html#branches">Branches</a>
+      <a href="services.html#testimonials">Reviews</a>
+      <a href="services.html#blog">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
     <a href="contact.html#quote" class="nav-cta">Get a Quote</a>
     <button class="hamburger" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -566,6 +581,7 @@
     <a href="contact.html#specs" onclick="document.getElementById('mobile-menu').classList.remove('open')">Technology</a>
     <a href="contact.html#branches" onclick="document.getElementById('mobile-menu').classList.remove('open')">Branches</a>
     <a href="services.html#testimonials" onclick="document.getElementById('mobile-menu').classList.remove('open')">Reviews</a>
+    <a href="services.html#blog" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
     <a href="faq.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">FAQ</a>
     <a href="contact.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
   </div>
@@ -1223,53 +1239,56 @@
 </div>
 
 
+
 <script>
-/* Active nav — v2 */
+/* Active nav — v3 */
 (function(){
+  var links = document.querySelectorAll('.nav-links a');
+
+  function clearActive(){ links.forEach(function(a){ a.classList.remove('active'); }); }
+
   function setActive(){
     var path  = window.location.pathname;
-    var hash  = window.location.hash; // e.g. "#specs" or ""
-
-    // Derive filename: "/everest/contact.html" → "contact.html"
-    // "/everest/" or "/" → "index.html"
-    var page = path.split('/').pop();
-    if(!page) page = 'index.html';
-
-    // City pages highlight Services
+    var hash  = window.location.hash;
+    var page  = path.split('/').pop() || 'index.html';
     if(page.indexOf('borehole-drilling-') === 0) page = 'services.html';
 
-    var links = document.querySelectorAll('.nav-links a');
-    links.forEach(function(a){ a.classList.remove('active'); });
-
+    clearActive();
     var matched = false;
 
-    // Pass 1 — try to match hash-aware links first (only when hash exists)
+    // Pass 1: hash-aware matching
     if(hash){
       links.forEach(function(a){
         if(matched) return;
         var href = a.getAttribute('href') || '';
-        // Pure hash link: href="#about", hash="#about"
         if(href === hash){ a.classList.add('active'); matched = true; return; }
-        // Page+hash link: href="contact.html#specs"
-        var parts   = href.split('#');
-        var hPage   = parts[0];          // "contact.html"
-        var hHash   = parts[1] ? '#'+parts[1] : ''; // "#specs"
+        var parts = href.split('#');
+        var hPage = parts[0];
+        var hHash = parts[1] ? '#'+parts[1] : '';
         if(hPage === page && hHash === hash){ a.classList.add('active'); matched = true; }
       });
     }
 
-    // Pass 2 — match by page alone (no hash required on the link)
+    // Pass 2: page-only matching
     if(!matched){
       links.forEach(function(a){
         if(matched) return;
         var href = a.getAttribute('href') || '';
-        if(href.charAt(0) === '#') return; // skip pure-hash anchors
+        if(href.charAt(0) === '#') return;
         var hPage = href.split('#')[0];
         var hHash = href.includes('#') ? '#'+href.split('#')[1] : '';
         if(hPage === page && hHash === ''){ a.classList.add('active'); matched = true; }
       });
     }
   }
+
+  // Click listener: immediately highlight the clicked link
+  links.forEach(function(a){
+    a.addEventListener('click', function(){
+      clearActive();
+      a.classList.add('active');
+    });
+  });
 
   setActive();
   window.addEventListener('hashchange', setActive);
