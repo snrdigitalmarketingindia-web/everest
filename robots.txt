@@ -1,5 +1,5 @@
 # Everest Drilling (Pty) Ltd — robots.txt
-# https://snrdigitalmarketingindia-web.github.io/everest/
+# https://everestdrilling.co.za/
 
 User-agent: *
 Allow: /
@@ -28,4 +28,4 @@ User-agent: Bytespider
 Allow: /
 
 # Sitemap
-Sitemap: https://snrdigitalmarketingindia-web.github.io/everest/sitemap.xml
+Sitemap: https://everestdrilling.co.za/sitemap.xml
