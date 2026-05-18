@@ -129,6 +129,7 @@
     .nav-links { display:flex; gap:22px; align-items:center; }
     .nav-links a { font-family:'Montserrat',sans-serif; color:var(--slate); font-size:10px; font-weight:700; text-decoration:none; letter-spacing:1.5px; text-transform:uppercase; transition:color 0.2s; white-space:nowrap; }
     .nav-links a:hover { color:var(--gold2); }
+    .nav-links a.active { color:var(--gold2) !important; }
     .nav-cta { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:10px; padding:11px 22px; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; transition:background 0.2s; white-space:nowrap; flex-shrink:0; margin-left:20px; }
     .nav-cta:hover { background:var(--gold3); }
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
@@ -521,7 +522,7 @@
       <a href="contact.html#branches">Branches</a>
       <a href="services.html#testimonials">Reviews</a>
       <a href="services.html#blog">Blog</a>
-      <a href="faq.html" style="color:#c8960c;">FAQ</a>
+      <a href="faq.html">FAQ</a>
       <a href="contact.html#contact">Contact</a>
     </div>
     <a href="contact.html#quote" class="nav-cta">Request Quote</a>
@@ -537,7 +538,7 @@
     <a href="contact.html#branches" onclick="document.getElementById('mobile-menu').classList.remove('open')">Branches</a>
     <a href="services.html#testimonials" onclick="document.getElementById('mobile-menu').classList.remove('open')">Reviews</a>
     <a href="services.html#blog" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
-    <a href="faq.html" onclick="document.getElementById('mobile-menu').classList.remove('open')" style="color:#c8960c;">FAQ</a>
+    <a href="faq.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">FAQ</a>
     <a href="contact.html#quote" onclick="document.getElementById('mobile-menu').classList.remove('open')">Request Quote</a>
     <a href="contact.html#contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
   </div>
@@ -1023,5 +1024,32 @@
   </a>
 </div>
 
+<script>
+/* Active nav link detection */
+(function(){
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var links = document.querySelectorAll(".nav-links a");
+  links.forEach(function(a){
+    var href = a.getAttribute("href");
+    if(!href) return;
+    var isHome    = path.endsWith("/") || path.endsWith("index.html") || path.endsWith("/everest/");
+    var onSvc     = path.endsWith("services.html");
+    var onContact = path.endsWith("contact.html");
+    var onFaq     = path.endsWith("faq.html");
+    var onCity    = path.includes("borehole-drilling-");
+
+    if(href === "index.html"               && isHome)                                         a.classList.add("active");
+    else if(href === "services.html"       && onSvc && !hash)                                 a.classList.add("active");
+    else if(href === "contact.html#specs"  && onContact && hash === "#specs")                 a.classList.add("active");
+    else if(href === "contact.html#branches" && onContact && hash === "#branches")            a.classList.add("active");
+    else if(href === "services.html#testimonials" && onSvc && hash === "#testimonials")       a.classList.add("active");
+    else if(href === "services.html#blog"  && onSvc && hash === "#blog")                      a.classList.add("active");
+    else if(href === "faq.html"            && onFaq)                                          a.classList.add("active");
+    else if(href === "#contact"            && hash === "#contact")                            a.classList.add("active");
+    else if(href === "services.html"       && onCity)                                         a.classList.add("active");
+  });
+})();
+</script>
 </body>
 </html>

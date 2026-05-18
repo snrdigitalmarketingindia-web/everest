@@ -551,7 +551,7 @@
       <li><a href="contact.html#specs">Technology</a></li>
       <li><a href="contact.html#branches">Branches</a></li>
       <li><a href="services.html#testimonials">Reviews</a></li>
-      <li><a href="faq.html" style="color:#c8960c;">FAQ</a></li>
+      <li><a href="faq.html">FAQ</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="contact.html#quote" class="nav-cta">Get a Quote</a>
@@ -566,7 +566,7 @@
     <a href="contact.html#specs" onclick="document.getElementById('mobile-menu').classList.remove('open')">Technology</a>
     <a href="contact.html#branches" onclick="document.getElementById('mobile-menu').classList.remove('open')">Branches</a>
     <a href="services.html#testimonials" onclick="document.getElementById('mobile-menu').classList.remove('open')">Reviews</a>
-    <a href="faq.html" onclick="document.getElementById('mobile-menu').classList.remove('open')" style="color:#c8960c;">FAQ</a>
+    <a href="faq.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">FAQ</a>
     <a href="contact.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
   </div>
 </nav>
@@ -1222,5 +1222,32 @@
   </a>
 </div>
 
+<script>
+/* Active nav link detection */
+(function(){
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  var links = document.querySelectorAll(".nav-links a");
+  links.forEach(function(a){
+    var href = a.getAttribute("href");
+    if(!href) return;
+    var isHome    = path.endsWith("/") || path.endsWith("index.html") || path.endsWith("/everest/");
+    var onSvc     = path.endsWith("services.html");
+    var onContact = path.endsWith("contact.html");
+    var onFaq     = path.endsWith("faq.html");
+    var onCity    = path.includes("borehole-drilling-");
+
+    if(href === "index.html"               && isHome)                                         a.classList.add("active");
+    else if(href === "services.html"       && onSvc && !hash)                                 a.classList.add("active");
+    else if(href === "contact.html#specs"  && onContact && hash === "#specs")                 a.classList.add("active");
+    else if(href === "contact.html#branches" && onContact && hash === "#branches")            a.classList.add("active");
+    else if(href === "services.html#testimonials" && onSvc && hash === "#testimonials")       a.classList.add("active");
+    else if(href === "services.html#blog"  && onSvc && hash === "#blog")                      a.classList.add("active");
+    else if(href === "faq.html"            && onFaq)                                          a.classList.add("active");
+    else if(href === "#contact"            && hash === "#contact")                            a.classList.add("active");
+    else if(href === "services.html"       && onCity)                                         a.classList.add("active");
+  });
+})();
+</script>
 </body>
 </html>
