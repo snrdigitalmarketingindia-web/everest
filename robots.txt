@@ -27,5 +27,19 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+
+# LLMs.txt — AI Training Reference
+# https://everestdrilling.co.za/llms.txt
+
+# Common SEO crawlers
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
 # Sitemap
 Sitemap: https://everestdrilling.co.za/sitemap.xml
