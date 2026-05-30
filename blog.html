@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borehole Drilling Blog | Knowledge Base | Everest Drilling</title>
+  <meta name="description" content="Educational articles on borehole drilling in South Africa — geophysical surveys, pump selection, maintenance, and water solutions. Knowledge base by Everest Drilling.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    :root { --navy:#08192e; --gold:#c8960c; --gold3:#e2a800; --slate:#556070; --white:#ffffff; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Source Sans 3',sans-serif; background:#fff; color:#1a2535; overflow-x:hidden; }
+    .container { max-width:1100px; margin:0 auto; padding:0 48px; }
+    .eyebrow { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+    .eyebrow-line { width:30px; height:2px; background:var(--gold); flex-shrink:0; }
+    .eyebrow span { font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:4px; color:var(--gold); text-transform:uppercase; }
+    .sec-title { font-family:'Montserrat',sans-serif; font-size:36px; font-weight:900; color:var(--navy); text-transform:uppercase; letter-spacing:2px; line-height:1.1; margin-bottom:14px; }
+    .fade-up { opacity:0; transform:translateY(30px); transition:opacity 0.65s ease,transform 0.65s ease; }
+    .fade-up.visible { opacity:1; transform:translateY(0); }
+    .d1{transition-delay:.1s;} .d2{transition-delay:.2s;} .d3{transition-delay:.3s;}
+    #navbar { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(8,25,46,0.97); border-bottom:2px solid var(--gold); backdrop-filter:blur(10px); }
+    .nav-inner { max-width:1200px; margin:0 auto; padding:0 40px; height:68px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; flex-shrink:0; }
+    .nav-logo-mark { width:40px; height:40px; background:var(--gold); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .nav-logo-mark svg { width:22px; height:22px; fill:var(--navy); }
+    .nav-logo-text { display:flex; flex-direction:column; line-height:1; white-space:nowrap; }
+    .nav-logo-top { font-family:'Montserrat',sans-serif; font-size:15px; font-weight:900; color:#fff; letter-spacing:3px; text-transform:uppercase; }
+    .nav-logo-bot { font-family:'Montserrat',sans-serif; font-size:8px; font-weight:600; color:var(--gold); letter-spacing:3px; text-transform:uppercase; margin-top:4px; }
+    .nav-links { display:flex; gap:18px; align-items:center; }
+    .nav-links a { font-family:'Montserrat',sans-serif; color:#556070; font-size:9.5px; font-weight:700; text-decoration:none; letter-spacing:1.2px; text-transform:uppercase; transition:color 0.2s; white-space:nowrap; }
+    .nav-links a:hover, .nav-links a.active { color:var(--gold); }
+    .nav-cta { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:10px; padding:11px 22px; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; transition:background 0.2s; white-space:nowrap; flex-shrink:0; margin-left:12px; }
+    .nav-cta:hover { background:var(--gold3); }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .hamburger span { width:24px; height:2px; background:var(--gold); display:block; }
+    .mobile-menu { display:none; flex-direction:column; background:var(--navy); border-top:1px solid rgba(200,150,12,0.2); padding:20px 48px 28px; gap:18px; }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { font-family:'Montserrat',sans-serif; color:#556070; font-size:13px; font-weight:700; text-decoration:none; letter-spacing:2px; text-transform:uppercase; padding:6px 0; border-bottom:1px solid rgba(200,150,12,0.1); }
+    footer { background:#f7f9fc; border-top:1px solid #e2e8f0; padding:28px 48px; }
+    .foot-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+    .foot-logo { display:flex; align-items:center; gap:12px; }
+    .foot-logo-mark { width:32px; height:32px; background:var(--gold); display:flex; align-items:center; justify-content:center; }
+    .foot-logo-mark svg { width:16px; height:16px; fill:var(--navy); }
+    .foot-name { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; color:var(--navy); letter-spacing:2px; text-transform:uppercase; }
+    .foot-copy { font-size:11px; color:#94aabf; }
+    .foot-socials { display:flex; gap:12px; }
+    .fsoc { width:32px; height:32px; background:var(--navy); display:flex; align-items:center; justify-content:center; border-radius:4px; }
+    .fsoc svg { width:14px; height:14px; fill:#94aabf; }
+    #wa-float { position:fixed; bottom:24px; right:24px; background:#25d366; border-radius:50px; padding:12px 20px; display:flex; align-items:center; gap:10px; text-decoration:none; z-index:999; box-shadow:0 4px 20px rgba(37,211,102,.4); }
+    #wa-float span { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; color:#fff; letter-spacing:1px; white-space:nowrap; }
+    @media(max-width:960px){.nav-links{display:none;}.nav-cta{display:none;}.hamburger{display:flex;}}
+    @media(max-width:600px){.container{padding:0 20px;}#wa-float span{display:none;}#wa-float{border-radius:50%;padding:14px;}}
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-top">Everest Drilling</span>
+        <span class="nav-logo-bot">Pty Ltd &nbsp;·&nbsp; South Africa</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="technology.html">Technology</a>
+      <a href="branches.html">Branches</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="contact.html" class="nav-cta">Contact</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
+    <a href="services.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+    <a href="about.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
+    <a href="technology.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">Technology</a>
+    <a href="branches.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">Branches</a>
+    <a href="reviews.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">Reviews</a>
+    <a href="blog.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
+    <a href="faq.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">FAQ</a>
+    <a href="contact.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="background:var(--navy);padding:120px 0 80px;margin-top:68px;">
+  <div class="container fade-up">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span>Knowledge Base</span></div>
+    <h1 style="font-family:'Montserrat',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:3px;line-height:1.05;margin-bottom:18px;">Knowledge Base</h1>
+    <p style="font-size:1.2rem;color:#94aabf;max-width:620px;line-height:1.7;">Borehole Drilling Insights &amp; Guides</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section style="padding:60px 0 20px;background:#fff;">
+  <div class="container">
+    <div style="max-width:720px;" class="fade-up">
+      <p style="font-size:1.1rem;line-height:1.85;color:#2d3748;">A resource for homeowners, farmers, and commercial clients considering borehole water solutions in South Africa. Browse our educational articles below.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG CARDS -->
+<section style="padding:40px 0 80px;background:#fff;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;">
+
+      <div class="fade-up d1" style="background:#f7f9fc;border-radius:12px;overflow:hidden;border-top:4px solid var(--gold);">
+        <div style="padding:30px 28px 24px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--navy);color:var(--gold);padding:4px 10px;border-radius:4px;">Agriculture</span>
+            <span style="font-size:.8rem;color:var(--slate);">May 2026</span>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:12px;line-height:1.4;">Borehole Water for South African Farms: What You Need to Know</h3>
+          <p style="color:var(--slate);font-size:.9rem;line-height:1.75;margin-bottom:20px;">Agricultural water supply challenges and how borehole water addresses farm irrigation, livestock, and rural community needs.</p>
+          <a href="contact.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);text-decoration:none;">Discuss Your Project &rarr;</a>
+        </div>
+      </div>
+
+      <div class="fade-up d2" style="background:#f7f9fc;border-radius:12px;overflow:hidden;border-top:4px solid var(--gold);">
+        <div style="padding:30px 28px 24px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--navy);color:var(--gold);padding:4px 10px;border-radius:4px;">Residential</span>
+            <span style="font-size:.8rem;color:var(--slate);">March 2026</span>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:12px;line-height:1.4;">Why Every South African Homeowner Should Consider a Borehole</h3>
+          <p style="color:var(--slate);font-size:.9rem;line-height:1.75;margin-bottom:20px;">Municipal water supply challenges, load-shedding, and how a private borehole provides long-term water security for residential properties.</p>
+          <a href="contact.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);text-decoration:none;">Get a Quote &rarr;</a>
+        </div>
+      </div>
+
+      <div class="fade-up d3" style="background:#f7f9fc;border-radius:12px;overflow:hidden;border-top:4px solid var(--gold);">
+        <div style="padding:30px 28px 24px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--navy);color:var(--gold);padding:4px 10px;border-radius:4px;">Geophysics</span>
+            <span style="font-size:.8rem;color:var(--slate);">January 2026</span>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:12px;line-height:1.4;">Why a Geophysical Survey Saves You Money Before Drilling</h3>
+          <p style="color:var(--slate);font-size:.9rem;line-height:1.75;margin-bottom:20px;">Drilling without a survey risks an unproductive borehole. A geophysical survey uses electromagnetic scanning to identify water-bearing fractures &mdash; making it a critical first step.</p>
+          <a href="contact.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);text-decoration:none;">Book a Survey &rarr;</a>
+        </div>
+      </div>
+
+      <div class="fade-up d1" style="background:#f7f9fc;border-radius:12px;overflow:hidden;border-top:4px solid var(--gold);">
+        <div style="padding:30px 28px 24px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--navy);color:var(--gold);padding:4px 10px;border-radius:4px;">Industrial</span>
+            <span style="font-size:.8rem;color:var(--slate);">November 2025</span>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:12px;line-height:1.4;">Industrial &amp; Commercial Borehole Water Supply in South Africa</h3>
+          <p style="color:var(--slate);font-size:.9rem;line-height:1.75;margin-bottom:20px;">Water supply requirements for commercial properties, industrial facilities, and construction sites across South Africa.</p>
+          <a href="contact.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);text-decoration:none;">Get a Quote &rarr;</a>
+        </div>
+      </div>
+
+      <div class="fade-up d2" style="background:#f7f9fc;border-radius:12px;overflow:hidden;border-top:4px solid var(--gold);">
+        <div style="padding:30px 28px 24px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--navy);color:var(--gold);padding:4px 10px;border-radius:4px;">Maintenance</span>
+            <span style="font-size:.8rem;color:var(--slate);">December 2025</span>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:12px;line-height:1.4;">Borehole Maintenance: Keeping Your Water Supply Running Long-Term</h3>
+          <p style="color:var(--slate);font-size:.9rem;line-height:1.75;margin-bottom:20px;">A well-maintained borehole can provide reliable water for decades. Key steps: regular water testing, monitoring flow rate changes, and periodic pump servicing.</p>
+          <a href="contact.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);text-decoration:none;">Discuss Your Project &rarr;</a>
+        </div>
+      </div>
+
+      <div class="fade-up d3" style="background:#f7f9fc;border-radius:12px;overflow:hidden;border-top:4px solid var(--gold);">
+        <div style="padding:30px 28px 24px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--navy);color:var(--gold);padding:4px 10px;border-radius:4px;">Process</span>
+            <span style="font-size:.8rem;color:var(--slate);">October 2025</span>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:12px;line-height:1.4;">The Borehole Drilling Process: Step by Step</h3>
+          <p style="color:var(--slate);font-size:.9rem;line-height:1.75;margin-bottom:20px;">An overview of how Everest Drilling approaches each project &mdash; from initial geophysical survey through to commissioning and handover.</p>
+          <a href="contact.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);text-decoration:none;">Contact Our Team &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding:80px 0;background:var(--navy);">
+  <div class="container fade-up" style="text-align:center;">
+    <div class="eyebrow" style="justify-content:center;"><div class="eyebrow-line" style="background:var(--gold);"></div><span style="color:var(--gold);">Enquire</span><div class="eyebrow-line" style="background:var(--gold);"></div></div>
+    <h2 style="font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;">Ready to Get Started?</h2>
+    <p style="color:#94aabf;font-size:1.05rem;margin-bottom:32px;">Contact Everest Drilling to discuss your borehole water supply project.</p>
+    <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);text-decoration:none;padding:14px 32px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;">Contact Us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">
+      <div class="foot-logo-mark"><svg viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div>
+      <span class="foot-name">Everest Drilling (Pty) Ltd</span>
+    </div>
+    <div class="foot-copy">© 2026 Everest Drilling Pty Ltd &nbsp;·&nbsp; All Rights Reserved &nbsp;·&nbsp; Registered in South Africa</div>
+    <div class="foot-socials">
+      <a href="https://www.facebook.com/EverestDrillingPtyLtd" target="_blank" class="fsoc" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.instagram.com/everestdrillingsa" target="_blank" class="fsoc" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a href="https://wa.me/27751123456" target="_blank" class="fsoc" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+    </div>
+  </div>
+  <div style="background:#0d2540;padding:20px 48px;border-top:1px solid rgba(200,150,12,0.15);">
+    <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:center;">
+      <a href="index.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#556070;text-decoration:none;">Home</a>
+      <a href="services.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#556070;text-decoration:none;">Services</a>
+      <a href="about.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#556070;text-decoration:none;">About</a>
+      <a href="technology.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#556070;text-decoration:none;">Technology</a>
+      <a href="branches.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#556070;text-decoration:none;">Branches</a>
+      <a href="reviews.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#556070;text-decoration:none;">Reviews</a>
+      <a href="blog.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#556070;text-decoration:none;">Blog</a>
+      <a href="faq.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#556070;text-decoration:none;">FAQ</a>
+      <a href="contact.html" style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#556070;text-decoration:none;">Contact</a>
+    </div>
+  </div>
+  <div style="background:#f4f6f8;border-top:2px solid rgba(200,150,12,0.3);padding:28px 48px;">
+    <div style="max-width:900px;margin:0 auto;text-align:center;">
+      <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#08192e;margin-bottom:10px;">DISCLAIMER</div>
+      <p style="font-size:12px;color:#556070;line-height:1.8;margin:0;">The information provided on this website is intended for general informational and educational purposes only. While every effort is made to keep content accurate and up to date, information may become outdated and may not reflect current site conditions, geological variations, equipment specifications, regulatory changes, or project-specific requirements. Content published on this website should not be interpreted as technical, legal, regulatory, engineering, compliance, or project-specific advice. Everest does not guarantee drilling depth, water availability, borehole yield, project outcomes, pricing, approvals, certifications, or regulatory compliance requirements. Visitors should contact Everest directly or consult qualified professionals for advice relating to their specific project, location, and requirements.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" id="wa-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:#fff;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Chat on WhatsApp</span>
+</a>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').style.boxShadow = window.scrollY > 40 ? '0 4px 32px rgba(0,0,0,0.4)' : 'none';
+  });
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
