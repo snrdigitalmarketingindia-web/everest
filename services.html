@@ -85,15 +85,15 @@
   <style>
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     :root {
-      --navy:    #08192e;
+      --navy:    #0b1f3a;
       --navy2:   #f0f4f8;
       --navy3:   #e4ecf4;
-      --gold:    #c8960c;
-      --gold2:   #c8960c;
-      --gold3:   #e2a800;
+      --gold:    #F28B00;
+      --gold2:   #F5A623;
+      --gold3:   #F7B731;
       --white:   #ffffff;
       --offwhite:#1a2535;
-      --slate:   #556070;
+      --slate:   #3d4a5c;
       --light:   #333d4d;
       --card:    #ffffff;
       --cardalt: #f7f9fc;
@@ -115,7 +115,7 @@
     /* ── NAVBAR ──────────────────────────────── */
     #navbar {
       position:fixed; top:0; left:0; right:0; z-index:1000;
-      background:rgba(8,25,46,0.97);
+      background:rgba(11,31,58,0.97);
       border-bottom:2px solid var(--gold);
       backdrop-filter:blur(10px);
     }
@@ -130,13 +130,13 @@
     .nav-links a { font-family:'Montserrat',sans-serif; color:var(--slate); font-size:10px; font-weight:700; text-decoration:none; letter-spacing:1.5px; text-transform:uppercase; transition:color 0.2s; white-space:nowrap; }
     .nav-links a:hover { color:var(--gold2); }
     .nav-links a.active { color:var(--gold2) !important; }
-    .nav-cta { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:10px; padding:11px 22px; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; transition:background 0.2s; white-space:nowrap; flex-shrink:0; margin-left:20px; }
+    .nav-cta { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:10px; padding:14px 28px; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; transition:all 0.2s ease; white-space:nowrap; flex-shrink:0; margin-left:20px; }
     .nav-cta:hover { background:var(--gold3); }
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
     .hamburger span { width:24px; height:2px; background:var(--gold); display:block; transition:0.3s; }
-    .mobile-menu { display:none; flex-direction:column; background:var(--navy); border-top:1px solid rgba(200,150,12,0.2); padding:20px 48px 28px; gap:18px; }
+    .mobile-menu { display:none; flex-direction:column; background:var(--navy); border-top:1px solid rgba(242,139,0,0.2); padding:20px 48px 28px; gap:18px; }
     .mobile-menu.open { display:flex; }
-    .mobile-menu a { font-family:'Montserrat',sans-serif; color:var(--slate); font-size:13px; font-weight:700; text-decoration:none; letter-spacing:2px; text-transform:uppercase; padding:6px 0; border-bottom:1px solid rgba(200,150,12,0.1); }
+    .mobile-menu a { font-family:'Montserrat',sans-serif; color:var(--slate); font-size:13px; font-weight:700; text-decoration:none; letter-spacing:2px; text-transform:uppercase; padding:6px 0; border-bottom:1px solid rgba(242,139,0,0.1); }
 
     /* ── HERO ────────────────────────────────── */
     #hero { position:relative; min-height:80vh; display:flex; align-items:center; margin-top:68px; overflow:hidden; }
@@ -145,12 +145,12 @@
     .hero-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(105deg, rgba(0,0,0,0.72) 35%, rgba(0,0,0,0.35) 100%); }
     .hero-content { position:relative; z-index:2; max-width:1100px; margin:0 auto; padding:50px 48px; display:grid; grid-template-columns:58% 42%; gap:40px; align-items:center; width:100%; }
     .hero-left { /* left column */ }
-    .hero-right-panel { background:rgba(200,150,12,0.08); border:1px solid rgba(200,150,12,0.4); padding:32px; align-self:center; }
-    .hero-panel-title { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:4px; color:var(--gold2); text-transform:uppercase; margin-bottom:24px; border-bottom:1px solid rgba(200,150,12,0.3); padding-bottom:12px; }
+    .hero-right-panel { background:rgba(242,139,0,0.08); border:1px solid rgba(242,139,0,0.4); padding:32px; align-self:center; }
+    .hero-panel-title { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:4px; color:var(--gold2); text-transform:uppercase; margin-bottom:24px; border-bottom:1px solid rgba(242,139,0,0.3); padding-bottom:12px; }
     .hero-panel-stats { display:flex; flex-direction:column; gap:20px; }
     .hpstat { border-left:2px solid var(--gold); padding-left:16px; }
     .hpstat-n { font-family:'Montserrat',sans-serif; font-size:26px; font-weight:900; color:var(--gold2); letter-spacing:1px; line-height:1; }
-    .hpstat-l { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:3px; color:rgba(255,255,255,0.65); text-transform:uppercase; margin-top:5px; }
+    .hpstat-l { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:3px; color:rgba(255,255,255,0.75); text-transform:uppercase; margin-top:5px; }
     .hero-tag { display:inline-flex; align-items:center; gap:12px; border:1px solid rgba(255,255,255,0.35); padding:8px 20px; margin-bottom:28px; }
     .hero-tag-line { width:22px; height:1px; background:var(--gold); }
     .hero-tag span { font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:4px; color:var(--gold2); text-transform:uppercase; }
@@ -159,28 +159,28 @@
     .hero-sub { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:5px; color:rgba(255,255,255,0.75); text-transform:uppercase; margin-bottom:28px; }
     .hero-desc { font-size:17px; color:rgba(255,255,255,0.88); line-height:1.8; max-width:500px; margin-bottom:24px; }
     .hero-btns { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:36px; }
-    .btn-primary { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:11px; padding:15px 34px; letter-spacing:2px; text-transform:uppercase; text-decoration:none; border:none; cursor:pointer; transition:background 0.2s; display:inline-block; }
+    .btn-primary { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:11px; padding:15px 34px; letter-spacing:2px; text-transform:uppercase; text-decoration:none; border:none; cursor:pointer; transition:all 0.2s ease; display:inline-block; }
     .btn-primary:hover { background:var(--gold3); }
-    .btn-outline { font-family:'Montserrat',sans-serif; background:transparent; border:1.5px solid rgba(200,150,12,0.6); color:var(--gold2); font-weight:700; font-size:11px; padding:15px 34px; letter-spacing:2px; text-transform:uppercase; text-decoration:none; cursor:pointer; transition:all 0.2s; display:inline-block; }
-    .btn-outline:hover { border-color:var(--gold2); color:var(--gold3); }
+    .btn-outline { font-family:'Montserrat',sans-serif; background:transparent; border:2px solid #E60000; color:#E60000; font-weight:700; font-size:11px; padding:15px 34px; letter-spacing:2px; text-transform:uppercase; text-decoration:none; cursor:pointer; transition:all 0.2s ease; display:inline-block; }
+    .btn-outline:hover { border-color:#cc0000; color:#cc0000; }
     .hero-stats { display:flex; gap:44px; flex-wrap:wrap; }
     .hstat { border-left:2px solid var(--gold); padding-left:16px; }
     .hstat-n { font-family:'Montserrat',sans-serif; font-size:28px; font-weight:900; color:var(--gold2); letter-spacing:1px; line-height:1; }
-    .hstat-l { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:3px; color:rgba(255,255,255,0.65); text-transform:uppercase; margin-top:5px; }
+    .hstat-l { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:3px; color:rgba(255,255,255,0.75); text-transform:uppercase; margin-top:5px; }
 
     /* ── GOLD STATS BAR ──────────────────────── */
     #goldbar { background:var(--gold); }
     .gb-inner { max-width:1100px; margin:0 auto; padding:0 48px; display:flex; }
-    .gb-item { flex:1; padding:18px 12px; text-align:center; border-right:1px solid rgba(8,25,46,0.18); }
+    .gb-item { flex:1; padding:18px 12px; text-align:center; border-right:1px solid rgba(11,31,58,0.18); }
     .gb-item:last-child { border-right:none; }
     .gb-n { font-family:'Montserrat',sans-serif; font-size:16px; font-weight:800; color:var(--navy); letter-spacing:1px; }
-    .gb-l { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:2px; color:rgba(8,25,46,0.6); text-transform:uppercase; margin-top:3px; }
+    .gb-l { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:2px; color:rgba(11,31,58,0.6); text-transform:uppercase; margin-top:3px; }
 
     /* ── SERVICES ────────────────────────────── */
     #services { padding:90px 0; background:#fff; }
     .svc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:48px; }
     .svc-card { background:#fff; padding:0; border:1px solid #e2e8f0; border-top:3px solid transparent; border-radius:2px; box-shadow:0 2px 12px rgba(0,0,0,0.05); transition:border-color 0.25s, box-shadow 0.25s; overflow:hidden; }
-    .svc-card:hover { border-color:var(--gold); box-shadow:0 6px 24px rgba(200,150,12,0.12); }
+    .svc-card:hover { border-color:var(--gold); box-shadow:0 6px 24px rgba(242,139,0,0.12); }
     .svc-placeholder { height:160px; display:flex; align-items:center; justify-content:center; }
     .svc-card-body { padding:20px 24px 24px; }
     .svc-card h3 { font-family:'Montserrat',sans-serif; font-size:13px; font-weight:800; color:var(--navy); letter-spacing:2px; text-transform:uppercase; margin-bottom:12px; }
@@ -196,7 +196,7 @@
     .about-badge .sm { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; color:rgba(255,255,255,0.8); letter-spacing:3px; text-transform:uppercase; margin-top:4px; }
     .about-points { display:flex; flex-direction:column; gap:22px; margin-top:32px; }
     .apoint { display:flex; align-items:flex-start; gap:16px; }
-    .apoint-icon { width:44px; height:44px; background:rgba(200,150,12,0.1); border:1px solid rgba(200,150,12,0.4); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:18px; }
+    .apoint-icon { width:44px; height:44px; background:rgba(242,139,0,0.1); border:1px solid rgba(242,139,0,0.4); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:18px; }
     .apoint h4 { font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:var(--navy); letter-spacing:2px; text-transform:uppercase; margin-bottom:4px; }
     .apoint p { font-size:14px; color:var(--slate); line-height:1.7; }
 
@@ -204,7 +204,7 @@
     #process { padding:90px 0; background:#fff; }
     .proc-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:48px; }
     .proc-step { background:#fff; border:1px solid #e2e8f0; border-top:3px solid var(--gold); padding:40px 24px; text-align:center; position:relative; border-radius:2px; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
-    .proc-num { font-family:'Montserrat',sans-serif; font-size:54px; font-weight:900; color:rgba(180,130,8,0.28); line-height:1; margin-bottom:8px; }
+    .proc-num { font-family:'Montserrat',sans-serif; font-size:54px; font-weight:900; color:rgba(200,110,0,0.28); line-height:1; margin-bottom:8px; }
     .proc-icon { font-size:28px; margin-bottom:16px; display:block; }
     .proc-step h3 { font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:3px; color:var(--navy); text-transform:uppercase; margin-bottom:10px; }
     .proc-step p { font-size:13px; color:var(--slate); line-height:1.7; }
@@ -218,8 +218,8 @@
     .gal-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; display:block; }
     .gal-item:hover img { transform:scale(1.05); }
     .gal-item.big { grid-column:1; grid-row:1/3; }
-    .gal-overlay { position:absolute; inset:0; background:rgba(8,25,46,0); transition:background 0.3s; display:flex; align-items:flex-end; }
-    .gal-item:hover .gal-overlay { background:rgba(8,25,46,0.45); }
+    .gal-overlay { position:absolute; inset:0; background:rgba(11,31,58,0); transition:background 0.3s; display:flex; align-items:flex-end; }
+    .gal-item:hover .gal-overlay { background:rgba(11,31,58,0.45); }
     .gal-label { font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:3px; color:var(--gold2); text-transform:uppercase; padding:18px; opacity:0; transition:opacity 0.3s; }
     .gal-item:hover .gal-label { opacity:1; }
 
@@ -238,7 +238,7 @@
     #blog { padding:90px 0; background:#f7f9fc; }
     .blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px; }
     .blog-card { background:#fff; border:1px solid #e2e8f0; border-radius:2px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,0.05); transition:box-shadow 0.25s; }
-    .blog-card:hover { box-shadow:0 6px 24px rgba(200,150,12,0.12); }
+    .blog-card:hover { box-shadow:0 6px 24px rgba(242,139,0,0.12); }
     .blog-tag { display:inline-block; background:var(--gold); color:#fff; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:5px 12px; margin-bottom:14px; }
     .blog-body { padding:24px; }
     .blog-card h3 { font-family:'Montserrat',sans-serif; font-size:14px; font-weight:800; color:var(--navy); letter-spacing:1px; text-transform:uppercase; margin-bottom:10px; line-height:1.4; }
@@ -266,11 +266,11 @@
     #branches { padding:90px 0; background:#f7f9fc; }
     .branch-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:48px; }
     .branch-card { background:#fff; padding:36px 24px; text-align:center; border:1px solid #e2e8f0; border-top:3px solid var(--gold); border-radius:2px; box-shadow:0 2px 12px rgba(0,0,0,0.05); transition:box-shadow 0.25s; }
-    .branch-card:hover { box-shadow:0 6px 24px rgba(200,150,12,0.12); }
+    .branch-card:hover { box-shadow:0 6px 24px rgba(242,139,0,0.12); }
     .branch-icon { font-size:26px; margin-bottom:14px; }
     .branch-city { font-family:'Montserrat',sans-serif; font-size:15px; font-weight:800; color:var(--navy); letter-spacing:2px; text-transform:uppercase; margin-bottom:6px; }
     .branch-prov { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:3px; color:var(--gold); text-transform:uppercase; }
-    .branch-tag { display:inline-block; margin-top:12px; background:rgba(200,150,12,0.08); font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:2px; color:var(--slate); padding:5px 12px; text-transform:uppercase; }
+    .branch-tag { display:inline-block; margin-top:12px; background:rgba(242,139,0,0.08); font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:2px; color:var(--slate); padding:5px 12px; text-transform:uppercase; }
 
     /* ── QUOTE ───────────────────────────────── */
     #quote { padding:90px 0; background:#fff; }
@@ -279,7 +279,7 @@
     .quote-info p { font-size:15px; color:var(--slate); line-height:1.8; margin-bottom:36px; }
     .q-contacts { display:flex; flex-direction:column; gap:18px; }
     .qc { display:flex; align-items:center; gap:16px; }
-    .qc-icon { width:44px; height:44px; background:rgba(200,150,12,0.1); border:1px solid rgba(200,150,12,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:18px; }
+    .qc-icon { width:44px; height:44px; background:rgba(242,139,0,0.1); border:1px solid rgba(242,139,0,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:18px; }
     .qc-label { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:3px; color:var(--slate); text-transform:uppercase; }
     .qc-value { font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:var(--navy); margin-top:2px; }
     .qform { background:#fff; border:1px solid #e2e8f0; border-top:3px solid var(--gold); padding:40px; border-radius:2px; box-shadow:0 4px 24px rgba(0,0,0,0.07); }
@@ -292,7 +292,7 @@
     .fg input:focus, .fg select:focus, .fg textarea:focus { border-color:var(--gold); background:#fff; }
     .fg input::placeholder, .fg textarea::placeholder { color:#aab4c0; }
     .fg select option { background:#fff; }
-    .fsub { width:100%; background:var(--gold); color:#fff; font-family:'Montserrat',sans-serif; font-weight:800; font-size:12px; padding:16px; border:none; cursor:pointer; letter-spacing:3px; text-transform:uppercase; transition:background 0.2s; margin-top:8px; border-radius:2px; }
+    .fsub { width:100%; background:var(--gold); color:#fff; font-family:'Montserrat',sans-serif; font-weight:800; font-size:12px; padding:16px; border:none; cursor:pointer; letter-spacing:3px; text-transform:uppercase; transition:all 0.2s ease; margin-top:8px; border-radius:2px; }
     .fsub:hover { background:var(--gold3); }
 
     /* ── CONTACT ─────────────────────────────── */
@@ -303,7 +303,7 @@
     .phone-block { text-align:center; }
     .phone-num { font-family:'Montserrat',sans-serif; font-size:30px; font-weight:900; color:var(--gold); letter-spacing:1px; }
     .phone-label { font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:3px; color:var(--slate); text-transform:uppercase; margin-top:8px; }
-    .phone-divider { width:1px; height:60px; background:rgba(200,150,12,0.3); }
+    .phone-divider { width:1px; height:60px; background:rgba(242,139,0,0.3); }
     .contact-pills { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:48px; }
     .cpill { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:1px; color:var(--slate); border:1px solid #e2e8f0; padding:10px 20px; display:inline-flex; align-items:center; gap:10px; text-decoration:none; transition:all 0.2s; }
     .cpill:hover { border-color:var(--gold); color:var(--gold); }
@@ -371,14 +371,14 @@
   
 /* ══ MOBILE STICKY CTA BAR (Phase 6 CRO) ══════════════════════════════ */
 #mob-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9998;
-  background:#08192e;border-top:2px solid #c8960c;
+  background:#0b1f3a;border-top:2px solid #F28B00;
   grid-template-columns:1fr 1fr;height:60px;}
 #mob-cta a{display:flex;align-items:center;justify-content:center;gap:8px;
   font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;
   letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;
   color:#fff;height:100%;transition:background .2s;}
-#mob-cta .mcta-call{background:#c8960c;color:#08192e;}
-#mob-cta .mcta-call:active{background:#a37a09;}
+#mob-cta .mcta-call{background:#E60000;color:#fff;}
+#mob-cta .mcta-call:active{background:#cc0000;}
 #mob-cta .mcta-wa{background:#1a8f44;}
 #mob-cta .mcta-wa:active{background:#146d34;}
 #mob-cta svg{width:18px;height:18px;fill:currentColor;flex-shrink:0;}
@@ -409,12 +409,12 @@
 
 /* ══ SCROLL NUDGE (Phase 6 CRO) ═══════════════════════════════════════ */
 #cro-nudge{display:none;position:fixed;bottom:76px;left:50%;
-  transform:translateX(-50%);z-index:9997;background:#08192e;
+  transform:translateX(-50%);z-index:9997;background:#0b1f3a;
   color:#fff;font-family:'Montserrat',sans-serif;font-size:11px;
   font-weight:700;letter-spacing:1px;padding:10px 20px 10px 14px;
-  border-radius:50px;border:1.5px solid #c8960c;white-space:nowrap;
+  border-radius:50px;border:1.5px solid #F28B00;white-space:nowrap;
   animation:nudgein .4s ease;box-shadow:0 4px 20px rgba(0,0,0,.4);}
-#cro-nudge a{color:#c8960c;text-decoration:none;}
+#cro-nudge a{color:#F28B00;text-decoration:none;}
 #cro-nudge .ndx{cursor:pointer;margin-left:10px;opacity:.6;font-size:14px;}
 @keyframes nudgein{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 @media(max-width:900px){#cro-nudge{display:block;}}
@@ -614,59 +614,59 @@
 <section id="service-detail" aria-label="Detailed Borehole Drilling Service Information" style="background:#f7f9fc;padding:80px 0;border-top:1px solid #e2e8f0;">
   <div class="container">
     <div style="text-align:center;margin-bottom:56px;">
-      <div style="display:inline-block;background:#c8960c;border-radius:4px;width:48px;height:4px;margin-bottom:18px;"></div>
-      <h2 style="font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:900;color:#08192e;margin:0 0 14px;">Service Detail — What Everest Drilling Does</h2>
+      <div style="display:inline-block;background:#F28B00;border-radius:4px;width:48px;height:4px;margin-bottom:18px;"></div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:900;color:#0b1f3a;margin:0 0 14px;">Service Detail — What Everest Drilling Does</h2>
       <p style="color:#4a5568;max-width:620px;margin:0 auto;font-size:1.05rem;line-height:1.75;">Transparent explanations of every service we provide — how it works, why it matters in South Africa, and what you can expect.</p>
     </div>
 
     <div style="display:flex;flex-direction:column;gap:40px;max-width:900px;margin:0 auto;">
 
       <!-- SERVICE BLOCK 1: Geophysical Survey -->
-      <article itemscope itemtype="https://schema.org/Service" style="background:#fff;border-radius:16px;padding:40px;border-left:5px solid #c8960c;box-shadow:0 2px 16px rgba(10,37,64,.07);">
+      <article itemscope itemtype="https://schema.org/Service" style="background:#fff;border-radius:16px;padding:40px;border-left:5px solid #F28B00;box-shadow:0 2px 16px rgba(10,37,64,.07);">
         <meta itemprop="provider" content="Everest Drilling (Pty) Ltd" />
         <meta itemprop="areaServed" content="South Africa" />
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
           <span style="font-size:2rem;">🔬</span>
           <div>
-            <h3 style="font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:900;color:#08192e;margin:0;" itemprop="name">Geophysical Survey</h3>
-            <div style="font-size:.8rem;color:#c8960c;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">Pre-Drilling Ground Scanning</div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:900;color:#0b1f3a;margin:0;" itemprop="name">Geophysical Survey</h3>
+            <div style="font-size:.8rem;color:#F28B00;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">Pre-Drilling Ground Scanning</div>
           </div>
         </div>
         <p style="font-size:.95rem;color:#2d3748;line-height:1.85;margin:0 0 18px;" itemprop="description"><strong>What it is:</strong> A geophysical survey is a non-invasive ground scanning method that uses electromagnetic (EM) induction and electrical resistivity measurements to map subsurface geology before any drilling begins. The equipment is surface-deployed — no holes are dug, no ground is disturbed.</p>
         <p style="font-size:.95rem;color:#4a5568;line-height:1.85;margin:0 0 18px;"><strong>How it works:</strong> Electrical current is transmitted through the ground and the response pattern is measured. Water-saturated fractured rock conducts electricity differently from dry solid rock. The survey software generates a subsurface profile showing the depth, lateral extent, and likely yield of underground water-bearing zones — allowing Everest Drilling's geologist to select the optimal drill point with high confidence.</p>
         <p style="font-size:.95rem;color:#4a5568;line-height:1.85;margin:0 0 18px;"><strong>South Africa context:</strong> South Africa's geology is highly variable — Karoo sandstone, Witwatersrand granite, Cape sandstone, KZN basement complex, and coastal sediments all require different interpretations. Everest Drilling's geophysicists have calibrated survey interpretation for all major South African geological regions.</p>
         <div style="background:#f4f6f8;border-radius:10px;padding:20px 24px;margin-top:8px;">
-          <strong style="font-size:.85rem;color:#08192e;">Key benefit:</strong>
+          <strong style="font-size:.85rem;color:#0b1f3a;">Key benefit:</strong>
           <span style="font-size:.9rem;color:#4a5568;"> Helps reduce the risk of drilling an unproductive borehole by mapping subsurface water-bearing formations before any drilling begins.</span>
         </div>
       </article>
 
       <!-- SERVICE BLOCK 2: Water Borehole Drilling -->
-      <article itemscope itemtype="https://schema.org/Service" style="background:#fff;border-radius:16px;padding:40px;border-left:5px solid #c8960c;box-shadow:0 2px 16px rgba(10,37,64,.07);">
+      <article itemscope itemtype="https://schema.org/Service" style="background:#fff;border-radius:16px;padding:40px;border-left:5px solid #F28B00;box-shadow:0 2px 16px rgba(10,37,64,.07);">
         <meta itemprop="provider" content="Everest Drilling (Pty) Ltd" />
         <meta itemprop="areaServed" content="South Africa" />
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
           <span style="font-size:2rem;">🏗️</span>
           <div>
-            <h3 style="font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:900;color:#08192e;margin:0;" itemprop="name">Water Borehole Drilling</h3>
-            <div style="font-size:.8rem;color:#c8960c;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">Up to 250 Metres · Soft & Hard Formation</div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:900;color:#0b1f3a;margin:0;" itemprop="name">Water Borehole Drilling</h3>
+            <div style="font-size:.8rem;color:#F28B00;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">Up to 250 Metres · Soft & Hard Formation</div>
           </div>
         </div>
         <p style="font-size:.95rem;color:#2d3748;line-height:1.85;margin:0 0 18px;" itemprop="description"><strong>What it is:</strong> Water borehole drilling is the mechanical process of boring a narrow, precise vertical shaft through soil, rock, and geological formations to reach underground water-bearing aquifers. Everest Drilling uses heavy-duty truck-mounted rigs capable of drilling to 250 metres in any South African geological formation.</p>
         <p style="font-size:.95rem;color:#4a5568;line-height:1.85;margin:0 0 18px;"><strong>How it works:</strong> The drill string rotates under high torque while hydraulic percussion breaks through hard formations. Water or air is circulated to cool the bit and flush cuttings to surface. As each metre is drilled, cuttings are logged by the driller to track formation changes and identify water strikes. Casing is installed during or immediately after drilling to prevent wall collapse.</p>
         <p style="font-size:.95rem;color:#4a5568;line-height:1.85;margin:0 0 18px;"><strong>South Africa context:</strong> Drill diameter is 6.5" continuous for standard water boreholes, with 9", 10", and 12" overburden options for unconsolidated surface layers. Drilling duration depends on site-specific conditions including formation hardness, depth, and access.</p>
         <div style="background:#f4f6f8;border-radius:10px;padding:20px 24px;margin-top:8px;">
-          <strong style="font-size:.85rem;color:#08192e;">Cost guide:</strong>
+          <strong style="font-size:.85rem;color:#0b1f3a;">Cost guide:</strong>
           <span style="font-size:.9rem;color:#4a5568;"> Project requirements vary based on site conditions, geology, access requirements, equipment requirements, and project scope. Please contact Everest directly for a project-specific quotation.</span>
         </div>
       </article>
 
       <!-- ▶ CTA INTERCEPT 1 — after drilling services, before sedimentary -->
-      <div style="background:linear-gradient(135deg,#08192e 0%,#0d2540 100%);border-radius:12px;padding:32px 36px;border:1px solid rgba(200,150,12,.35);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <div style="background:linear-gradient(135deg,#0b1f3a 0%,#0d2540 100%);border-radius:12px;padding:32px 36px;border:1px solid rgba(242,139,0,.35);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
         <div>
-          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;color:#c8960c;text-transform:uppercase;margin-bottom:8px;">Free Quotation — No Obligation</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;color:#F28B00;text-transform:uppercase;margin-bottom:8px;">Free Quotation — No Obligation</div>
           <div style="font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;color:#fff;line-height:1.3;margin-bottom:8px;">Ready to get started? Request a written quote.</div>
-          <p style="font-size:13px;color:rgba(255,255,255,.6);margin:0;">Tell us your location, project type, and water needs — we'll send you a full cost breakdown. Free, fast, no commitment.</p>
+          <p style="font-size:13px;color:rgba(255,255,255,.75);margin:0;">Tell us your location, project type, and water needs — we'll send you a full cost breakdown. Free, fast, no commitment.</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:10px;flex-shrink:0;">
           <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20drilling%20quote%20please." target="_blank" rel="noopener"
@@ -675,117 +675,117 @@
             WhatsApp Quote
           </a>
           <a href="tel:+27751123456"
-            style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#c8960c;font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 24px;text-decoration:none;border:1px solid rgba(200,150,12,.4);border-radius:6px;white-space:nowrap;justify-content:center;">
+            style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#F28B00;font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 24px;text-decoration:none;border:1px solid rgba(242,139,0,.4);border-radius:6px;white-space:nowrap;justify-content:center;">
             📞 +27 75 112 3456
           </a>
         </div>
       </div>
 
       <!-- SERVICE BLOCK 3: Sedimentary Drilling -->
-      <article itemscope itemtype="https://schema.org/Service" style="background:#fff;border-radius:16px;padding:40px;border-left:5px solid #c8960c;box-shadow:0 2px 16px rgba(10,37,64,.07);">
+      <article itemscope itemtype="https://schema.org/Service" style="background:#fff;border-radius:16px;padding:40px;border-left:5px solid #F28B00;box-shadow:0 2px 16px rgba(10,37,64,.07);">
         <meta itemprop="provider" content="Everest Drilling (Pty) Ltd" />
         <meta itemprop="areaServed" content="South Africa" />
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
           <span style="font-size:2rem;">🪨</span>
           <div>
-            <h3 style="font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:900;color:#08192e;margin:0;" itemprop="name">Sedimentary Drilling</h3>
-            <div style="font-size:.8rem;color:#c8960c;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">Karoo Basin · Eastern Cape · Free State Specialist</div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:900;color:#0b1f3a;margin:0;" itemprop="name">Sedimentary Drilling</h3>
+            <div style="font-size:.8rem;color:#F28B00;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">Karoo Basin · Eastern Cape · Free State Specialist</div>
           </div>
         </div>
         <p style="font-size:.95rem;color:#2d3748;line-height:1.85;margin:0 0 18px;" itemprop="description"><strong>What it is:</strong> Sedimentary drilling targets water stored in the pore spaces and fractures of sedimentary rock sequences — particularly the Karoo Supergroup formation which underlies approximately 60% of South Africa's land area. These formations include mudstone, shale, sandstone, and occasional dolerite intrusions.</p>
         <p style="font-size:.95rem;color:#4a5568;line-height:1.85;margin:0 0 18px;"><strong>How it works:</strong> Sedimentary formations require different bit configurations and drilling parameters compared to hard crystalline rock. Karoo sandstone is relatively soft and drills quickly, but dolerite sills and dykes — common intrusions throughout the Karoo — are extremely hard and require percussion hammer techniques. Everest Drilling's rig is configured for mixed-formation drilling, switching methods as geology demands.</p>
         <p style="font-size:.95rem;color:#4a5568;line-height:1.85;margin:0 0 18px;"><strong>South Africa context:</strong> The Karoo Basin is South Africa's most important agricultural groundwater region. Eastern Cape, Northern Cape, Free State, and Mpumalanga all have significant Karoo sedimentary groundwater resources. Borehole depth varies based on site-specific geological conditions. Please contact Everest for project-specific guidance.</p>
         <div style="background:#f4f6f8;border-radius:10px;padding:20px 24px;margin-top:8px;">
-          <strong style="font-size:.85rem;color:#08192e;">Regional advantage:</strong>
+          <strong style="font-size:.85rem;color:#0b1f3a;">Regional advantage:</strong>
           <span style="font-size:.9rem;color:#4a5568;"> Eastern Cape is Everest Drilling's regional headquarters — our team has the deepest knowledge of local Karoo and coastal sedimentary geology of any drilling contractor in the province.</span>
         </div>
       </article>
 
       <!-- SERVICE BLOCK 4: Pump Installation -->
-      <article itemscope itemtype="https://schema.org/Service" style="background:#fff;border-radius:16px;padding:40px;border-left:5px solid #c8960c;box-shadow:0 2px 16px rgba(10,37,64,.07);">
+      <article itemscope itemtype="https://schema.org/Service" style="background:#fff;border-radius:16px;padding:40px;border-left:5px solid #F28B00;box-shadow:0 2px 16px rgba(10,37,64,.07);">
         <meta itemprop="provider" content="Everest Drilling (Pty) Ltd" />
         <meta itemprop="areaServed" content="South Africa" />
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
           <span style="font-size:2rem;">⚙️</span>
           <div>
-            <h3 style="font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:900;color:#08192e;margin:0;" itemprop="name">Pump Installation</h3>
-            <div style="font-size:.8rem;color:#c8960c;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">Submersible & Hand Pump · Pressure Tested · Warranted</div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:900;color:#0b1f3a;margin:0;" itemprop="name">Pump Installation</h3>
+            <div style="font-size:.8rem;color:#F28B00;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">Submersible & Hand Pump · Pressure Tested · Warranted</div>
           </div>
         </div>
         <p style="font-size:.95rem;color:#2d3748;line-height:1.85;margin:0 0 18px;" itemprop="description"><strong>What it is:</strong> Pump installation is the supply, installation, commissioning, and testing of the water extraction system that lifts water from the borehole aquifer to the surface distribution network. Everest Drilling installs both submersible pump sets (for boreholes deeper than 10m) and hand pumps (for rural and off-grid applications).</p>
         <p style="font-size:.95rem;color:#4a5568;line-height:1.85;margin:0 0 18px;"><strong>How it works:</strong> The pump is selected based on borehole yield, depth, required surface pressure, and power supply. A stainless-steel rising main connects the pump to the surface wellhead. Electrical cables are secured to the rising main. The pump is lowered to the correct depth, connected to the control panel, and the system is commissioned before client handover. Where applicable, warranty is provided by the product manufacturer according to the manufacturer's terms and conditions.</p>
         <p style="font-size:.95rem;color:#4a5568;line-height:1.85;margin:0 0 18px;"><strong>Load-shedding resilience:</strong> Everest Drilling advises all clients on load-shedding resilience strategies — including correctly sized overhead storage tanks (12+ hours reserve), backup generator connections, solar-powered pump systems, and variable-frequency drives for solar/battery compatibility.</p>
         <div style="background:#f4f6f8;border-radius:10px;padding:20px 24px;margin-top:8px;">
-          <strong style="font-size:.85rem;color:#08192e;">What's included:</strong>
+          <strong style="font-size:.85rem;color:#0b1f3a;">What's included:</strong>
           <span style="font-size:.9rem;color:#4a5568;"> Pump supply, rising main, wellhead fittings, control panel, electrical connection, system commissioning, and handover documentation. Where applicable, warranty is provided by the product manufacturer according to the manufacturer's terms and conditions.</span>
         </div>
       </article>
 
       <!-- ▶ CTA INTERCEPT 2 — after pump installation, before tank & turnkey -->
-      <div style="background:#fff7e6;border-radius:12px;padding:32px 36px;border:2px solid #c8960c;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <div style="background:#fff7e6;border-radius:12px;padding:32px 36px;border:2px solid #F28B00;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
         <div>
-          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;color:#08192e;text-transform:uppercase;margin-bottom:8px;">Turnkey Water Solution</div>
-          <div style="font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;color:#08192e;line-height:1.3;margin-bottom:8px;">Survey → Borehole → Pump → Tank. One call covers it all.</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;color:#0b1f3a;text-transform:uppercase;margin-bottom:8px;">Turnkey Water Solution</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;color:#0b1f3a;line-height:1.3;margin-bottom:8px;">Survey → Borehole → Pump → Tank. One call covers it all.</div>
           <p style="font-size:13px;color:#4a5568;margin:0;">Our turnkey package covers the full scope under one contractor — no juggling multiple service providers.</p>
           <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;">
-            <span style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;color:#08192e;display:flex;align-items:center;gap:6px;"><span style="color:#1a8f44;">✓</span>Quality Tank Construction</span>
+            <span style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;color:#0b1f3a;display:flex;align-items:center;gap:6px;"><span style="color:#1a8f44;">✓</span>Quality Tank Construction</span>
             
-            <span style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;color:#08192e;display:flex;align-items:center;gap:6px;"><span style="color:#1a8f44;">✓</span>Professional Installation</span>
+            <span style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;color:#0b1f3a;display:flex;align-items:center;gap:6px;"><span style="color:#1a8f44;">✓</span>Professional Installation</span>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:10px;flex-shrink:0;">
           <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27m%20interested%20in%20a%20full%20turnkey%20water%20solution%20(borehole%20%2B%20pump%20%2B%20tank).%20Please%20can%20I%20get%20a%20free%20quote%3F" target="_blank" rel="noopener"
-            style="display:inline-flex;align-items:center;gap:10px;background:#c8960c;color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 24px;text-decoration:none;border-radius:6px;white-space:nowrap;">
+            style="display:inline-flex;align-items:center;gap:10px;background:#F28B00;color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 24px;text-decoration:none;border-radius:6px;white-space:nowrap;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.985l6.304-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.859 0-3.6-.5-5.1-1.373l-.366-.217-3.741.981.999-3.648-.239-.376A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
             Get Turnkey Quote
           </a>
           <a href="contact.html#quote"
-            style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#08192e;font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 24px;text-decoration:none;border:1px solid rgba(8,25,46,.25);border-radius:6px;white-space:nowrap;">
+            style="display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#0b1f3a;font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 24px;text-decoration:none;border:1px solid rgba(11,31,58,.25);border-radius:6px;white-space:nowrap;">
             📋 Formal Quote Form
           </a>
         </div>
       </div>
 
       <!-- SERVICE BLOCK 5: Overhead Tank Construction -->
-      <article itemscope itemtype="https://schema.org/Service" style="background:#fff;border-radius:16px;padding:40px;border-left:5px solid #c8960c;box-shadow:0 2px 16px rgba(10,37,64,.07);">
+      <article itemscope itemtype="https://schema.org/Service" style="background:#fff;border-radius:16px;padding:40px;border-left:5px solid #F28B00;box-shadow:0 2px 16px rgba(10,37,64,.07);">
         <meta itemprop="provider" content="Everest Drilling (Pty) Ltd" />
         <meta itemprop="areaServed" content="South Africa" />
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
           <span style="font-size:2rem;">🏗️</span>
           <div>
-            <h3 style="font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:900;color:#08192e;margin:0;" itemprop="name">Overhead Tank Construction</h3>
-            <div style="font-size:.8rem;color:#c8960c;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">Residential · Agricultural · Industrial</div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:900;color:#0b1f3a;margin:0;" itemprop="name">Overhead Tank Construction</h3>
+            <div style="font-size:.8rem;color:#F28B00;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">Residential · Agricultural · Industrial</div>
           </div>
         </div>
         <p style="font-size:.95rem;color:#2d3748;line-height:1.85;margin:0 0 18px;" itemprop="description"><strong>What it is:</strong> Overhead water tank construction involves building an elevated water storage structure that uses gravity to deliver water pressure to the distribution system — eliminating the need for a constant-pressure pump on the supply side. Everest Drilling constructs elevated tanks with full structural design, foundation, and installation.</p>
         <p style="font-size:.95rem;color:#4a5568;line-height:1.85;margin:0 0 18px;"><strong>How it works:</strong> A reinforced steel or concrete support structure is erected to the required height (typically 3–8 metres above the highest distribution point). A polyethylene tank (2,000–30,000 litres) is mounted on the structure. Pipework connects the borehole pump to the tank (fill line) and the tank to the distribution network (outlet). Float valves or level controllers prevent overflow.</p>
         <p style="font-size:.95rem;color:#4a5568;line-height:1.85;margin:0 0 18px;"><strong>Load-shedding benefit:</strong> An overhead tank stores water to maintain supply during load-shedding and power outages, providing a buffer when the borehole pump cannot run. Tank capacity should be matched to your household or commercial usage requirements.</p>
         <div style="background:#f4f6f8;border-radius:10px;padding:20px 24px;margin-top:8px;">
-          <strong style="font-size:.85rem;color:#08192e;">Construction standards:</strong>
+          <strong style="font-size:.85rem;color:#0b1f3a;">Construction standards:</strong>
           <span style="font-size:.9rem;color:#4a5568;"> All Everest Drilling tank structures include structural load calculations, foundation design, and appropriate tank material selection for the intended use.</span>
         </div>
       </article>
 
       <!-- SERVICE BLOCK 6: Full Turnkey Water Supply -->
-      <article itemscope itemtype="https://schema.org/Service" style="background:#08192e;border-radius:16px;padding:40px;border:2px solid #c8960c;box-shadow:0 8px 32px rgba(10,37,64,.18);">
+      <article itemscope itemtype="https://schema.org/Service" style="background:#0b1f3a;border-radius:16px;padding:40px;border:2px solid #F28B00;box-shadow:0 8px 32px rgba(10,37,64,.18);">
         <meta itemprop="provider" content="Everest Drilling (Pty) Ltd" />
         <meta itemprop="areaServed" content="South Africa" />
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
           <span style="font-size:2rem;">💧</span>
           <div>
             <h3 style="font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:900;color:#fff;margin:0;" itemprop="name">Full Turnkey Water Supply</h3>
-            <div style="font-size:.8rem;color:#c8960c;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">End-to-End · One Contractor · One Point of Contact</div>
+            <div style="font-size:.8rem;color:#F28B00;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">End-to-End · One Contractor · One Point of Contact</div>
           </div>
         </div>
         <p style="font-size:.95rem;color:#cbd5e0;line-height:1.85;margin:0 0 18px;" itemprop="description"><strong style="color:#fff;">What it is:</strong> A full turnkey water supply project means Everest Drilling handles every step — from initial geophysical survey and borehole drilling through to pump installation, overhead tank construction, pipework, commissioning, and client handover. One contractor, single point of responsibility, no subcontracting.</p>
         <p style="font-size:.95rem;color:#94aabf;line-height:1.85;margin:0 0 18px;"><strong style="color:#fff;">The 5-step process:</strong><br>
-        <strong style="color:#c8960c;">1.</strong> Geophysical survey → optimal drill point identified.<br>
-        <strong style="color:#c8960c;">2.</strong> Borehole drilling → rig mobilised, shaft drilled to water-bearing zone.<br>
-        <strong style="color:#c8960c;">3.</strong> Casing and development → casing installed, borehole cleaned and developed.<br>
-        <strong style="color:#c8960c;">4.</strong> Pump and tank installation → pump set, rising main, overhead tank, and pipework completed.<br>
-        <strong style="color:#c8960c;">5.</strong> Commissioning and handover → system tested and commissioned, handover documentation given to client.</p>
+        <strong style="color:#F28B00;">1.</strong> Geophysical survey → optimal drill point identified.<br>
+        <strong style="color:#F28B00;">2.</strong> Borehole drilling → rig mobilised, shaft drilled to water-bearing zone.<br>
+        <strong style="color:#F28B00;">3.</strong> Casing and development → casing installed, borehole cleaned and developed.<br>
+        <strong style="color:#F28B00;">4.</strong> Pump and tank installation → pump set, rising main, overhead tank, and pipework completed.<br>
+        <strong style="color:#F28B00;">5.</strong> Commissioning and handover → system tested and commissioned, handover documentation given to client.</p>
         <div style="background:#0d2540;border-radius:10px;padding:20px 24px;margin-top:8px;border:1px solid #1a3050;">
-          <strong style="font-size:.85rem;color:#c8960c;">Typical timeline:</strong>
+          <strong style="font-size:.85rem;color:#F28B00;">Typical timeline:</strong>
           <span style="font-size:.9rem;color:#94aabf;"> Project timelines vary depending on scope, access, geology, and site conditions. Contact us for a project-specific timeline estimate.</span>
         </div>
       </article>
@@ -794,9 +794,9 @@
 
     <!-- FAQ Teaser -->
     <div style="text-align:center;margin-top:56px;padding:40px;background:#fff;border-radius:14px;border:1.5px solid #e2e8f0;">
-      <h3 style="font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:800;color:#08192e;margin:0 0 10px;">Have Questions About Our Services?</h3>
+      <h3 style="font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:800;color:#0b1f3a;margin:0 0 10px;">Have Questions About Our Services?</h3>
       <p style="color:#4a5568;margin:0 0 22px;">We've answered 44 of the most common borehole drilling questions — covering drilling process, geology, agriculture, maintenance, and more.</p>
-      <a href="faq.html" style="display:inline-block;background:#c8960c;color:#fff;text-decoration:none;padding:13px 32px;border-radius:8px;font-weight:700;font-size:.95rem;">Read All 44 FAQs →</a>
+      <a href="faq.html" style="display:inline-block;background:#F28B00;color:#fff;text-decoration:none;padding:13px 32px;border-radius:8px;font-weight:700;font-size:.95rem;">Read All 44 FAQs →</a>
     </div>
   </div>
 </section>
@@ -966,10 +966,10 @@
     </div>
   </div>
 
-<div style="background:#f4f6f8;border-top:2px solid rgba(200,150,12,0.3);padding:28px 48px;">
+<div style="background:#f4f6f8;border-top:2px solid rgba(242,139,0,0.3);padding:28px 48px;">
   <div style="max-width:900px;margin:0 auto;text-align:center;">
-    <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#08192e;margin-bottom:10px;">DISCLAIMER</div>
-    <p style="font-size:12px;color:#556070;line-height:1.8;margin:0;">The information provided on this website is intended for general informational and educational purposes only. While every effort is made to keep content accurate and up to date, information may become outdated and may not reflect current site conditions, geological variations, equipment specifications, regulatory changes, or project-specific requirements. Content published on this website should not be interpreted as technical, legal, regulatory, engineering, compliance, or project-specific advice. Everest does not guarantee drilling depth, water availability, borehole yield, project outcomes, pricing, approvals, certifications, or regulatory compliance requirements. Visitors should contact Everest directly or consult qualified professionals for advice relating to their specific project, location, and requirements.</p>
+    <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#0b1f3a;margin-bottom:10px;">DISCLAIMER</div>
+    <p style="font-size:12px;color:#3d4a5c;line-height:1.8;margin:0;">The information provided on this website is intended for general informational and educational purposes only. While every effort is made to keep content accurate and up to date, information may become outdated and may not reflect current site conditions, geological variations, equipment specifications, regulatory changes, or project-specific requirements. Content published on this website should not be interpreted as technical, legal, regulatory, engineering, compliance, or project-specific advice. Everest does not guarantee drilling depth, water availability, borehole yield, project outcomes, pricing, approvals, certifications, or regulatory compliance requirements. Visitors should contact Everest directly or consult qualified professionals for advice relating to their specific project, location, and requirements.</p>
   </div>
 </div>
 </footer>

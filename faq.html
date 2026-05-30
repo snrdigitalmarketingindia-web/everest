@@ -395,13 +395,13 @@
 
   <style>
 
-    :root{--navy:#08192e;--gold:#c8960c;--light:#f4f6f8;--text:#2d3748;--muted:#4a5568}
+    :root{--navy:#0b1f3a;--gold:#F28B00;--light:#f4f6f8;--text:#2d3748;--muted:#4a5568}
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'Open Sans',sans-serif;color:var(--text);background:#fff}
     .container{max-width:1120px;margin:0 auto;padding:0 24px}
     #navbar {
       position:fixed; top:0; left:0; right:0; z-index:1000;
-      background:rgba(8,25,46,0.97);
+      background:rgba(11,31,58,0.97);
       border-bottom:2px solid var(--gold);
       backdrop-filter:blur(10px);
     }
@@ -411,20 +411,20 @@
     .nav-logo-mark svg { width:22px; height:22px; fill:var(--navy); }
     .nav-logo-text { display:flex; flex-direction:column; line-height:1; white-space:nowrap; }
     .nav-logo-top { font-family:'Montserrat',sans-serif; font-size:14px; font-weight:900; color:#ffffff; letter-spacing:2.5px; text-transform:uppercase; white-space:nowrap; }
-    .nav-logo-bot { font-family:'Montserrat',sans-serif; font-size:8px; font-weight:600; color:#c8960c; letter-spacing:3px; text-transform:uppercase; margin-top:4px; white-space:nowrap; }
+    .nav-logo-bot { font-family:'Montserrat',sans-serif; font-size:8px; font-weight:600; color:#F28B00; letter-spacing:3px; text-transform:uppercase; margin-top:4px; white-space:nowrap; }
     .nav-links { display:flex; gap:22px; align-items:center; }
-    .nav-links a { font-family:'Montserrat',sans-serif; color:#556070; font-size:10px; font-weight:700; text-decoration:none; letter-spacing:1.5px; text-transform:uppercase; transition:color 0.2s; white-space:nowrap; }
-    .nav-links a:hover { color:#c8960c; }
-    .nav-links a.active { color:#c8960c !important; }
-    .nav-cta { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:10px; padding:11px 22px; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; transition:background 0.2s; white-space:nowrap; flex-shrink:0; margin-left:20px; }
-    .nav-cta:hover { background:#e2a800; }
+    .nav-links a { font-family:'Montserrat',sans-serif; color:#3d4a5c; font-size:10px; font-weight:700; text-decoration:none; letter-spacing:1.5px; text-transform:uppercase; transition:color 0.2s; white-space:nowrap; }
+    .nav-links a:hover { color:#F28B00; }
+    .nav-links a.active { color:#F28B00 !important; }
+    .nav-cta { font-family:'Montserrat',sans-serif; background:var(--gold); color:var(--navy); font-weight:700; font-size:10px; padding:14px 28px; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; transition:all 0.2s ease; white-space:nowrap; flex-shrink:0; margin-left:20px; }
+    .nav-cta:hover { background:#F7B731; }
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
     .hamburger span { width:24px; height:2px; background:var(--gold); display:block; transition:0.3s; }
-    .mobile-menu { display:none; flex-direction:column; background:#08192e; border-top:1px solid rgba(200,150,12,0.2); padding:20px 48px 28px; gap:18px; }
+    .mobile-menu { display:none; flex-direction:column; background:#0b1f3a; border-top:1px solid rgba(242,139,0,0.2); padding:20px 48px 28px; gap:18px; }
     .mobile-menu.open { display:flex; }
-    .mobile-menu a { font-family:'Montserrat',sans-serif; color:#556070; font-size:13px; font-weight:700; text-decoration:none; letter-spacing:2px; text-transform:uppercase; padding:6px 0; border-bottom:1px solid rgba(200,150,12,0.1); }
+    .mobile-menu a { font-family:'Montserrat',sans-serif; color:#3d4a5c; font-size:13px; font-weight:700; text-decoration:none; letter-spacing:2px; text-transform:uppercase; padding:6px 0; border-bottom:1px solid rgba(242,139,0,0.1); }
     @media(max-width:960px){ .nav-links { display:none; } .nav-cta { display:none; } .hamburger { display:flex; } }
-    footer{background:#08192e;border-top:2px solid var(--gold);padding:32px 0;margin-top:0}
+    footer{background:#0b1f3a;border-top:2px solid var(--gold);padding:32px 0;margin-top:0}
     .foot-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
     .foot-logo{display:flex;align-items:center;gap:10px}
     .foot-logo-mark{width:32px;height:32px;background:var(--gold);border-radius:5px;display:flex;align-items:center;justify-content:center}
@@ -442,35 +442,35 @@
     body{padding-top:68px}
     .faq-list{display:flex;flex-direction:column;gap:4px}
     .faq-item{border:1.5px solid #e2e8f0;border-radius:10px;overflow:hidden;transition:border-color .2s}
-    .faq-item:hover{border-color:#c8960c}
-    .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;background:#fff;border:none;cursor:pointer;text-align:left;font-family:'Montserrat',sans-serif;font-size:.95rem;font-weight:700;color:#08192e;line-height:1.4}
-    .faq-q[aria-expanded="true"]{background:#f8f4e8;color:#c8960c}
-    .faq-icon{font-size:1.4rem;font-weight:300;flex-shrink:0;transition:transform .2s;color:#c8960c}
+    .faq-item:hover{border-color:#F28B00}
+    .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;background:#fff;border:none;cursor:pointer;text-align:left;font-family:'Montserrat',sans-serif;font-size:.95rem;font-weight:700;color:#0b1f3a;line-height:1.4}
+    .faq-q[aria-expanded="true"]{background:#f8f4e8;color:#F28B00}
+    .faq-icon{font-size:1.4rem;font-weight:300;flex-shrink:0;transition:transform .2s;color:#F28B00}
     .faq-q[aria-expanded="true"] .faq-icon{transform:rotate(45deg)}
     .faq-a{display:none;padding:0 22px 20px;background:#fffdf5;border-top:1px solid #f0e8cc}
     .faq-a p{font-size:.92rem;line-height:1.8;color:#4a5568;padding-top:16px}
     .faq-a.open{display:block}
-    .hero-faq{background:#08192e;padding:72px 0 56px;border-bottom:4px solid #c8960c;text-align:center}
+    .hero-faq{background:#0b1f3a;padding:72px 0 56px;border-bottom:4px solid #F28B00;text-align:center}
     .breadcrumb{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:20px;font-size:.82rem;color:#94aabf}
-    .breadcrumb a{color:#c8960c;text-decoration:none}
+    .breadcrumb a{color:#F28B00;text-decoration:none}
     .cat-nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px;justify-content:center}
     .sticky-toc{position:sticky;top:84px;align-self:flex-start;background:#fff;border:1.5px solid #e2e8f0;border-radius:12px;padding:24px;display:none}
     @media(min-width:1100px){.sticky-toc{display:block}}
     .sticky-toc a{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:.85rem;color:#4a5568;text-decoration:none;border-bottom:1px solid #f0f0f0}
-    .sticky-toc a:hover{color:#c8960c}
+    .sticky-toc a:hover{color:#F28B00}
     .layout{display:flex;gap:40px;align-items:flex-start}
     .main-col{flex:1;min-width:0}
   
 /* ══ MOBILE STICKY CTA BAR (Phase 6 CRO) ══════════════════════════════ */
 #mob-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9998;
-  background:#08192e;border-top:2px solid #c8960c;
+  background:#0b1f3a;border-top:2px solid #F28B00;
   grid-template-columns:1fr 1fr;height:60px;}
 #mob-cta a{display:flex;align-items:center;justify-content:center;gap:8px;
   font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;
   letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;
   color:#fff;height:100%;transition:background .2s;}
-#mob-cta .mcta-call{background:#c8960c;color:#08192e;}
-#mob-cta .mcta-call:active{background:#a37a09;}
+#mob-cta .mcta-call{background:#E60000;color:#fff;}
+#mob-cta .mcta-call:active{background:#cc0000;}
 #mob-cta .mcta-wa{background:#1a8f44;}
 #mob-cta .mcta-wa:active{background:#146d34;}
 #mob-cta svg{width:18px;height:18px;fill:currentColor;flex-shrink:0;}
@@ -501,12 +501,12 @@
 
 /* ══ SCROLL NUDGE (Phase 6 CRO) ═══════════════════════════════════════ */
 #cro-nudge{display:none;position:fixed;bottom:76px;left:50%;
-  transform:translateX(-50%);z-index:9997;background:#08192e;
+  transform:translateX(-50%);z-index:9997;background:#0b1f3a;
   color:#fff;font-family:'Montserrat',sans-serif;font-size:11px;
   font-weight:700;letter-spacing:1px;padding:10px 20px 10px 14px;
-  border-radius:50px;border:1.5px solid #c8960c;white-space:nowrap;
+  border-radius:50px;border:1.5px solid #F28B00;white-space:nowrap;
   animation:nudgein .4s ease;box-shadow:0 4px 20px rgba(0,0,0,.4);}
-#cro-nudge a{color:#c8960c;text-decoration:none;}
+#cro-nudge a{color:#F28B00;text-decoration:none;}
 #cro-nudge .ndx{cursor:pointer;margin-left:10px;opacity:.6;font-size:14px;}
 @keyframes nudgein{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 @media(max-width:900px){#cro-nudge{display:block;}}
@@ -564,20 +564,20 @@
       <span>›</span>
       <span style="color:#fff;">FAQ</span>
     </nav>
-    <div style="display:inline-block;background:rgba(200,150,12,.15);border:1px solid rgba(200,150,12,.4);border-radius:20px;padding:6px 18px;font-size:.8rem;font-weight:700;color:#c8960c;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Knowledge Base</div>
-    <h1 style="font-family:'Montserrat',sans-serif;font-size:2.4rem;font-weight:900;color:#fff;margin:0 0 16px;line-height:1.15;">Borehole Drilling FAQ<br><span style="color:#c8960c;">South Africa — Expert Answers</span></h1>
+    <div style="display:inline-block;background:rgba(242,139,0,.15);border:1px solid rgba(242,139,0,.4);border-radius:20px;padding:6px 18px;font-size:.8rem;font-weight:700;color:#F28B00;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Knowledge Base</div>
+    <h1 style="font-family:'Montserrat',sans-serif;font-size:2.4rem;font-weight:900;color:#fff;margin:0 0 16px;line-height:1.15;">Borehole Drilling FAQ<br><span style="color:#F28B00;">South Africa — Expert Answers</span></h1>
     <p style="color:#94aabf;max-width:620px;margin:0 auto 32px;font-size:1.05rem;line-height:1.75;">Everything you need to know about borehole drilling, geophysical surveys, pump installation, regional geology, and long-term maintenance — answered by South Africa's borehole drilling specialists.</p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;">
       <div style="background:#0d2540;border-radius:10px;padding:16px 24px;text-align:center;min-width:120px;">
-        <div style="font-family:'Montserrat',sans-serif;font-size:1.8rem;font-weight:900;color:#c8960c;">30+</div>
+        <div style="font-family:'Montserrat',sans-serif;font-size:1.8rem;font-weight:900;color:#F28B00;">30+</div>
         <div style="font-size:.75rem;color:#94aabf;text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Questions Answered</div>
       </div>
       <div style="background:#0d2540;border-radius:10px;padding:16px 24px;text-align:center;min-width:120px;">
-        <div style="font-family:'Montserrat',sans-serif;font-size:1.8rem;font-weight:900;color:#c8960c;">8</div>
+        <div style="font-family:'Montserrat',sans-serif;font-size:1.8rem;font-weight:900;color:#F28B00;">8</div>
         <div style="font-size:.75rem;color:#94aabf;text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Topic Categories</div>
       </div>
       <div style="background:#0d2540;border-radius:10px;padding:16px 24px;text-align:center;min-width:120px;">
-        <div style="font-family:'Montserrat',sans-serif;font-size:1.8rem;font-weight:900;color:#c8960c;">SA</div>
+        <div style="font-family:'Montserrat',sans-serif;font-size:1.8rem;font-weight:900;color:#F28B00;">SA</div>
         <div style="font-size:.75rem;color:#94aabf;text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Focus: South Africa</div>
       </div>
     </div>
@@ -588,14 +588,14 @@
 <div style="background:#f4f6f8;border-bottom:1px solid #e2e8f0;padding:24px 0;">
   <div class="container">
     <div class="cat-nav" style="margin-bottom:0;">
-      <a href="#general" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#c8960c';this.style.color='#c8960c'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">💧 General Borehole Questions</a>
-<a href="#cost" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#c8960c';this.style.color='#c8960c'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">💰 Cost & Pricing</a>
-<a href="#process" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#c8960c';this.style.color='#c8960c'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">⚙️ Drilling Process</a>
+      <a href="#general" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#F28B00';this.style.color='#F28B00'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">💧 General Borehole Questions</a>
+<a href="#cost" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#F28B00';this.style.color='#F28B00'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">💰 Cost & Pricing</a>
+<a href="#process" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#F28B00';this.style.color='#F28B00'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">⚙️ Drilling Process</a>
 
-<a href="#regional" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#c8960c';this.style.color='#c8960c'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">🗺️ Regional & Geological Questions</a>
-<a href="#agricultural" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#c8960c';this.style.color='#c8960c'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">🌾 Agricultural & Farm Boreholes</a>
-<a href="#industrial" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#c8960c';this.style.color='#c8960c'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">🏭 Industrial & Commercial Water</a>
-<a href="#maintenance" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#c8960c';this.style.color='#c8960c'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">🔧 Maintenance & Long-Term Care</a>
+<a href="#regional" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#F28B00';this.style.color='#F28B00'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">🗺️ Regional & Geological Questions</a>
+<a href="#agricultural" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#F28B00';this.style.color='#F28B00'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">🌾 Agricultural & Farm Boreholes</a>
+<a href="#industrial" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#F28B00';this.style.color='#F28B00'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">🏭 Industrial & Commercial Water</a>
+<a href="#maintenance" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 18px;font-size:.88rem;font-weight:600;color:#0a2540;text-decoration:none;transition:.2s;" onmouseover="this.style.borderColor='#F28B00';this.style.color='#F28B00'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#0a2540'">🔧 Maintenance & Long-Term Care</a>
 
     </div>
   </div>
@@ -608,10 +608,10 @@
 
       <!-- Sticky TOC (desktop only) -->
       <aside class="sticky-toc" style="width:240px;flex-shrink:0;">
-        <div style="font-family:'Montserrat',sans-serif;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#08192e;margin-bottom:16px;">Jump to Section</div>
+        <div style="font-family:'Montserrat',sans-serif;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#0b1f3a;margin-bottom:16px;">Jump to Section</div>
         <a href="#general">💧 General Borehole Questions</a><a href="#process">⚙️ Drilling Process</a><a href="#regional">🗺️ Regional & Geological Questions</a><a href="#agricultural">🌾 Agricultural & Farm Boreholes</a><a href="#industrial">🏭 Industrial & Commercial Water</a><a href="#maintenance">🔧 Maintenance & Long-Term Care</a>
         <div style="margin-top:20px;padding-top:16px;border-top:1px solid #e2e8f0;">
-          <a href="contact.html#quote" style="display:block;background:#c8960c;color:#fff;text-align:center;padding:12px;border-radius:8px;font-weight:700;font-size:.85rem;text-decoration:none;">Get a Free Quote</a>
+          <a href="contact.html#quote" style="display:block;background:#F28B00;color:#fff;text-align:center;padding:12px;border-radius:8px;font-weight:700;font-size:.85rem;text-decoration:none;">Get a Free Quote</a>
         </div>
       </aside>
 
@@ -622,8 +622,8 @@
   <section id="general" style="margin-bottom:56px;" itemscope itemtype="https://schema.org/FAQPage">
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:2px solid #e2e8f0;">
       <span style="font-size:2rem;">💧</span>
-      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#08192e;margin:0;">General Borehole Questions</h2>
-      <span style="margin-left:auto;background:#08192e;color:#c8960c;font-size:.75rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;">8 Q&As</span>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#0b1f3a;margin:0;">General Borehole Questions</h2>
+      <span style="margin-left:auto;background:#0b1f3a;color:#F28B00;font-size:.75rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;">8 Q&As</span>
     </div>
     <div class="faq-list">
 
@@ -705,8 +705,8 @@
   <section id="process" style="margin-bottom:56px;" itemscope itemtype="https://schema.org/FAQPage">
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:2px solid #e2e8f0;">
       <span style="font-size:2rem;">⚙️</span>
-      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#08192e;margin:0;">Drilling Process</h2>
-      <span style="margin-left:auto;background:#08192e;color:#c8960c;font-size:.75rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;">6 Q&As</span>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#0b1f3a;margin:0;">Drilling Process</h2>
+      <span style="margin-left:auto;background:#0b1f3a;color:#F28B00;font-size:.75rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;">6 Q&As</span>
     </div>
     <div class="faq-list">
 
@@ -770,8 +770,8 @@
   <section id="regional" style="margin-bottom:56px;" itemscope itemtype="https://schema.org/FAQPage">
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:2px solid #e2e8f0;">
       <span style="font-size:2rem;">🗺️</span>
-      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#08192e;margin:0;">Regional & Geological Questions</h2>
-      <span style="margin-left:auto;background:#08192e;color:#c8960c;font-size:.75rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;">6 Q&As</span>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#0b1f3a;margin:0;">Regional & Geological Questions</h2>
+      <span style="margin-left:auto;background:#0b1f3a;color:#F28B00;font-size:.75rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;">6 Q&As</span>
     </div>
     <div class="faq-list">
 
@@ -835,8 +835,8 @@
   <section id="agricultural" style="margin-bottom:56px;" itemscope itemtype="https://schema.org/FAQPage">
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:2px solid #e2e8f0;">
       <span style="font-size:2rem;">🌾</span>
-      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#08192e;margin:0;">Agricultural & Farm Boreholes</h2>
-      <span style="margin-left:auto;background:#08192e;color:#c8960c;font-size:.75rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;">5 Q&As</span>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#0b1f3a;margin:0;">Agricultural & Farm Boreholes</h2>
+      <span style="margin-left:auto;background:#0b1f3a;color:#F28B00;font-size:.75rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;">5 Q&As</span>
     </div>
     <div class="faq-list">
 
@@ -891,8 +891,8 @@
   <section id="industrial" style="margin-bottom:56px;" itemscope itemtype="https://schema.org/FAQPage">
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:2px solid #e2e8f0;">
       <span style="font-size:2rem;">🏭</span>
-      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#08192e;margin:0;">Industrial & Commercial Water</h2>
-      <span style="margin-left:auto;background:#08192e;color:#c8960c;font-size:.75rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;">4 Q&As</span>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#0b1f3a;margin:0;">Industrial & Commercial Water</h2>
+      <span style="margin-left:auto;background:#0b1f3a;color:#F28B00;font-size:.75rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;">4 Q&As</span>
     </div>
     <div class="faq-list">
 
@@ -938,8 +938,8 @@
   <section id="maintenance" style="margin-bottom:56px;" itemscope itemtype="https://schema.org/FAQPage">
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:2px solid #e2e8f0;">
       <span style="font-size:2rem;">🔧</span>
-      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#08192e;margin:0;">Maintenance & Long-Term Care</h2>
-      <span style="margin-left:auto;background:#08192e;color:#c8960c;font-size:.75rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;">5 Q&As</span>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#0b1f3a;margin:0;">Maintenance & Long-Term Care</h2>
+      <span style="margin-left:auto;background:#0b1f3a;color:#F28B00;font-size:.75rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;">5 Q&As</span>
     </div>
     <div class="faq-list">
 
@@ -992,11 +992,11 @@
   </section>
 
         <!-- CTA Block -->
-        <div style="background:#08192e;border-radius:16px;padding:48px 36px;text-align:center;border:2px solid #c8960c;margin-top:16px;">
+        <div style="background:#0b1f3a;border-radius:16px;padding:48px 36px;text-align:center;border:2px solid #F28B00;margin-top:16px;">
           <h2 style="font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:900;color:#fff;margin:0 0 12px;">Still Have Questions?</h2>
           <p style="color:#94aabf;margin:0 0 28px;font-size:1rem;">Our team answers all borehole drilling questions — no obligation, no pressure. Call or WhatsApp us directly.</p>
           <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;">
-            <a href="tel:+27751123456" style="background:#c8960c;color:#fff;text-decoration:none;padding:13px 28px;border-radius:8px;font-weight:700;font-size:.95rem;">📞 +27 75 112 3456</a>
+            <a href="tel:+27751123456" style="background:#F28B00;color:#fff;text-decoration:none;padding:13px 28px;border-radius:8px;font-weight:700;font-size:.95rem;">📞 +27 75 112 3456</a>
             <a href="https://wa.me/27751123456?text=Hi%20Everest%20Drilling%2C%20I%27d%20like%20a%20free%20borehole%20quote%20please." target="_blank" style="background:#1a8f44;color:#fff;text-decoration:none;padding:13px 28px;border-radius:8px;font-weight:700;font-size:.95rem;">💬 WhatsApp Us</a>
             <a href="contact.html#quote" style="background:transparent;color:#fff;text-decoration:none;padding:13px 28px;border-radius:8px;font-weight:700;font-size:.95rem;border:2px solid #fff;">Get a Free Quote →</a>
           </div>
@@ -1023,10 +1023,10 @@
     </div>
   </div>
 
-<div style="background:#f4f6f8;border-top:2px solid rgba(200,150,12,0.3);padding:28px 48px;">
+<div style="background:#f4f6f8;border-top:2px solid rgba(242,139,0,0.3);padding:28px 48px;">
   <div style="max-width:900px;margin:0 auto;text-align:center;">
-    <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#08192e;margin-bottom:10px;">DISCLAIMER</div>
-    <p style="font-size:12px;color:#556070;line-height:1.8;margin:0;">The information provided on this website is intended for general informational and educational purposes only. While every effort is made to keep content accurate and up to date, information may become outdated and may not reflect current site conditions, geological variations, equipment specifications, regulatory changes, or project-specific requirements. Content published on this website should not be interpreted as technical, legal, regulatory, engineering, compliance, or project-specific advice. Everest does not guarantee drilling depth, water availability, borehole yield, project outcomes, pricing, approvals, certifications, or regulatory compliance requirements. Visitors should contact Everest directly or consult qualified professionals for advice relating to their specific project, location, and requirements.</p>
+    <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#0b1f3a;margin-bottom:10px;">DISCLAIMER</div>
+    <p style="font-size:12px;color:#3d4a5c;line-height:1.8;margin:0;">The information provided on this website is intended for general informational and educational purposes only. While every effort is made to keep content accurate and up to date, information may become outdated and may not reflect current site conditions, geological variations, equipment specifications, regulatory changes, or project-specific requirements. Content published on this website should not be interpreted as technical, legal, regulatory, engineering, compliance, or project-specific advice. Everest does not guarantee drilling depth, water availability, borehole yield, project outcomes, pricing, approvals, certifications, or regulatory compliance requirements. Visitors should contact Everest directly or consult qualified professionals for advice relating to their specific project, location, and requirements.</p>
   </div>
 </div>
 </footer>
