@@ -686,12 +686,26 @@
               </div>
             </div>
             <div class="fg">
-              <label for="qf-location">Site Location</label>
-              <input id="qf-location" type="text" name="location" placeholder="e.g. East London, Joburg, or use button →" autocomplete="off" />
+              <label for="qf-location">Drill Site Location</label>
+              <input id="qf-location" type="text" name="location" placeholder="e.g. Farm name, suburb, nearest town..." autocomplete="off" />
+
+              <!-- Option A: GPS if at the site -->
               <button type="button" id="btn-location" onclick="getSiteLocation()" style="margin-top:8px;display:flex;align-items:center;gap:7px;background:#f0f4ff;border:1.5px solid #3b6cb7;color:#3b6cb7;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:9px 16px;cursor:pointer;border-radius:6px;width:100%;">
                 <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#3b6cb7;flex-shrink:0;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                <span id="btn-location-text">📍 Pin Exact Drill Site on Google Maps</span>
+                <span id="btn-location-text">I'm at the site — Use My GPS Location</span>
               </button>
+
+              <!-- Option B: Paste Google Maps link -->
+              <div style="margin-top:10px;">
+                <label for="qf-maps-paste" style="font-size:.78rem;color:#3d4a5c;font-weight:600;display:block;margin-bottom:4px;">
+                  Not at the site? Paste a Google Maps link:
+                </label>
+                <input id="qf-maps-paste" type="url" placeholder="https://maps.app.goo.gl/... or https://www.google.com/maps?q=..." autocomplete="off" style="font-size:.85rem;" oninput="onMapsPaste(this.value)" />
+                <span style="font-size:.7rem;color:#94aabf;display:block;margin-top:4px;">
+                  Open Google Maps → long-press the site → tap Share → Copy link → paste above
+                </span>
+              </div>
+
               <input type="hidden" id="qf-maps-link" name="maps_link" />
               <div id="location-status" style="font-size:.75rem;margin-top:5px;display:none;"></div>
             </div>
@@ -871,6 +885,23 @@
 </script>
 <!-- ══ SITE LOCATION PICKER ══ -->
 <script>
+// Option B: user pastes a Google Maps link
+function onMapsPaste(val) {
+  var link  = document.getElementById('qf-maps-link');
+  var stat  = document.getElementById('location-status');
+  val = val.trim();
+  if (val.length > 10) {
+    link.value = val;
+    stat.style.display  = 'block';
+    stat.style.color    = '#2e7d32';
+    stat.textContent    = '✅ Google Maps link saved.';
+  } else {
+    link.value = '';
+    stat.style.display  = 'none';
+  }
+}
+
+// Option A: use device GPS
 function getSiteLocation() {
   var btn  = document.getElementById('btn-location');
   var txt  = document.getElementById('btn-location-text');
