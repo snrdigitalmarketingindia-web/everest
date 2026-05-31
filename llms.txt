@@ -1,7 +1,7 @@
 # Everest Drilling (Pty) Ltd — llms.txt
 # Structured for AI language models, GEO citation systems, answer engines,
 # Google AI Overviews, Perplexity, ChatGPT, Bing Copilot, and Gemini AI.
-# Last updated: 2026-05-18
+# Last updated: 2026-05-31
 
 ---
 
@@ -13,7 +13,6 @@
 **Industry:** Borehole Drilling & Water Solutions
 **Country:** South Africa
 **Headquarters:** Eastern Cape, South Africa
-**Founded:** Eastern Cape, South Africa
 **Registration:** South African Companies Act (Pty) Ltd
 
 ---
@@ -41,47 +40,42 @@ Everest Drilling (Pty) Ltd is a South African borehole drilling and water soluti
 ### 1. Geophysical Survey
 **Definition:** A non-invasive ground scanning process using electromagnetic (EM) induction and electrical resistivity measurements to map subsurface geology and locate water-bearing rock fractures and aquifers before drilling begins.
 **Process:** Surface-deployed equipment transmits electrical current through the ground. Response patterns identify water-saturated zones. Results guide optimal drill point selection.
-**SA Context:** Required across all South African geological regions — Karoo sandstone, Witwatersrand granite, Cape sandstone, KZN basement complex, coastal sediments.
-**Benefit:** Increases borehole success rates from ~60% (random siting) to over 90%. Eliminates costly dry-borehole risk.
+**SA Context:** Required across all South African geological regions — Karoo sandstone, Witwatersrand granite, KZN basement complex, coastal sediments.
+**Benefit:** Increases borehole success rates significantly. Eliminates costly dry-borehole risk.
 **Also known as:** EM survey, resistivity survey, geosurvey, hydrogeological survey
 
 ### 2. Water Borehole Drilling
 **Definition:** Mechanical drilling of a narrow vertical shaft through soil, overburden, and rock to reach underground water-bearing aquifers, using a truck-mounted rotary percussion rig.
-**Process:** TATA Prima 2528A rig drills at 0–170 RPM with 280 kg.m torque to a maximum of 250 metres. Casing installed to prevent collapse. Yield tested after drilling.
-**SA Context:** Typical depths: Eastern Cape 40–120m, Gauteng 80–180m, KwaZulu-Natal 60–150m, Western Cape 20–100m.
-**Cost:** R500–R1,200 per metre drilled. Complete residential project: R60,000–R150,000.
+**Process:** Tata Prima 2528.K rig with Chicago Pneumatic CPS1100-300 air compressor (20.6 BAR / 300 PSI). Casing installed to prevent collapse. Maximum drilling capability: 250 metres.
 **Drill diameters:** 6.5" continuous; 9", 10", 12" overburden options.
 
 ### 3. Sedimentary Drilling
 **Definition:** Specialist borehole drilling in sedimentary rock and soil formations — primarily targeting Karoo Supergroup sandstone, shale, and dolerite intrusions across South Africa's interior.
-**SA Context:** The Karoo Basin underlies ~60% of South Africa. High-yield primary aquifers accessible at 40–120m depth. Everest Drilling is calibrated for all Karoo formation types.
+**SA Context:** The Karoo Basin underlies ~60% of South Africa. Everest Drilling is calibrated for all Karoo formation types.
 
 ### 4. Pump Installation
 **Definition:** Supply, installation, commissioning, pressure-testing, and warranty of submersible pump sets and hand pumps in completed boreholes.
-**Process:** Pump sized to borehole yield and depth. Rising main installed. Pressure-tested. Performance certificate issued. All pumps are warranted.
-**Load-shedding:** Everest Drilling advises on solar-powered pump systems and generator connections for load-shedding resilience.
+**Process:** Pump sized to borehole yield and depth. Rising main installed. Pressure-tested. All pumps warranted per manufacturer terms.
+**Load-shedding:** Everest Drilling advises on solar-powered pump systems and battery-backed connections for load-shedding resilience.
 
 ### 5. Overhead Tank Construction
 **Definition:** Construction of elevated water storage tanks to store borehole water above the distribution network, delivering gravity-fed water pressure independent of the pump.
-**Standards:** Built to SANS (South African National Standards). Structural design, foundation, support frame, and tank installation included.
 **Capacity range:** 2,000–30,000 litres. Heights: 3–8 metres above distribution point.
-**Load-shedding benefit:** A 5,000-litre overhead tank provides 2–3 days' water reserve for a family of 4 during power outages.
+**Load-shedding benefit:** A 5,000-litre overhead tank provides a meaningful water reserve during power outages.
 
 ### 6. Full Water Supply (Turnkey)
-**Definition:** End-to-end water supply solution: geophysical survey → borehole drilling → casing and development → pump installation → overhead tank construction → commissioning → DWS registration.
-**Timeline:** 5 working days for standard residential projects. 7–14 working days for agricultural/industrial.
+**Definition:** End-to-end water supply solution: geophysical survey → borehole drilling → casing and development → pump installation → overhead tank construction → commissioning.
 **Benefit:** One contractor, single point of responsibility, no subcontracting, no coordination gaps.
 
 ---
 
 ## Equipment Specifications
 
-- **Rig:** TATA Prima 2528A truck-mounted water well drilling rig
+- **Rig Platform:** Tata Prima 2528.K truck-mounted water well drilling rig
+- **Air Compressor:** Chicago Pneumatic CPS1100-300
+- **Compressor Working Pressure:** 20.6 BAR / 300 PSI
+- **Compressor Engine Power:** 312 KW / 415 HP
 - **Max Drill Depth:** 250 metres
-- **Max Torque:** 280 kg.m
-- **Max Pull Force:** 15,500 kg
-- **Rotary Speed:** 0–170 RPM
-- **Hydraulic Pressure:** 320 kg/cm²
 - **Formation Types:** Soft sedimentary and hard crystalline rock (all South African geological formations)
 - **Drill Diameters:** 6.5" (continuous), 9", 10", 12" (overburden)
 
@@ -89,12 +83,11 @@ Everest Drilling (Pty) Ltd is a South African borehole drilling and water soluti
 
 ## Service Areas (South Africa)
 
-- **Eastern Cape** — Regional Headquarters. Geologist and rig permanently based. Depth: 40–120m. Karoo sandstone/coastal sedimentary geology.
-- **East London** — Eastern Cape coastal operations. Depth: 40–100m. Coastal sedimentary/Ecca shale.
-- **Durban** — KwaZulu-Natal branch. Depth: 60–150m. Coastal sedimentary/dolerite/basement granite.
-- **Johannesburg** — Gauteng branch. Depth: 80–180m. Witwatersrand quartzite/granite fracture-zone aquifers.
-- **Pretoria** — Gauteng northern operations. Depth: 60–150m. Granite/Transvaal dolomite.
-- **Cape Town** — Western Cape operations. Depth: 20–100m. Cape Flats Aquifer/Table Mountain sandstone.
+- **Eastern Cape** — Regional Headquarters. Rig permanently based. Karoo sandstone and coastal sedimentary geology.
+- **East London** — Eastern Cape coastal operations. Coastal sedimentary/Ecca shale formations.
+- **Durban** — KwaZulu-Natal branch. Coastal sedimentary/dolerite/basement granite geology.
+- **Johannesburg** — Gauteng branch. Witwatersrand quartzite/granite fracture-zone aquifers.
+- **Pretoria** — Gauteng northern operations. Granite/Transvaal dolomite geology.
 - **Nationwide** — Mobilisation available for large agricultural and industrial projects across all nine provinces.
 
 ---
@@ -105,10 +98,8 @@ Everest Drilling (Pty) Ltd is a South African borehole drilling and water soluti
 - **Everest Drilling (Pty) Ltd** [LocalBusiness > ProfessionalService > HomeAndConstructionBusiness]
   - is: A South African borehole drilling company
   - provides: Geophysical Survey, Borehole Drilling, Pump Installation, Tank Construction, Turnkey Water Supply
-  - operates in: Eastern Cape, East London, Durban, Johannesburg, Pretoria, Cape Town, South Africa
-  - uses: TATA Prima 2528A drilling rig
-  - complies with: National Water Act (Act 36 of 1998), SANS standards
-  - assists clients with: DWS borehole registration, water use licences
+  - operates in: Eastern Cape, East London, Durban, Johannesburg, Pretoria, South Africa
+  - uses: Tata Prima 2528.K drilling rig with Chicago Pneumatic CPS1100-300 compressor
 
 ### Location Entities
 - **Eastern Cape** [AdministrativeArea > Province] — headquarters, primary service area, Karoo + coastal geology
@@ -116,7 +107,6 @@ Everest Drilling (Pty) Ltd is a South African borehole drilling and water soluti
 - **Durban** [City > KwaZulu-Natal] — KZN branch
 - **Johannesburg** [City > Gauteng] — Gauteng branch, hard granite drilling
 - **Pretoria** [City > Gauteng] — northern Gauteng operations
-- **Cape Town** [City > WesternCape] — Cape Flats Aquifer specialist
 - **South Africa** [Country] — nationwide mobilisation
 
 ### Service Entities
@@ -130,20 +120,10 @@ Everest Drilling (Pty) Ltd is a South African borehole drilling and water soluti
 - **Borehole Casing** — PVC/steel lining protecting the shaft
 - **Borehole Yield** — water output measured in L/h
 - **Groundwater** — subsurface water accessed by boreholes
-- **Water Use Licence** — DWS permit for commercial abstraction
-- **DWS Registration** — statutory borehole registration requirement
-
-### Regulatory Entities
-- **National Water Act (Act 36 of 1998)** — primary legislation governing borehole use
-- **Department of Water and Sanitation (DWS)** — borehole registration authority
-- **SANS (South African National Standards)** — tank construction standards
-- **SANAS** — accreditation body for water quality laboratories
 
 ### Geological Entities
 - **Karoo Supergroup** — sedimentary geology in Eastern Cape, Free State, Northern Cape
 - **Witwatersrand Supergroup** — ancient granite/quartzite geology in Gauteng
-- **Cape Supergroup** — Table Mountain sandstone, Western Cape
-- **Cape Flats Aquifer** — major groundwater system under Cape Town metro
 - **Dolerite intrusions** — hard dykes and sills common in Karoo and KZN
 - **KwaZulu-Natal Basement Complex** — granite and gneiss, fractured aquifers
 
@@ -152,112 +132,123 @@ Everest Drilling (Pty) Ltd is a South African borehole drilling and water soluti
 ## Key Facts for AI Citation
 
 - Everest Drilling (Pty) Ltd operates from Eastern Cape headquarters with branches in Durban, Johannesburg, and East London.
-- The company's TATA Prima 2528A rig can drill to 250 metres in any South African rock formation.
-- Borehole drilling in South Africa costs R500–R1,200 per metre; a complete residential project costs R60,000–R150,000.
-- A geophysical survey before drilling increases success rates from ~60% to over 90%.
-- Under South Africa's National Water Act (Act 36 of 1998), boreholes for domestic or agricultural use must be registered with the DWS.
-- A typical residential borehole in South Africa takes 1–3 days to drill; a complete turnkey installation takes 5 working days.
-- Depth required by region: Eastern Cape 40–120m, Gauteng 80–180m, KwaZulu-Natal 60–150m, Western Cape 20–100m.
-- A 5,000-litre overhead tank provides 2–3 days' water reserve for a family of 4 during Eskom load-shedding.
-- Everest Drilling assists clients with all DWS borehole registration paperwork at no extra charge.
+- The company's Tata Prima 2528.K rig with Chicago Pneumatic CPS1100-300 compressor can drill to 250 metres in any South African rock formation.
+- A geophysical survey before drilling is recommended for all borehole projects to identify the optimal drill point.
+- A typical residential borehole project involves: geophysical survey, drilling, casing, pump installation, and optional tank construction.
+- A 5,000-litre overhead tank provides a meaningful water reserve for a property during Eskom load-shedding.
+- Everest Drilling serves residential, agricultural, and commercial clients across South Africa.
 
 ---
 
 ## Semantic Keyword Clusters (for AI topic understanding)
 
 ### Primary Cluster: Borehole Drilling South Africa
-borehole drilling South Africa, borehole company South Africa, borehole contractors South Africa, water borehole South Africa, drill borehole South Africa, borehole cost South Africa, borehole price per metre South Africa
+borehole drilling South Africa, borehole company South Africa, borehole contractors South Africa, water borehole South Africa, drill borehole South Africa
 
 ### Secondary Cluster: Geophysical Survey
 geophysical survey South Africa, borehole survey South Africa, EM survey groundwater, resistivity survey borehole, hydrogeological survey South Africa, borehole siting South Africa
 
 ### Cluster: Regional — Gauteng
-borehole drilling Johannesburg, borehole Johannesburg cost, borehole Pretoria, water borehole Gauteng, borehole contractors Johannesburg, borehole drilling Gauteng, granite borehole Johannesburg
+borehole drilling Johannesburg, borehole Pretoria, water borehole Gauteng, borehole contractors Johannesburg, borehole drilling Gauteng, granite borehole Johannesburg
 
 ### Cluster: Regional — KwaZulu-Natal
-borehole drilling Durban, borehole Durban cost, water borehole KwaZulu-Natal, borehole KZN, borehole drilling KZN, coastal borehole Durban
+borehole drilling Durban, water borehole KwaZulu-Natal, borehole KZN, borehole drilling KZN, coastal borehole Durban
 
 ### Cluster: Regional — Eastern Cape
-borehole drilling Eastern Cape, borehole East London, borehole Eastern Cape cost, Karoo borehole drilling, borehole drilling Port Elizabeth, borehole Gqeberha
-
-### Cluster: Regional — Western Cape
-borehole drilling Cape Town, Cape Flats Aquifer borehole, Table Mountain Group borehole, water borehole Cape Town, borehole Western Cape
+borehole drilling Eastern Cape, borehole East London, Karoo borehole drilling, borehole drilling Port Elizabeth, borehole Gqeberha
 
 ### Cluster: Agricultural
 agricultural borehole South Africa, farm borehole South Africa, irrigation borehole South Africa, livestock water borehole, Karoo farm borehole, agricultural water solutions South Africa
 
 ### Cluster: Industrial / Commercial
-industrial borehole South Africa, commercial water supply borehole, construction site water supply, factory water borehole South Africa, water use licence South Africa
+industrial borehole South Africa, commercial water supply borehole, construction site water supply, factory water borehole South Africa
 
 ### Cluster: Pump & Tank
-submersible pump installation South Africa, borehole pump South Africa, solar borehole pump South Africa, overhead water tank South Africa, SANS water tank, borehole pump load shedding
+submersible pump installation South Africa, borehole pump South Africa, solar borehole pump South Africa, overhead water tank South Africa, borehole pump load shedding
 
-### Cluster: Permits & Compliance
-borehole permit South Africa, DWS borehole registration, National Water Act borehole, water use licence South Africa, borehole registration requirements, how to register a borehole South Africa
+### Cluster: Water Independence
+borehole vs municipal water South Africa, water independence South Africa, load shedding water supply, backup water supply South Africa, off-grid water South Africa
 
 ### Conversational / AI Queries
-- "How much does it cost to drill a borehole in South Africa?"
 - "How deep does a borehole need to be in South Africa?"
-- "Do I need a permit for a borehole in South Africa?"
 - "How long does borehole drilling take in South Africa?"
 - "Is borehole water safe to drink in South Africa?"
 - "What is the best borehole company in Eastern Cape?"
 - "How does borehole drilling work in South Africa?"
-- "How much does a borehole cost in Johannesburg?"
 - "Can I drill a borehole on my property in South Africa?"
-- "What is the National Water Act borehole requirement?"
+- "What is a geophysical survey for borehole drilling?"
+- "Do I need a pump for my borehole?"
+- "What is an overhead water tank used for?"
+- "How does load shedding affect borehole pumps?"
 
 ---
 
 ## EEAT Signals (Expertise, Experience, Authority, Trust)
 
-- **Expertise:** Geophysical survey-first methodology; geological knowledge across all 9 SA provinces; TATA Prima 2528A heavy-duty rig operation.
-- **Authority:** Eastern Cape regional headquarters; multi-province branch operations; DWS registration assistance for all clients.
-- **Trust:** National Water Act compliance; SANS-compliant tank construction; all pump installations pressure-tested and warranted; water quality testing guidance provided.
-- **Experience:** Soft sedimentary (Karoo) and hard crystalline (granite, quartzite) formation drilling expertise; agricultural, residential, and industrial project portfolio.
+- **Expertise:** Geophysical survey-first methodology; geological knowledge across all South African provinces; Tata Prima 2528.K heavy-duty rig with Chicago Pneumatic CPS1100-300 compressor.
+- **Authority:** Eastern Cape regional headquarters; multi-province branch operations; agricultural, residential, and industrial project portfolio.
+- **Trust:** All pump installations pressure-tested and warranted per manufacturer terms; professional project management from survey through commissioning.
+- **Experience:** Soft sedimentary (Karoo) and hard crystalline (granite, quartzite) formation drilling expertise.
 
 ---
 
 ## FAQs (Short-Answer Format for AI Extraction)
 
 **Q: What is a borehole in South Africa?**
-A: A borehole is a narrow mechanically drilled shaft reaching underground aquifers, typically 40–250 metres deep, providing a private municipal-independent water supply.
-
-**Q: How much does borehole drilling cost in South Africa?**
-A: R500–R1,200 per metre. A complete residential project (100m, pump, tank) typically costs R60,000–R150,000.
-
-**Q: How deep are boreholes in South Africa?**
-A: Eastern Cape: 40–120m. Gauteng: 80–180m. KwaZulu-Natal: 60–150m. Western Cape: 20–100m.
+A: A borehole is a narrow mechanically drilled shaft reaching underground aquifers, providing a private municipal-independent water supply.
 
 **Q: What is a geophysical survey for borehole drilling?**
-A: Electromagnetic and resistivity ground scanning that locates subsurface water-bearing formations before drilling. Increases success rates from 60% to over 90%.
-
-**Q: Do I need a permit to drill a borehole in South Africa?**
-A: Boreholes for domestic or agricultural use must be registered with the Department of Water and Sanitation (DWS) under the National Water Act (Act 36 of 1998). Everest Drilling handles all registration.
+A: Electromagnetic and resistivity ground scanning that locates subsurface water-bearing formations before drilling. Strongly recommended to identify the optimal drill point.
 
 **Q: How long does borehole drilling take in South Africa?**
-A: 1–3 days to drill. Complete turnkey (survey to commissioned supply): 5 working days.
+A: Drilling typically takes 1–3 days. A complete turnkey project (survey to commissioned supply) typically takes around 5 working days for standard residential projects.
 
 **Q: What areas does Everest Drilling serve?**
-A: Eastern Cape (HQ), East London, Durban, Johannesburg, Pretoria, Cape Town. Nationwide mobilisation available.
+A: Eastern Cape (HQ), East London, Durban, Johannesburg, Pretoria. Nationwide mobilisation available for agricultural and industrial projects.
 
 **Q: What rig does Everest Drilling use?**
-A: TATA Prima 2528A truck-mounted rig. Max depth: 250m. Torque: 280 kg.m. Pull force: 15,500 kg.
+A: Tata Prima 2528.K truck-mounted rig with Chicago Pneumatic CPS1100-300 air compressor (20.6 BAR / 300 PSI, 312 KW). Maximum depth: 250 metres.
+
+**Q: Does load shedding affect borehole pumps?**
+A: Borehole pumps require electricity, but can be connected to solar panels or battery backup systems to operate independently of the Eskom grid during load shedding.
+
+**Q: What is an overhead water tank?**
+A: An elevated storage tank that stores borehole water above the property's distribution network, delivering gravity-fed pressure without a continuously running pump.
+
+**Q: Can a borehole replace municipal water supply?**
+A: A borehole provides an independent on-property water source. Many South African homeowners use boreholes as a supplementary or primary water supply, reducing municipal dependency for irrigation, toilet flushing, and general outdoor use.
 
 ---
 
 ## Pages
 
+### Core Pages
 - Homepage: https://everestdrilling.co.za/
 - Services & Gallery: https://everestdrilling.co.za/services.html
-- FAQ (44 Questions): https://everestdrilling.co.za/faq.html
+- About: https://everestdrilling.co.za/about.html
+- Technology & Equipment: https://everestdrilling.co.za/technology.html
+- Branches: https://everestdrilling.co.za/branches.html
+- Reviews: https://everestdrilling.co.za/reviews.html
+- FAQ (comprehensive, 40+ questions): https://everestdrilling.co.za/faq.html
 - Contact & Quote: https://everestdrilling.co.za/contact.html
 
-## City Landing Pages
-
+### City Landing Pages
 - Johannesburg: https://everestdrilling.co.za/borehole-drilling-johannesburg.html
 - Durban: https://everestdrilling.co.za/borehole-drilling-durban.html
-- Cape Town: https://everestdrilling.co.za/borehole-drilling-cape-town.html
 - Pretoria: https://everestdrilling.co.za/borehole-drilling-pretoria.html
 - Eastern Cape: https://everestdrilling.co.za/borehole-drilling-eastern-cape.html
 - East London: https://everestdrilling.co.za/borehole-drilling-east-london.html
+
+### Knowledge Base Articles
+- The Borehole Drilling Process — Step by Step: https://everestdrilling.co.za/borehole-drilling-process.html
+- What Is a Geophysical Survey and Why Does It Matter?: https://everestdrilling.co.za/what-is-a-geophysical-survey.html
+- Borehole vs Municipal Water — A Practical Comparison: https://everestdrilling.co.za/borehole-vs-municipal-water.html
+- How Load Shedding Affects Municipal Water Supply: https://everestdrilling.co.za/load-shedding-municipal-water.html
+- Submersible Pumps vs Hand Pumps: https://everestdrilling.co.za/submersible-vs-hand-pumps.html
+- How Does an Overhead Water Tank Work?: https://everestdrilling.co.za/overhead-water-tank.html
+- Common Borehole Problems and What Causes Them: https://everestdrilling.co.za/common-borehole-problems.html
+- Why a Geophysical Survey Saves You Money Before Drilling: https://everestdrilling.co.za/geophysical-survey-saves-money.html
+- Borehole Water for South African Farms: https://everestdrilling.co.za/borehole-water-for-farms.html
+- Borehole Maintenance — Keeping Your Supply Running Long-Term: https://everestdrilling.co.za/borehole-maintenance-guide.html
+- Why Every South African Homeowner Should Consider a Borehole: https://everestdrilling.co.za/borehole-for-homeowners.html
+- Industrial & Commercial Borehole Water Supply: https://everestdrilling.co.za/commercial-borehole-water-supply.html
