@@ -892,7 +892,7 @@
         ph.style.borderColor = '#e53e3e'; ph.focus(); return;
       }
 
-      // ── 1. Save to Google Sheets (fire and forget) ──────────────────
+      // ── 1. Save to Google Sheets (image beacon — bypasses CORS) ────
       if (SHEET_URL !== 'PASTE_YOUR_APPS_SCRIPT_URL_HERE') {
         try {
           var params = new URLSearchParams({
@@ -903,8 +903,8 @@
             type:     ptype ? ptype.value : '',
             notes:    notes
           });
-          fetch(SHEET_URL + '?' + params.toString(), { mode: 'no-cors' })
-            .catch(function() {});
+          var beacon = new Image();
+          beacon.src = SHEET_URL + '?' + params.toString();
         } catch(err) {}
       }
 
