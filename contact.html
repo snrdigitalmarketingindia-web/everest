@@ -865,30 +865,61 @@
 </script>
 <!-- ══ QUOTE FORM — WhatsApp Submission Script ══ -->
 <script>
+  // ── Google Sheets lead capture ─────────────────────────────────────────
+  // Paste your Google Apps Script Web App URL below after deployment.
+  // Setup guide: see comment block at bottom of this file.
+  var SHEET_URL = 'PASTE_YOUR_APPS_SCRIPT_URL_HERE';
+
   var qForm = document.getElementById('cro-quote-form');
   if (qForm) {
     qForm.addEventListener('submit', function(e) {
       e.preventDefault();
       var phone    = (document.getElementById('qf-phone').value || '').trim();
       var name     = (document.getElementById('qf-name').value || '').trim();
-      var service  = (document.getElementById('qf-service').value || '');
       var location = (document.getElementById('qf-location').value || '').trim();
       var notes    = (document.getElementById('qf-notes').value || '').trim();
       var ptype    = document.querySelector('input[name="project_type"]:checked');
+
+      // Collect all checked services (multi-select checkboxes)
+      var services = [];
+      document.querySelectorAll('input[name="service[]"]:checked').forEach(function(cb) {
+        services.push(cb.value);
+      });
+      var serviceStr = services.join(', ');
+
       if (!phone) {
         var ph = document.getElementById('qf-phone');
         ph.style.borderColor = '#e53e3e'; ph.focus(); return;
       }
-      var msg = 'Hi Everest Drilling 👋\n\n';
-      msg += 'FREE BOREHOLE QUOTE REQUEST:\n';
-      if (name)     msg += '👤 Name: ' + name + '\n';
-      msg         += '📞 Phone: ' + phone + '\n';
-      if (location) msg += '📍 Location: ' + location + '\n';
-      if (service)  msg += '🔧 Service: ' + service + '\n';
-      if (ptype)    msg += '🏷 Type: ' + ptype.value + '\n';
-      if (notes)    msg += '📝 Notes: ' + notes + '\n';
+
+      // ── 1. Save to Google Sheets (fire and forget) ──────────────────
+      if (SHEET_URL !== 'PASTE_YOUR_APPS_SCRIPT_URL_HERE') {
+        try {
+          var params = new URLSearchParams({
+            name:     name,
+            phone:    phone,
+            location: location,
+            services: serviceStr,
+            type:     ptype ? ptype.value : '',
+            notes:    notes
+          });
+          fetch(SHEET_URL + '?' + params.toString(), { mode: 'no-cors' })
+            .catch(function() {});
+        } catch(err) {}
+      }
+
+      // ── 2. Open WhatsApp with pre-filled message ─────────────────────
+      var msg = 'Hi Everest Drilling 👋\n\nFREE BOREHOLE QUOTE REQUEST:\n';
+      if (name)       msg += '👤 Name: '     + name       + '\n';
+                      msg += '📞 Phone: '    + phone      + '\n';
+      if (location)   msg += '📍 Location: ' + location   + '\n';
+      if (serviceStr) msg += '🔧 Service: '  + serviceStr + '\n';
+      if (ptype)      msg += '🏷 Type: '     + ptype.value + '\n';
+      if (notes)      msg += '📝 Notes: '    + notes      + '\n';
       msg += '\nPlease contact me. Thank you!';
       window.open('https://wa.me/27751123456?text=' + encodeURIComponent(msg), '_blank');
+
+      // ── 3. Show success message ───────────────────────────────────────
       document.getElementById('cro-quote-form').style.display = 'none';
       document.getElementById('qf-success').style.display = 'block';
     });
