@@ -686,8 +686,14 @@
               </div>
             </div>
             <div class="fg">
-              <label for="qf-location">Your Location / Town</label>
-              <input id="qf-location" type="text" name="location" placeholder="e.g. East London, Joburg..." autocomplete="address-level2" />
+              <label for="qf-location">Site Location</label>
+              <input id="qf-location" type="text" name="location" placeholder="e.g. East London, Joburg, or use button →" autocomplete="off" />
+              <button type="button" id="btn-location" onclick="getSiteLocation()" style="margin-top:8px;display:flex;align-items:center;gap:7px;background:#f0f4ff;border:1.5px solid #3b6cb7;color:#3b6cb7;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:9px 16px;cursor:pointer;border-radius:6px;width:100%;">
+                <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#3b6cb7;flex-shrink:0;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span id="btn-location-text">📍 Pin Exact Drill Site on Google Maps</span>
+              </button>
+              <input type="hidden" id="qf-maps-link" name="maps_link" />
+              <div id="location-status" style="font-size:.75rem;margin-top:5px;display:none;"></div>
             </div>
           </div>
 
@@ -863,6 +869,59 @@
   })();
 
 </script>
+<!-- ══ SITE LOCATION PICKER ══ -->
+<script>
+function getSiteLocation() {
+  var btn  = document.getElementById('btn-location');
+  var txt  = document.getElementById('btn-location-text');
+  var stat = document.getElementById('location-status');
+  var inp  = document.getElementById('qf-location');
+  var link = document.getElementById('qf-maps-link');
+
+  if (!navigator.geolocation) {
+    stat.style.display = 'block';
+    stat.style.color   = '#e53e3e';
+    stat.textContent   = 'Geolocation not supported. Please type your address above.';
+    return;
+  }
+
+  txt.textContent  = 'Getting your location…';
+  btn.disabled     = true;
+  stat.style.display = 'none';
+
+  navigator.geolocation.getCurrentPosition(
+    function(pos) {
+      var lat = pos.coords.latitude.toFixed(6);
+      var lng = pos.coords.longitude.toFixed(6);
+      var mapsUrl = 'https://www.google.com/maps?q=' + lat + ',' + lng;
+
+      inp.value  = 'GPS: ' + lat + ', ' + lng;
+      link.value = mapsUrl;
+
+      txt.textContent    = '✅ Location pinned — view on Google Maps';
+      btn.style.background   = '#e8f5e9';
+      btn.style.borderColor  = '#2e7d32';
+      btn.style.color        = '#2e7d32';
+      btn.onclick = function(){ window.open(mapsUrl, '_blank'); };
+      btn.disabled = false;
+
+      stat.style.display = 'block';
+      stat.style.color   = '#2e7d32';
+      stat.textContent   = 'Coordinates captured. You can also type the nearest town above.';
+    },
+    function(err) {
+      txt.textContent = '📍 Pin Exact Drill Site on Google Maps';
+      btn.disabled    = false;
+      stat.style.display = 'block';
+      stat.style.color   = '#e53e3e';
+      stat.textContent   = err.code === 1
+        ? 'Location access denied — please type the site address above.'
+        : 'Could not get location. Please type the site address above.';
+    },
+    { enableHighAccuracy: true, timeout: 10000 }
+  );
+}
+</script>
 <!-- ══ QUOTE FORM — WhatsApp Submission Script ══ -->
 <script>
   // ── Google Sheets lead capture ─────────────────────────────────────────
@@ -877,6 +936,7 @@
       var phone    = (document.getElementById('qf-phone').value || '').trim();
       var name     = (document.getElementById('qf-name').value || '').trim();
       var location = (document.getElementById('qf-location').value || '').trim();
+      var mapsLink = (document.getElementById('qf-maps-link').value || '').trim();
       var notes    = (document.getElementById('qf-notes').value || '').trim();
       var ptype    = document.querySelector('input[name="project_type"]:checked');
 
@@ -901,7 +961,8 @@
             location: location,
             services: serviceStr,
             type:     ptype ? ptype.value : '',
-            notes:    notes
+            notes:    notes,
+            maps:     mapsLink
           }).toString();
           var beacon = new Image();
           beacon.src = SHEET_URL + '?' + qs;
@@ -910,12 +971,13 @@
 
       // ── 2. Open WhatsApp with pre-filled message ─────────────────────
       var msg = 'Hi Everest Drilling 👋\n\nFREE BOREHOLE QUOTE REQUEST:\n';
-      if (name)       msg += '👤 Name: '     + name       + '\n';
-                      msg += '📞 Phone: '    + phone      + '\n';
-      if (location)   msg += '📍 Location: ' + location   + '\n';
-      if (serviceStr) msg += '🔧 Service: '  + serviceStr + '\n';
+      if (name)       msg += '👤 Name: '     + name        + '\n';
+                      msg += '📞 Phone: '    + phone       + '\n';
+      if (location)   msg += '📍 Location: ' + location    + '\n';
+      if (mapsLink)   msg += '🗺 Maps: '     + mapsLink    + '\n';
+      if (serviceStr) msg += '🔧 Service: '  + serviceStr  + '\n';
       if (ptype)      msg += '🏷 Type: '     + ptype.value + '\n';
-      if (notes)      msg += '📝 Notes: '    + notes      + '\n';
+      if (notes)      msg += '📝 Notes: '    + notes       + '\n';
       msg += '\nPlease contact me. Thank you!';
       window.open('https://wa.me/27751123456?text=' + encodeURIComponent(msg), '_blank');
 
