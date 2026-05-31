@@ -892,7 +892,7 @@
         ph.style.borderColor = '#e53e3e'; ph.focus(); return;
       }
 
-      // ── 1. Save to Google Sheets (hidden iframe — no CORS issues) ───
+      // ── 1. Save to Google Sheets (image beacon) ─────────────────────
       if (SHEET_URL !== 'PASTE_YOUR_APPS_SCRIPT_URL_HERE') {
         try {
           var qs = new URLSearchParams({
@@ -903,13 +903,8 @@
             type:     ptype ? ptype.value : '',
             notes:    notes
           }).toString();
-          var ifrm = document.createElement('iframe');
-          ifrm.style.cssText = 'display:none;width:0;height:0;border:0;';
-          ifrm.src = SHEET_URL + '?' + qs;
-          document.body.appendChild(ifrm);
-          setTimeout(function(){
-            try { document.body.removeChild(ifrm); } catch(e) {}
-          }, 10000);
+          var beacon = new Image();
+          beacon.src = SHEET_URL + '?' + qs;
         } catch(err) {}
       }
 
